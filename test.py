@@ -4,9 +4,8 @@ import yaml
 
 yaml_file_name = "src/all_validation.yaml"
 
-print(dir(yaml))
 with open(yaml_file_name) as f:
-    output = yaml.full_load(f)
+    output = yaml.load(f)
     print(output)
     task_list = output['tasks'].split()
     for task in task_list:
