@@ -26,11 +26,12 @@ with open(yaml_file_name) as f:
 
 tasks = "aci"
 
-match tasks:
-    case "aci":
-        print("aci")
-    case "core":
-        print("core")
-    case _:
-        print("not available")
+def run(tasks):
+    match (tasks):
+        case "aci":
+            print("aci")
+        case "core":
+            print("core")
+        case _:
+            print("not available")
 
