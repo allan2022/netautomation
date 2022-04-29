@@ -6,3 +6,5 @@ yaml_file_name = "src/all_validation.yaml"
 with open(yaml_file_name) as f:
     output = yaml.full_load(f)
     print(output)
+    task_list = output['tasks'].split()
+    print(task_list)
