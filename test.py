@@ -7,4 +7,5 @@ with open(yaml_file_name) as f:
     output = yaml.full_load(f)
     print(output)
     task_list = output['tasks'].split()
-    print(task_list)
+    for task in task_list:
+        print(task)
