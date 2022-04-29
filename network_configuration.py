@@ -26,11 +26,14 @@ import yaml
 
 tasks = "core"
 
-match tasks:
-    case "aci":
-        print("aci")
-    case "core":
-        print("core")
-    case _:
-        print("not available")
+def main(tasks):
+    match tasks:
+        case "aci":
+            print("aci")
+        case "core":
+            print("core")
+        case _:
+            print("not available")
 
+if __name__ == '__main__':
+    main(tasks)
