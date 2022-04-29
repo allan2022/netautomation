@@ -14,6 +14,9 @@
 
 """
 import yaml
+import sys
+
+print(sys.version)
 
 yaml_file_name = "src/all_validation.yaml"
 tasks = []
