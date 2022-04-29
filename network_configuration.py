@@ -14,18 +14,6 @@
 
 """
 import yaml
-import sys
-
-print(sys.version)
-
-yaml_file_name = "src/all_validation.yaml"
-tasks = []
-
-with open(yaml_file_name) as f:
-    output = yaml.load(f, Loader=yaml.FullLoader)
-    tasks = output['tasks'].split()
-    for task in tasks:
-        print(task)
 
 tasks = "aci"
 
