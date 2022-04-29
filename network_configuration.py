@@ -24,7 +24,7 @@ import yaml
 #     for task in tasks:
 #         print(task)
 
-tasks = "acii"
+tasks = ""
 
 def main(tasks):
     match tasks:
