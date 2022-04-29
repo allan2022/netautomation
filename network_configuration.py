@@ -16,11 +16,13 @@
 import yaml
 
 yaml_file_name = "src/all_validation.yaml"
-task_list = []
+tasks = []
 
 with open(yaml_file_name) as f:
     output = yaml.load(f, Loader=yaml.FullLoader)
-    task_list = output['tasks'].split()
+    tasks = output['tasks'].split()
+    for task in tasks:
+        print(task)
 
 
 def main(task_list):
@@ -31,3 +33,9 @@ def main(task_list):
             print("core")
         case _:
             print("not available")
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass
