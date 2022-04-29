@@ -1,14 +1,7 @@
 tasks:
-  aci_validation
-  core_validation
-  f5_validation
-  fortinet_validation
-  paloalto_validation
-  juniper_validation
-  network_healthcheck
-  manual_diff
-  ipam_update
-  aci_endpoint_epg_contract_tracer
-  test5.1
-  test5.0
-  test5.10
+  aci
+  core
+  f5
+  fortinet
+  paloalto
+  juniper
