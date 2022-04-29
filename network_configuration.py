@@ -15,6 +15,8 @@
 """
 import yaml
 
+yaml_file_name = "src/all_validation.yaml"
+
 tasks = "aci"
 
 def run(tasks):
