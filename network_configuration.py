@@ -25,8 +25,8 @@ with open(yaml_file_name) as f:
         print(task)
 
 
-def main(task_list):
-    match task_list:
+def main(tasks):
+    match tasks:
         case "aci":
             print("aci")
         case "core":
