@@ -9,3 +9,6 @@ tasks:
   manual_diff
   ipam_update
   aci_endpoint_epg_contract_tracer
+  test5.1
+  test5.0
+  test5.10
