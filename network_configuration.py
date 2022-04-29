@@ -24,7 +24,7 @@ import yaml
 #     for task in tasks:
 #         print(task)
 
-tasks = "aci"
+tasks = "core"
 
 match tasks:
     case "aci":
