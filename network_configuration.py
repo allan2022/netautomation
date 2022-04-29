@@ -24,18 +24,13 @@ with open(yaml_file_name) as f:
     for task in tasks:
         print(task)
 
+tasks = "aci"
 
-def main(tasks):
-    match tasks:
-        case "aci":
-            print("aci")
-        case "core":
-            print("core")
-        case _:
-            print("not available")
+match tasks:
+    case "aci":
+        print("aci")
+    case "core":
+        print("core")
+    case _:
+        print("not available")
 
-if __name__ == '__main__':
-    try:
-        main()
-    except KeyboardInterrupt:
-        pass
