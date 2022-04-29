@@ -27,7 +27,7 @@ with open(yaml_file_name) as f:
 tasks = "aci"
 
 def run(tasks):
-    match (tasks):
+    match tasks:
         case "aci":
             print("aci")
         case "core":
