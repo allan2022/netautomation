@@ -15,4 +15,6 @@ with open(yaml_filename) as f:
 
 if task_list != None:
     for task in task_list:
-        print(f'{task_list.index(task)}. {task}')        
+        print(f'{task_list.index(task) + 1}. {task}')        
+    ans = input("Select a task: ")
+    print(ans)
