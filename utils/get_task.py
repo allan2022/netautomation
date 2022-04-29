@@ -13,6 +13,6 @@ with open(yaml_filename) as f:
     for task in task_list:
         print(task)
 
-if not task_list:
+if task_list != None:
     for task in task_list:
         print(f'{task_list.index(task)}. {task}')        
