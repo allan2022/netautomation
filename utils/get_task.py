@@ -17,4 +17,4 @@ if task_list != None:
     for task in task_list:
         print(f'{task_list.index(task) + 1}. {task}')        
     ans = input("Select a task: ")
-    print(ans)
+    print(task_list[ans-1])
