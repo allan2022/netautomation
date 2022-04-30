@@ -19,8 +19,6 @@ NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
 task_list, task_select = get_task(NETWORK_VALIDATION)
 
-print(type(task_select))
-
 def main():
     match task_select:
         case "core_validation":
