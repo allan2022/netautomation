@@ -1,4 +1,3 @@
-
 """
 1. Read task
 2. Network configuration
@@ -11,7 +10,6 @@
     - F5 configuration
     - IPAM configuration
 4. Network configuration
-
 """
 from os import getcwd
 import yaml

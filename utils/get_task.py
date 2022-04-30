@@ -1,9 +1,6 @@
 from os.path import exists
 import yaml
 
-# yaml_filename = "../src/all_validation.yaml"
-# task_list = None
-
 def get_task(yaml_filename = None):
     task_list = None
     task_select = None
