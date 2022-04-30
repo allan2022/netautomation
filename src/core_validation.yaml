@@ -1,0 +1,68 @@
+tasks:
+  prechange_snapshot
+  postchange_snapshot_and_diff_prechange_snapshot
+  postchange_snapshot_and_diff_last_postchange_snapshot
+
+output_directory:
+  /output
+
+result_folder_suffix:
+  ChangeNumber
+
+core_networks:
+  walbrook_lab:
+    username: admin
+    password: NetworksTitanic12
+
+  wp_lab:
+    username: labapi
+    password: Networks@pi12!
+
+  ukdc1:
+    username: input when login or change here
+    password: input when login or change here
+
+  ukdc2:
+    username: input when login or change here
+    password: input when login or change here
+
+diff_organize_keywords:
+  config interface routing bgp ospf routes
+
+threads_number:
+  6
+
+pyats_learn_features:
+  config bgp hsrp interface lag lldp mcast ospf pim platform prefix_list route_policy routing static_routing vlan vrf vxlan
+
+nxos_self_learn_commands:
+  - show ip route vrf all
+  - show ip arp vrf all
+  - show cdp neighbors
+  - show port-channel summary
+  - show interface status
+  - show interface counters errors
+  - show mac address-table dynamic
+  - show spanning-tree root
+  - show spanning-tree bridge
+  - show spanning-tree blockedports
+  - show spanning-tree inconsistentports
+  - show spanning-tree inconsistentports | count
+  - show interface brief
+
+iosxe_self_learn_commands:
+  # - show inventory
+  # - show version
+  # - show module
+  # - show cdp neighbors
+  # - show lldp neighbors
+  # - show ip interface brief
+  # - show interface status | include connected
+  # - show interface counters errors
+  - show ip route vrf *
+  # - show ip arp
+  # - show mac address-table dynamic | count DYNAMIC
+  # - show spanning-tree root
+  # - show spanning-tree bridge
+  # - show spanning-tree blockedports
+  # - show spanning-tree inconsistentports
