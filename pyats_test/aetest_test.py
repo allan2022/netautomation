@@ -1,5 +1,5 @@
 from pyats import aetest
-from some_lib import configure_interface
+# from some_lib import configure_interface
 
 
 print(type(aetest))
