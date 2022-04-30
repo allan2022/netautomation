@@ -15,7 +15,7 @@ from os import getcwd
 import yaml
 from utils.get_task import get_task
 
-NETWORK_CONFIG = getcwd() + "/src/all_configuration.yaml"
+NETWORK_CONFIG = getcwd() + "/src/all_validation.yaml"
 
 task_list, task_select = get_task(NETWORK_CONFIG)
 
