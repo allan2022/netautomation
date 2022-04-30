@@ -11,11 +11,11 @@
     - IPAM validation
     - Splunk validation
 """
-import os
+from os import getcwd
 import yaml
 from utils.get_task import get_task
 
-NETWORK_VALIDATION = os.getcwd() + "src/all_validation.yaml"
+NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
 task_list, task_select = get_task(NETWORK_VALIDATION)
 
