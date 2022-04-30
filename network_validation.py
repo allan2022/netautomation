@@ -18,11 +18,9 @@ from utils.get_task import get_task
 NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
 task_list, task_select = get_task(NETWORK_VALIDATION)
-print(task_list)
-print(task_select)
 
-def main(task_list):
-    match task_list:
+def main(task_select):
+    match task_select:
         case "aci":
             print("aci")
         case "core":
