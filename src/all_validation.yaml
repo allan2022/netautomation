@@ -1,4 +1,7 @@
 tasks:
-  aci
-  core
-  f5
+  core validation
+  aci validation
+  juniper validation
+  f5 validation
+  fortinet validation
+  palo alot validation
