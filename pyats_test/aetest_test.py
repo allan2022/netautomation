@@ -8,6 +8,9 @@ print(dir(aetest))
 print(type(aetest.CommonSetup))
 print(dir(aetest.CommonSetup))
 
+print(type(aetest.subsection))
+print(dir(aetest.subsection))
+
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def connect_to_device(self, testbed):
