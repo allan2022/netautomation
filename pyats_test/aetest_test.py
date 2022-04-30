@@ -5,6 +5,9 @@ from pyats import aetest
 print(type(aetest))
 print(dir(aetest))
 
+print(type(aetest.CommonSetup))
+print(dir(aetest.CommonSetup))
+
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def connect_to_device(self, testbed):
