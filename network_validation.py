@@ -24,7 +24,7 @@ def main():
         case "core_validation":
             print("core_validation")
         case "aci_validation":
-            print("core_validation")
+            print("aci_validation")
         case "juniper_validation":
             print("juniper_validation")
         case "f5_validation":
