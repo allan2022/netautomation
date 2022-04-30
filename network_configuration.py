@@ -1,18 +1,5 @@
 """
 1. Read task
-2. Network configuration
-3. Implement configuration
-    - ACI configuration
-    - Cisco configuration
-    - Juniper configuration
-    - Fortinet configuration
-    - Palo Alto configuration
-    - F5 configuration
-    - IPAM configuration
-4. Network configuration
-"""
-"""
-1. Read task
 2. Setup environment
 3. Network validation
     - ACI validation
