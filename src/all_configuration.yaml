@@ -1,0 +1,7 @@
+tasks:
+  core_configuration
+  aci_configuration
+  juniper_configuration
+  f5_configuration
+  fortinet_configuration
+  paloalto_configuration
