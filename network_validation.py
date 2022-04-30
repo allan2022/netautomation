@@ -21,11 +21,14 @@ task_list, task_select = get_task(NETWORK_VALIDATION)
 
 print(type(task_select))
 
-match task_select:
-    case "aci":
-        print("aci")
-    case "core":
-        print("core")
-    case _:
-        print("not available")
+def main():
+    match task_select:
+        case "aci":
+            print("aci")
+        case "core":
+            print("core")
+        case _:
+            print("not available")
 
+if __name__ == '__main__':
+    main()
