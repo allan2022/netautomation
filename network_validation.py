@@ -12,7 +12,7 @@
     - Splunk validation
 """
 from os import getcwd
-import yaml
+# import yaml
 from utils.get_task import get_task
 
 NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
