@@ -12,7 +12,6 @@
     - Splunk configuration
 """
 from os import getcwd
-import yaml
 from utils.get_task import get_task
 
 NETWORK_CONFIG = getcwd() + "/src/all_configuration.yaml"
