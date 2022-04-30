@@ -1,38 +1,38 @@
 """
 1. Read task
 2. Setup environment
-3. Network validation
-    - ACI validation
-    - Cisco validation
-    - Juniper validation
-    - Fortinet validation
-    - Palo Alto validation
-    - F5 validation
-    - IPAM validation
-    - Splunk validation
+3. Network configuration
+    - ACI configuration
+    - Cisco configuration
+    - Juniper configuration
+    - Fortinet configuration
+    - Palo Alto configuration
+    - F5 configuration
+    - IPAM configuration
+    - Splunk configuration
 """
 from os import getcwd
 import yaml
 from utils.get_task import get_task
 
-NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
+NETWORK_CONFIG = getcwd() + "/src/all_configuration.yaml"
 
-task_list, task_select = get_task(NETWORK_VALIDATION)
+task_list, task_select = get_task(NETWORK_CONFIG)
 
 def main():
     match task_select:
-        case "core_validation":
-            print("core_validation")
-        case "aci_validation":
-            print("aci_validation")
-        case "juniper_validation":
-            print("juniper_validation")
-        case "f5_validation":
-            print("f5_validation")
-        case "fortinet_validation":
-            print("fortinet_validation") 
-        case "paloalto_validation":
-            print("paloalto_validation")                                               
+        case "core_configuration":
+            print("core_configuration")
+        case "aci_configuration":
+            print("aci_configuration")
+        case "juniper_configuration":
+            print("juniper_configuration")
+        case "f5_configuration":
+            print("f5_configuration")
+        case "fortinet_configuration":
+            print("fortinet_configuration") 
+        case "paloalto_configuration":
+            print("paloalto_configuration")                                               
         case _:
             print("\ntask not available")
 
