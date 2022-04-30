@@ -34,7 +34,7 @@ def main():
         case "paloalto_validation":
             print("paloalto_validation")                                               
         case _:
-            print("not available")
+            print("task not available")
 
 if __name__ == '__main__':
     main()
