@@ -20,5 +20,9 @@ def get_task(yaml_filename = None):
             for item in task_list:
                 print(f'{task_list.index(item) + 1}. {item}')        
             ans = input("Select a task: ")
-            task_select = task_list[int(ans)-1]
+            try:
+                task_select = task_list[int(ans)-1]
+            except IndexError:
+                task_select = None
+
     return task_list, task_select
