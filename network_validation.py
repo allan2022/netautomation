@@ -23,10 +23,18 @@ print(type(task_select))
 
 def main():
     match task_select:
-        case "aci":
-            print("aci")
-        case "core":
-            print("core")
+        case "core_validation":
+            print("core_validation")
+        case "aci_validation":
+            print("core_validation")
+        case "juniper_validation":
+            print("juniper_validation")
+        case "f5_validation":
+            print("f5_validation")
+        case "fortinet_validation":
+            print("fortinet_validation") 
+        case "paloalto_validation":
+            print("paloalto_validation")                                               
         case _:
             print("not available")
 
