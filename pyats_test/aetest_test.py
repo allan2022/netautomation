@@ -19,7 +19,7 @@ import logging
 from pyats import aetest
 
 # get your logger for your script
-log = logging.getLogger(__name__)
+log = logging.getLogger('example_log')
 
 class common_setup(aetest.CommonSetup):
     '''Common Setup Section
