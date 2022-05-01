@@ -28,7 +28,7 @@ print(type(acl2_config))
 print(type(preoutput))
 command = []
 for item in preoutput:
-    command.apprend(item)
+    command.append(item)
 
 #this actually configures the router
 print(command)
