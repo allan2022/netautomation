@@ -10,7 +10,7 @@ def connect(hostip):
     net_connect = ConnectHandler(device_type='cisco_ios', host=hostip, username='cisco', password='cisco', secret='cisco')
     net_connect.find_prompt()
     net_connect.enable()
-    accesslists = yaml.load(open('acl.ymlLoader=yaml.SafeLoader'))
+    accesslists = yaml.load(open('acl.yml'), Loader=yaml.SafeLoader)
     env = Environment(loader = FileSystemLoader)
     template = env.get_template('acl.j2') 
     acl_config = template.render(data=accesslists) 
