@@ -22,5 +22,6 @@ common_setup = MyCommonSetup()
 # loop through to see what we get:
 for i in common_setup:
     print(i)
+    print(type(i))
 # subsection_one
 # subsection_two
