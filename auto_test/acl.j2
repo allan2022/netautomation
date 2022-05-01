@@ -1,4 +1,4 @@
-{% for accesslist in data.accesslists -%}
+{% for accesslist in data.accesslists %}
 ip access-list extended {{accesslist.aclname}}
 {{accesslist.aclcommand}} {{accesslist.protocol}} {{accesslist.source}} {{accesslist.sourcewildcard}} {{accesslist.destination}} {{accesslist.destwildcard}}
 {% endfor %}
