@@ -11,7 +11,7 @@ def connect(hostip):
     net_connect.find_prompt()
     net_connect.enable()
     accesslists = yaml.load(open('acl.yaml'), Loader=yaml.SafeLoader)
-    env = Environment(loader = FileSystemLoader(searchpath ='./'))
+    env = Environment(loader = FileSystemLoader())
     template = env.get_template('acl.j2') 
     print(template)
     acl_config = template.render(data=accesslists) 
