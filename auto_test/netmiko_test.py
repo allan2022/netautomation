@@ -13,6 +13,7 @@ def connect(hostip):
     accesslists = yaml.load(open('acl.yaml'), Loader=yaml.SafeLoader)
     env = Environment(loader = FileSystemLoader(searchpath ='./'))
     template = env.get_template('acl.j2') 
+    print(template)
     acl_config = template.render(data=accesslists) 
     print(acl_config) 
     print(f"Logged into {hostip} successfully") 
