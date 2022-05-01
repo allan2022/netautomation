@@ -15,6 +15,7 @@ class MyCommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def subsection_two(self):
         assert self.a == 1
+        print('hello sub2')
 
 # let's instantiate the class
 common_setup = MyCommonSetup()
