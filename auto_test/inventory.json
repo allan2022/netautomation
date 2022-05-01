@@ -1,0 +1,14 @@
+{
+    "r1": {
+             "IP": "192.168.126.140",
+             "type": "ios",
+             "user": "cisco",
+             "password": "cisco"
+          },
+     "r2": {
+             "IP": "192.168.122.101",
+             "type": "ios",
+             "user": "cisco",
+             "password": "cisco"
+           }
+ }

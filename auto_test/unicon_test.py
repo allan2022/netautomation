@@ -9,7 +9,6 @@ env = Environment(loader = FileSystemLoader('.'), trim_blocks=True, autoescape=T
 template = env.get_template('acl.j2')
 acl_config = template.render(data=accesslists)
 command = acl_config.split("\n")
-# print(preoutput)
 
 #this prepares the connection
 c = Connection(hostname='R1', start=['ssh 192.168.126.140'], os='ios', credentials={'default': {'username': 'cisco', 'password': 'cisco'}, 'secret': 'cisco'},)
