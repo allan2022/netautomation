@@ -19,7 +19,7 @@ import logging
 from pyats import aetest
 
 # get your logger for your script
-log = logging.getLogger('example_log')
+log = logging.getLogger(__name__)
 
 class common_setup(aetest.CommonSetup):
     '''Common Setup Section
@@ -40,7 +40,7 @@ class common_setup(aetest.CommonSetup):
     @aetest.subsection
     def subsection_1(self):
         '''example subsection one'''
-        log.info('hello world!')
+        log.warning('hello world!')
         
 
     @aetest.subsection
