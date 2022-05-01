@@ -16,7 +16,7 @@ def connect(hostip):
     acl_config = template.render(data=accesslists) 
     print(acl_config) 
     print(f"Logged into {hostip} successfully") 
-    output = net_connect.send_config_set(acl_config.split("\n")) #split method returns a list, that can be used in the send_config_set
+    output = net_connect.send_config_set(acl_config.split("\n"))
 
 if __name__ == "__main__": 
     ip = sys.argv[1] 
