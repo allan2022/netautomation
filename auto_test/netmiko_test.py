@@ -15,6 +15,7 @@ def connect(hostip):
     template = env.get_template('acl.j2') 
     print(template)
     acl_config = template.render(data=accesslists) 
+    print(type(acl_config)) 
     print(acl_config) 
     print(f"Logged into {hostip} successfully") 
     output = net_connect.send_config_set(acl_config.split("\n")) #split method returns a list, that can be used in the send_config_set
