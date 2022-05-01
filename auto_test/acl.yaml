@@ -6,3 +6,10 @@ accesslists:
   sourcewildcard: 0.0.0.0
   destination: 8.8.8.8
   destwildcard: 0.0.0.0
+- aclname: permit_http
+  aclcommand: permit
+  protocol: ip
+  source: 192.168.122.99
+  sourcewildcard: 0.0.0.0
+  destination: 9.9.9.9
+  destwildcard: 0.0.0.0  
