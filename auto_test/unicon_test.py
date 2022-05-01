@@ -17,12 +17,18 @@ c.connect()
 
 #This checks how many commands the config set has. This is because unicon's configure method adds ''end'' after each command. So in case of nested commands we need to push the whole set of commands (e.g. interface loop0,ip addr 1.1.1.1 255.255.255.255). So command is a list, to which I push all elements of the config, then the whole list is pushed to the router.
 
-x = len(preoutput)
-y=0
+# x = len(preoutput)
+# y=0
+# command = []
+# while y<x:
+#   command.append(preoutput[x-x+y])
+#   y = y+1
+
+print(type(acl2_config))
+print(type(preoutput))
 command = []
-while y<x:
-  command.append(preoutput[x-x+y])
-  y = y+1
+for item in preoutput:
+    command.apprend(item)
 
 #this actually configures the router
 print(command)
