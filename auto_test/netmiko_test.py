@@ -1,4 +1,12 @@
 import sys
+"""
+addd ACL to cisco router from acl.j2 with render from acl.yaml
+
+ip access-list extended permit_www
+permit ip 192.168.122.100 0.0.0.0 8.8.8.8 0.0.0.0
+"""
+
+
 from netmiko import ConnectHandler
 import time
 from netmiko import redispatch
