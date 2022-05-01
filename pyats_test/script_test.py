@@ -25,3 +25,7 @@ for i in common_setup:
     print(type(i))
 # subsection_one
 # subsection_two
+
+result = common_setup()
+
+print(result)
