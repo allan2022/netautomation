@@ -1,8 +1,8 @@
 accesslists:
 - aclname: permit_www
-aclcommand: permit
-protocol: ip
-source: 192.168.122.100
-sourcewildcard: 0.0.0.0
-destination: 8.8.8.8
-destwildcard: 0.0.0.0
+  aclcommand: permit
+  protocol: ip
+  source: 192.168.122.100
+  sourcewildcard: 0.0.0.0
+  destination: 8.8.8.8
+  destwildcard: 0.0.0.0
