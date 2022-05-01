@@ -4,7 +4,7 @@ from jinja2 import Environment, FileSystemLoader
 import yaml
 
 #this prepares the config
-accesslists = yaml.load(open('acl2.yaml'), Loader=yaml.SafeLoader)
+accesslists = yaml.load(open('acl.yaml'), Loader=yaml.SafeLoader)
 env = Environment(loader = FileSystemLoader('.'), trim_blocks=True, autoescape=True)
 template = env.get_template('acl.j2')
 acl2_config = template.render(data=accesslists)
