@@ -49,7 +49,7 @@ class common_setup(aetest.CommonSetup):
         if the special 'section' keyword argument is defined in the subsection
         method, the current running subsection will be passed in.
         '''
-        log.info("inside %s" % (section))
+        log.warning("inside %s" % (section))
 
 
 class Testcase_One(aetest.Testcase):
@@ -82,7 +82,7 @@ class Testcase_One(aetest.Testcase):
 
         setup sections are optional within a testcase, and is always runs first.
         '''
-        log.info("%s testcase setup/preparation" % self.uid)
+        log.warning("%s testcase setup/preparation" % self.uid)
 
         # set some variables
         self.a = 1
@@ -99,7 +99,7 @@ class Testcase_One(aetest.Testcase):
 
         test sections run in the order they appear within a testcase body.
         '''
-        log.info("test section: %s in testcase %s" % (section.uid, self.uid))
+        log.warning("test section: %s in testcase %s" % (section.uid, self.uid))
 
         # testcase instance is preserved, eg
         assert self.a == 1
@@ -110,7 +110,7 @@ class Testcase_One(aetest.Testcase):
         you can also provide explicit results, reason and data using result API.
         These information will be captured in the result summary.
         '''
-        log.info("test section: %s in testcase %s" % (section.uid, self.uid))
+        log.warning("test section: %s in testcase %s" % (section.uid, self.uid))
 
         if self.b == 2:
             self.passed('variable b contains the expected value',
@@ -129,7 +129,7 @@ class Testcase_One(aetest.Testcase):
 
         cleanup sections are optional within a testcase, and is always run last.
         '''
-        log.info("%s testcase cleanup/teardown" % self.uid)
+        log.warning("%s testcase cleanup/teardown" % self.uid)
 
 class common_cleanup(aetest.CommonCleanup):
     '''Common Cleanup Section
@@ -160,7 +160,7 @@ class common_cleanup(aetest.CommonCleanup):
     def clean_everything(self):
         '''one subsection for simplicity'''
 
-        log.info('goodbye world')
+        log.warning('goodbye world')
 
 if __name__ == '__main__':
     # standard boilerplate entrypoint if the script is run standalone
