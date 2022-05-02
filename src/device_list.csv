@@ -1,4 +1,4 @@
-hostname,ip,protocol,os,platform,group,dc
-R1,192.168.126.140,ssh,ios,cisco,group1,ukdc1
-R2,192.168.126.138,ssh,linux,f5,group1,udkc2
+hostname,ip,username,passwordprotocol,os,platform,group,dc
+R1,192.168.126.140,cisco,ciscossh,ios,cisco,group1,ukdc1
+R2,192.168.126.138,root,Red8856662,ssh,linux,f5,group1,udkc2
 
