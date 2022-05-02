@@ -22,5 +22,7 @@ pprint.pprint(output)
                            'device_name': 'nx-osv-1',
                            'model': 'NX-OSv',
                            'processor_board_id': 'TM00010000B',
-                           'slots': 'None'},
-...
+                           'slots': 'None'
+                           },
+            }
+}

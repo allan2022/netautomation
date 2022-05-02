@@ -1,0 +1,18 @@
+testbed:
+    name: 'testing'
+
+devices:
+     R1:
+        type: "CSR1000V"
+        os: "iosxe"
+        credentials:
+            default:
+                username: cisco
+                password: cisco
+        connections:
+            vty:
+                protocol: ssh
+                ip: sandbox-iosxr-1.cisco.com
+        custom:
+            abstraction:
+                order: [os, type]
