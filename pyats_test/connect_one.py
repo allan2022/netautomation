@@ -50,5 +50,7 @@ n7k5.execute('show clock')
 # creating a new connection to the alt (mgmt) connection definition
 # and calling it 'mgmt'. After connecting, you can make calls to it.
 # n7k5.connect(alias = 'mgmt', via = 'alt')
-n7k5.mgmt.execute('show version')
+# n7k5.mgmt.execute('show version')
 # ... etc
+
+n7k5.disconnect()
