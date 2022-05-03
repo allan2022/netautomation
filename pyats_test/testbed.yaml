@@ -10,20 +10,21 @@ devices:
         username: cisco
       enable:
         password: cisco
-    os: ios
-    platform: cisco
+    os: iosxe
+    platform: csr1000v
     type: ios
   R2:
     connections:
       cli:
-        ip: 192.168.126.138
-        protocol: ssh
+        ip: 192.168.126.134
+        protocol: telnet
+        port: 2000
     credentials:
       default:
-        password: Red8856662
-        username: root
+        password: 4848
+        username: admin
       enable:
-        password: Red8856662
-    os: linux
-    platform: f5
-    type: linux
+        password: 4848
+    os: nxos
+    platform: n9k
+    type: ios
