@@ -3,7 +3,9 @@
 #
 # connecting to devices in parallel
 
+
 # using the sample topology file from
+import os
 from pyats import topology
 
 testbedfile = os.path.join('testbed.yaml')
