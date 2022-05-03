@@ -4,7 +4,7 @@ devices:
       cli:
         ip: 192.168.126.140
         protocol: telnet
-        port: 2000
+        port: 23
     credentials:
       default:
         password: cisco
