@@ -3,7 +3,8 @@ devices:
     connections:
       cli:
         ip: 192.168.126.140
-        protocol: ssh
+        protocol: telnet
+        port: 22
     credentials:
       default:
         password: cisco
