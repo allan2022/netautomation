@@ -27,4 +27,4 @@ devices:
         password: 4848
     os: nxos
     platform: n9k
-    type: ios
+    type: nxos
