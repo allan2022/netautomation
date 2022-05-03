@@ -7,8 +7,7 @@
 import os
 from pyats import topology
 
-testbedfile = os.path.join(os.path.dirname(topology.__file__),
-                           'testbed.yaml')
+testbedfile = os.path.join('testbed.yaml')
 testbed = topology.loader.load(testbedfile)
 
 # pick a device
