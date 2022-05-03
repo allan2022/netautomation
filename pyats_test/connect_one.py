@@ -8,11 +8,11 @@ import os
 from pyats import topology
 
 testbedfile = os.path.join(os.path.dirname(topology.__file__),
-                           'sampleTestbed.yaml')
+                           'testbed.yaml')
 testbed = topology.loader.load(testbedfile)
 
 # pick a device
-n7k5 = testbed.devices['ott-tb1-n7k5']
+n7k5 = testbed.devices['R1']
 
 # connect to it by calling connect()
 #   this is actually a ConnectionManager method. the compound object

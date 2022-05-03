@@ -1,18 +1,33 @@
-testbed:
-    name: 'testing'
-
 devices:
-     R1:
-        type: "CSR1000V"
-        os: "iosxe"
-        credentials:
-            default:
-                username: cisco
-                password: cisco
-        connections:
-            vty:
-                protocol: ssh
-                ip: sandbox-iosxr-1.cisco.com
-        custom:
-            abstraction:
-                order: [os, type]
+  R1:
+    connections:
+      cli:
+        ip: 192.168.126.140
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    dc: ukdc1
+    group: group1
+    os: ios
+    platform: cisco
+    type: ios
+  R2:
+    connections:
+      cli:
+        ip: 192.168.126.138
+        protocol: ssh
+    credentials:
+      default:
+        password: Red8856662
+        username: root
+      enable:
+        password: Red8856662
+    dc: udkc2
+    group: group1
+    os: linux
+    platform: f5
+    type: linux
