@@ -10,7 +10,6 @@ devices:
         username: cisco
       enable:
         password: cisco
-    dc: ukdc1
     os: ios
     platform: cisco
     type: ios
@@ -25,7 +24,6 @@ devices:
         username: root
       enable:
         password: Red8856662
-    dc: udkc2
     os: linux
     platform: f5
     type: linux
