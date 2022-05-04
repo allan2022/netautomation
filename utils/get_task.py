@@ -1,4 +1,4 @@
-from netautomation.utils.load_file import full_load_yaml
+from utils.load_file import full_load_yaml
 import yaml
 
 def get_task(yaml_filename, task=None):
