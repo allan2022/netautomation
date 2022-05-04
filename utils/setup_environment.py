@@ -13,10 +13,9 @@ class SetupEnvironment:
 
 
     def setup_netmiko(self):
-
-
-
-
+        self.device_list = "device_inventory.csv"
+        self.command_lsit = "command_inventory.csv"
+        self.change_number = input("Specify change numebr: ")
 
 
         # ans = True

@@ -1,10 +1,10 @@
-from os import getcwd()
+from os import getcwd
 from utils.setup_environment import TestEnv
 
 from utils.get_task import get_task
 
-from pyatstools.pyatslearn import PyatsLearn
-from pyatstools.pyatsdiff import PyatsDiff
+# from pyatstools.pyatslearn import PyatsLearn
+# from pyatstools.pyatsdiff import PyatsDiff
 
 
 
