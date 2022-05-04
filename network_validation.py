@@ -16,7 +16,7 @@ from utils.get_task import get_task
 
 NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
-task_list, task_select = get_task(NETWORK_VALIDATION)
+task_list, task_select = get_task(NETWORK_VALIDATION, 'tasks')
 
 # def main():
 #     match task_select:
