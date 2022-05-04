@@ -2,6 +2,8 @@ import yaml
 import csv
 from os.path import exists
 
+csvfilename = "../src/device_inventory.csv"
+
 def full_load_yaml(yaml_filename = None):
     output = None
     if yaml_filename == None:
@@ -13,7 +15,7 @@ def full_load_yaml(yaml_filename = None):
             output = yaml.load(f, Loader=yaml.FullLoader)
     return output
 
-def full_load_csv(csv_filename = None):
+def full_load_csv(csv_filename = csvfilename):
     output = None
     if csv_filename == None:
         print(f'{csv_filename} not found!')
@@ -24,5 +26,10 @@ def full_load_csv(csv_filename = None):
             reader = csv.DictReader(f, delimiter = ",")
             for row in reader:
                 output.append(row)
-
+    
+    print(output)    
     return output
+
+
+if __name__ == "__main__":
+    full_load_csv(csvfilename)    

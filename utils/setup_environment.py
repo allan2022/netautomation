@@ -10,14 +10,14 @@ class SetupEnvironment:
 
 
     def setup_pyats(self, device_filename, config_filename):
-        self.device_list = full_load_yaml(config_filename)
-        self.command_list = full_load_csv(device_filename)
+        self.device_list = full_load_csv(device_filename)
+        self.command_list = full_load_yaml(config_filename)
         self.change_number = input("Specify change numebr: ")
 
 
-    def setup_netmiko(self, device_filename, command_filename):
+    def setup_netmiko(self, device_filename, config_filename):
         self.device_list = full_load_csv(device_filename)
-        self.command_list = full_load_csv(command_filename)
+        self.command_list = full_load_yaml(config_filename)
         self.change_number = input("Specify change numebr: ")
 
 
