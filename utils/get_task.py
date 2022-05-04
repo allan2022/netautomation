@@ -1,25 +1,21 @@
-from os.path import exists
+from load_yaml import full_load
 import yaml
 
-def get_task(yaml_filename = None):
+def get_task(yaml_filename, task=None):
     task_list = None
     task_select = None
-    if yaml_filename == None:
-        print(f'{yaml_filename} not found!')
-    elif not exists(yaml_filename):
-        print(f'{yaml_filename} not found!')
-    else:
-        with open(yaml_filename) as f:
-            output = yaml.load(f, Loader=yaml.FullLoader)
-            task_list = output['tasks'].split()
+    output = full_load(yaml_filename)
 
-        if task_list != None:
-            for item in task_list:
-                print(f'{task_list.index(item) + 1}. {item}')        
-            ans = input("Select a task: ")
-            try:
-                task_select = task_list[int(ans)-1]
-            except (IndexError, ValueError):
-                task_select = None
+    if output != None and task != None:
+        task_list = output[task].split()
+
+    if task_list != None:
+        for item in task_list:
+            print(f'{task_list.index(item) + 1}. {item}')        
+        ans = input("Select a task: ")
+        try:
+            task_select = task_list[int(ans)-1]
+        except (IndexError, ValueError):
+            task_select = None
 
     return task_list, task_select
