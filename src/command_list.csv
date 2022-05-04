@@ -1,2 +1,0 @@
-hostname,ip,username,password,protocol,os,platform
-R1,192.168.126.140,cisco,cisco,ssh,ios,cisco
