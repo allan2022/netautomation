@@ -15,7 +15,7 @@ def get_task(yaml_filename, task=None):
         ans = input("Select a task: ")
         try:
             task_select = task_list[int(ans)-1]
-        except (IndexError, ValueError):
+        except (IndexError, ValueError, KeyboardInterrupt):
             task_select = None
 
     return task_list, task_select
