@@ -1,4 +1,4 @@
-from load_yaml import full_load
+from utils.load_yaml import full_load
 import yaml
 
 def get_task(yaml_filename, task=None):
