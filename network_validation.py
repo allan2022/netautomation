@@ -19,7 +19,7 @@ NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 try:    
     task_list, task_select = get_task(NETWORK_VALIDATION, 'tasks')
 except KeyboardInterrupt:
-    print("\ntask aborted")       
+    pass
 
 # def main():
 #     match task_select:
