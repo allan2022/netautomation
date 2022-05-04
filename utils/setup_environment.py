@@ -1,10 +1,10 @@
-from utils.load_yaml import full_load
+from utils.load_file import full_load_yaml, full_load_csv
 
 class SetupEnvironment:
 
     def __init__(self, device_filename, command_filename):
-        self.device_list = full_load(device_filename)
-        self.command_list = full_load(command_filename)
+        self.device_list = full_load_yaml(device_filename)
+        self.command_list = full_load_csv(command_filename)
         self.change_number = ""
         self.test_type = ""
 

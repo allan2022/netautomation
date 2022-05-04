@@ -11,7 +11,6 @@ def full_load_yaml(yaml_filename = None):
     else:
         with open(yaml_filename, 'r') as f:
             output = yaml.load(f, Loader=yaml.FullLoader)
-            # task_list = output['tasks'].split()
     return output
 
 def full_load_csv(csv_filename = None):
