@@ -1,10 +1,10 @@
-from utils.load_yaml import full_load
+from netautomation.utils.load_file import full_load_yaml
 import yaml
 
 def get_task(yaml_filename, task=None):
     task_list = None
     task_select = None
-    output = full_load(yaml_filename)
+    output = full_load_yaml(yaml_filename)
 
     if output != None and task != None:
         task_list = output[task].split()
