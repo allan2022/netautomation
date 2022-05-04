@@ -13,6 +13,7 @@ def load(yaml_filename = file):
     else:
         with open(yaml_filename) as f:
             output = yaml.load(f, Loader=yaml.FullLoader)
+            print(output['core_networks']['prod1']['username'])
             print(output['core_networks']['lab1']['username'])
             task_list = output['tasks'].split()
     return task_list
