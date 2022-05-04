@@ -1,7 +1,10 @@
+from utils.load_yaml import full_load
+
 class SetupEnvironment:
-    def __init__(self):
-        self.device_list = ""
-        self.command_list = ""
+
+    def __init__(self, device_filename, command_filename):
+        self.device_list = full_load(device_filename)
+        self.command_list = full_load(command_filename)
         self.change_number = ""
         self.test_type = ""
 
@@ -18,25 +21,5 @@ class SetupEnvironment:
         self.change_number = input("Specify change numebr: ")
 
 
-        # ans = True
-        # while ans:
-        #     print('''
-        #     1. Pre-change test
-        #     2. Post-change test and validation
-        #     3. Exit 
-        #     ''')
-        #     ans = input("Select test type: ")
-        #     if ans == "1":
-        #         self.test_type = "before"
-        #         ans = False
-        #     elif ans == "2":
-        #         self.test_type = "after"
-        #         ans = False
-        #     elif ans == "3":
-        #         ans = False
-        #     elif ans == "":
-        #         ans = True
-        #         print("\n Not a Valid Choice Try again")                
-        #     else:    
-        #         print("\n Not a Valid Choice Try again")
+
 

@@ -1,7 +1,5 @@
 from os import getcwd
-from utils.setup_environment import TestEnv
-
-from utils.get_task import get_task
+import utils.setup_environment
 
 # from pyatstools.pyatslearn import PyatsLearn
 # from pyatstools.pyatsdiff import PyatsDiff
