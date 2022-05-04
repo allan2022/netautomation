@@ -16,7 +16,7 @@ def full_load_yaml(yaml_filename = None):
     return output
 
 def full_load_csv(csv_filename = csvfilename):
-    output = {}
+    output = []
     if csv_filename == None:
         print(f'{csv_filename} not found!')
     elif not exists(csv_filename):
