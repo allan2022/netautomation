@@ -16,7 +16,10 @@ from utils.get_task import get_task
 
 NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
-task_list, task_select = get_task(NETWORK_VALIDATION, 'tasks')
+try:    
+    task_list, task_select = get_task(NETWORK_VALIDATION, 'tasks')
+except KeyboardInterrupt:
+    print("\ntask aborted")       
 
 # def main():
 #     match task_select:
