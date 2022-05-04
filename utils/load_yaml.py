@@ -17,5 +17,5 @@ def load(yaml_filename = file):
             task_list = output['tasks'].split()
     return task_list
 
-if __name__ == "__main__":
-    load()
+# if __name__ == "__main__":
+#     load()
