@@ -9,18 +9,23 @@ class SetupEnvironment:
         self.device_list = ""
         self.command_list = ""
         self.change_number = ""
+        self.output_folder = ""
+        self.testbed_file = ""
         self.test_type = ""
+
         try:
             self.change_number = input("Specify change numebr: ")
         except KeyboardInterrupt:
             print("\ntask aborted")
 
+        create_folder("output")
+        if self.change_number != "":
+            self.output_folder = create_folder(f'output/{self.change_number}')
 
 
     def setup_pyats(self, dev_filename, env_filename):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
-        self.testbed_file = ""
 
         create_folder("testbed")
 

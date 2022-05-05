@@ -15,6 +15,7 @@ class CoreValidation:
         self.devices = ""
         self.commands = ""
         self.testbed = ""
+        self.output_folder = ""
         self.type = ""
     
     def core_validation_pyats(self):
@@ -25,11 +26,9 @@ class CoreValidation:
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
             self.testbed = core_validation.testbed_file
+            self.output_folder = core_validation.output_folder
 
-            a = create_folder("output")
-            output_folder = create_folder(f'output/{core_validation.change_number}')
-
-            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {output_folder}')
+            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.output_folder}')
 
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
@@ -39,9 +38,7 @@ class CoreValidation:
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
             self.type = 'prechange'
-
-            a = create_folder("output")
-            output_folder = create_folder(f'output/{core_validation.change_number}')
+            self.output_folder = core_validation.output_folder
 
             print(self.devices)
             print("######################################################################")

@@ -46,7 +46,7 @@ class NetmikoCommand:
     # log configuration for all devices by calling run_command
     def connect_execute_output(self, all_devices, all_commands, changenumber, testtype):    
         current_dir = os.getcwd()
-        output_folder = "Output"
+        output_folder = "output"
 
         # create ouput folder for all validations
         if(not os.path.isdir(output_folder)):
