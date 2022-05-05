@@ -12,3 +12,4 @@ core_validation.setup_pyats(DEVICE_LIST_FILENAME, CORE_CONFIG_FILENAME)
 
 print(core_validation.device_list)
 print(core_validation.command_list)
+print(core_validation.testbed_file)
