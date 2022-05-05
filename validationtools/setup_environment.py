@@ -34,10 +34,10 @@ class SetupEnvironment:
 
     def setup_netmiko(self, dev_filename, env_filename):
         self.device_filename = dev_filename
-        self.device_list = full_load_csv(dev_filename)
-        self.command_list = []
+        self.device_list = self.command_list = full_load_csv(dev_filename)
         
-        for dev in self.device_list:
+        for dev, com in zip(self.device_list, self.command_list):
+            
             dev['host'] = dev['hostname']
             dev.pop('hostname')
             dev.pop('protocol')
@@ -56,7 +56,7 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
             self.command_list.append(command_list)
-            dev["commands"] = command_list
+            com["commands"] = command_list
         
         return self
 
