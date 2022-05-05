@@ -10,6 +10,7 @@ CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
 core_validation = SetupEnvironment()
 core_validation.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT)
+
 commands = core_validation.command_list
 testbed = core_validation.testbed_file
 
