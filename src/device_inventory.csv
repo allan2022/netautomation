@@ -1,3 +1,2 @@
 hostname,ip,username,password,protocol,os,platform
-R1,192.168.126.140,cisco,cisco,ssh,ios,cisco
-R2,192.168.126.173,cisco,cisco,ssh,ios,cisco
+LEAF1,131.226.217.151,admin,Admin_1234!,ssh,nxos,cisco

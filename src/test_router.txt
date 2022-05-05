@@ -1,0 +1,7 @@
+
+
+IOSXR 131.226.217.149 22  developer/C1sco12345
+NXOS 131.226.217.151 22 admin/Admin_1234!
+
+R1,192.168.126.140,cisco,cisco,ssh,iosxe,cisco
+R2,192.168.126.173,cisco,cisco,ssh,iosxe,cisco
