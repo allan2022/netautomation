@@ -36,6 +36,8 @@ class SetupEnvironment:
         self.device_filename = dev_filename
         self.device_list = self.command_list = full_load_csv(dev_filename)
         
+        print(self.device_list)
+
         for dev in self.device_list:    
             print(dev)
             print("#################################")
