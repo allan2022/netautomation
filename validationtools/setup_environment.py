@@ -35,7 +35,7 @@ class SetupEnvironment:
     def setup_netmiko(self, dev_filename, env_filename):
         self.device_filename = dev_filename
         self.device_list = self.command_list = full_load_csv(dev_filename)
-        self.command_list = []        
+        self.command_list = {}        
 
         for dev in self.device_list:               
             dev['host'] = dev.pop('hostname')           
@@ -47,14 +47,15 @@ class SetupEnvironment:
                 command_list = full_load_yaml(env_filename)['nxos_learn_commands']
                 dev['device_type'] = "cisco_nxos"
                 dev.pop('os')
+                self.command_list['nxos'] = command_list
             elif dev_type == 'iosxr':
                 command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
                 dev['device_type'] = "cisco_xr"
                 dev.pop('os')
+                self.command_list['nxos'] = command_list
             else:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
-            self.command_list.append(command_list)
 
         return self
 
