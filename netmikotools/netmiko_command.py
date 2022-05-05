@@ -25,7 +25,7 @@ class NetmikoCommand:
             print(a_command)
             # connect to device
             output = netconnect.send_command(a_command)
-            command_to_run = a_command["command"].replace(" ", "_")
+            command_to_run = a_command.replace(" ", "_")
 
             console_file = compare_folder + "/" + changenumber + "_" + a_device["host"] + "_" + command_to_run + "_" + "console.txt"
             with open(console_file, "w") as file:
