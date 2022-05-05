@@ -47,8 +47,6 @@ class NetmikoCommand:
     def connect_execute_output(self, all_devices, all_commands, changenumber, testtype):    
         current_dir = os.getcwd()
         output_folder = "output"
-        print(all_commands)
-
 
         # create ouput folder for all validations
         if(not os.path.isdir(output_folder)):
