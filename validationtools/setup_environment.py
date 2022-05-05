@@ -40,6 +40,7 @@ class SetupEnvironment:
         for dev in self.device_list:
             dev['host'] = dev['hostname']
             dev.pop('hostname')
+            dev.pop('platform')
 
             dev_type = dev['os']
             if dev_type == 'nxos':
