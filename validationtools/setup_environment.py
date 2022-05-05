@@ -21,7 +21,8 @@ class SetupEnvironment:
 
         create_folder("output")
         if self.change_number != "":
-            self.change_folder = create_folder(f'output/{self.change_number}')
+            self.change_folder = os.path.join(os.getcwd(), self.change_number)
+            self.change_folder = create_folder(self.change_folder)
 
 
     def setup_pyats(self, dev_filename, env_filename, test_type):
