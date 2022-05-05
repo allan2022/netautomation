@@ -17,10 +17,6 @@ class SetupEnvironment:
         self.testbed_file = ""
 
         create_folder("testbed")
-        # path = "testbed"
-        # if not os.path.exists(path):
-        #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
-        #     os.makedirs(path)
 
         self.testbed_file = f'testbed/testbed_{self.change_number}.yaml'
         if not os.path.exists(self.testbed_file):

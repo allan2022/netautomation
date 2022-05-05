@@ -2,8 +2,6 @@ import yaml
 import csv
 from os.path import exists
 
-# csvfilename = "../src/device_inventory.csv"
-
 def full_load_yaml(yaml_filename = None):
     output = []
     if yaml_filename == None:
@@ -27,7 +25,3 @@ def full_load_csv(csv_filename = None):
             for row in reader:
                 output.append(row)
     return output
-
-
-# if __name__ == "__main__":
-#     full_load_csv(csvfilename)    
