@@ -39,6 +39,8 @@ class SetupEnvironment:
         print(self.device_list)
 
         for dev in self.device_list:    
+            i += 1
+            print(i)
             print(dev)
             print("#################################")
             
