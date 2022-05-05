@@ -36,18 +36,18 @@ class SetupEnvironment:
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
         if test_type.startswith('prechange_snapshot'):
-            self.snapshot_folder = os.path.join(self.change_folder, 'prechange_snapshot_', str(0))
+            self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(0)))
             if os.path.exists(self.snapshot_folder):
                 n = self.snapshot_folder.resplit('_', 1)[-1]
                 i = int(n) + 1
-                self.snapshot_folder = os.path.join(self.change_folder, 'prechange_snapshot_', str(i))
+                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
             create_folder(self.snapshot_folder)
         elif test_type.startswith('postchange_snapshot'):
-            self.snapshot_folder = os.path.join(self.change_folder, 'postchange_snapshot_', str(0))
+            self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(0)))
             if os.path.exists(self.snapshot_folder):
                 n = self.snapshot_folder.resplit('_', 1)[-1]
                 i = int(n) + 1
-                self.snapshot_folder = os.path.join(self.change_folder, 'postchange_snapshot_', str(i))
+                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
             create_folder(self.snapshot_folder)
         else:
             print("test type not supported")
