@@ -12,14 +12,16 @@ class SetupEnvironment:
 
     def setup_pyats(self, device_filename, config_filename):
         self.device_list = full_load_csv(device_filename)
+        self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
         path = "../testbed"
-        if not os.path.exists(path)
+        if not os.path.exists(path):
+            print("#"*5 + f' create new direcotry {path} ' + "#"*5)
             os.makedir(path)
-            print(f'created new direcotry {path}')
-        output_file = "../testbed/testbed.yaml"
+        testbed_file = "../testbed/testbed.yaml"
         # self.command_list = full_load_yaml(config_filename)
         # self.change_number = input("Specify change numebr: ")
-        os.system(f'pyats create testbed file --path {self.device_list} --ouput {output_file}')
+        print("#"*5 +  " create testbed.yaml " + "#"*5)
+        os.system(f'pyats create testbed file --path {device_filename} --ouput {testbed_file}')
         
         return self
 
@@ -28,8 +30,9 @@ class SetupEnvironment:
         self.device_list = full_load_csv(device_filename)
         self.command_list = full_load_yaml(config_filename)
         self.change_number = input("Specify change numebr: ")
-
+        # task_list = output[task].split()
+        
         return self
 
 
-        task_list = output[task].split()
+        
