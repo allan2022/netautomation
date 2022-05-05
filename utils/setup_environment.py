@@ -26,7 +26,7 @@ class SetupEnvironment:
         self.testbed_file = f'testbed/testbed_{self.change_number}.yaml'
         if not os.path.exists(self.testbed_file):
             print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
-            os.system(f'pyats create testbed file --path {device_filename} --output {self.testbed_file}')
+            os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
         return self
 
@@ -34,7 +34,9 @@ class SetupEnvironment:
     def setup_netmiko(self, dev_filename, env_filename):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = []
-        print(self.device_list)
+        # print(self.device_list)
+
+        
         for dev in self.device_list:
             dev_type = dev['os']
             if dev_type == 'nxos':
@@ -45,9 +47,8 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
             self.command_list.append(command_list)
-        print(self.command_list)
-        
-        # task_list = output[task].split()
+        # print(self.command_list)       
+        # command = command_list.split()
         
         return self
 

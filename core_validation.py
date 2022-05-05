@@ -37,6 +37,7 @@ class CoreValidation:
             a = create_folder("output")
             output_folder = create_folder(f'output/{core_validation.change_number}')
 
+            print(self.commands)
             print("run netmiko commands")
 
 def main():
