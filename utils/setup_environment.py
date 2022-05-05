@@ -7,7 +7,10 @@ class SetupEnvironment:
     def __init__(self):
         self.device_list = ""
         self.command_list = ""
-        self.change_number = input("Specify change numebr: ")
+        try:
+            self.change_number = input("Specify change numebr: ")
+        except KeyboardInterrupt:
+            print("\ntask aborted")
         self.test_type = ""
 
 
