@@ -43,7 +43,9 @@ class SetupEnvironment:
             print(type(com))
             print(com)
 
-            dev["host"] = dev.pop('hostname')
+            a = dev['hostname']
+            print(a)
+            dev['host'] = a
             dev.pop('protocol')
             dev.pop('platform')
 
