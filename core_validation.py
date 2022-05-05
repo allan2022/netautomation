@@ -33,12 +33,11 @@ class CoreValidation:
             core_validation.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT)
 
             self.commands = core_validation.command_list
-            self.testbed = core_validation.testbed_file
 
             a = create_folder("output")
             output_folder = create_folder(f'output/{core_validation.change_number}')
 
-            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {output_folder}')
+            print("run netmiko commands")
 
 def main():
     cv = CoreValidation()

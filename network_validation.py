@@ -44,7 +44,8 @@ def main():
         task = CoreValidation()
         task.core_validation_pyats()
     elif task_select == "core_validation_netmiko":
-        print("core_validation_netmiko")
+        task = CoreValidation()
+        task.core_validation_netmiko()
     elif task_select == "aci_validation":
         print("aci_validation")
     elif task_select == "juniper_validation":
