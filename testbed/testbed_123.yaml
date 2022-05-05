@@ -1,0 +1,29 @@
+devices:
+  R1:
+    connections:
+      cli:
+        ip: 192.168.126.140
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: ios
+    platform: cisco
+    type: ios
+  R2:
+    connections:
+      cli:
+        ip: 192.168.126.173
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: ios
+    platform: cisco
+    type: ios
