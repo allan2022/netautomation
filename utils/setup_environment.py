@@ -18,7 +18,7 @@ class SetupEnvironment:
         if not os.path.exists(path):
             print("#"*5 + f' create new direcotry {path} ' + "#"*5)
             os.makedirs(path)
-        testbed_file = "../testbed/testbed.yaml"
+        testbed_file = "testbed/testbed.yaml"
         # self.command_list = full_load_yaml(config_filename)
         # self.change_number = input("Specify change numebr: ")
         print("#"*5 +  " create testbed.yaml " + "#"*5)
