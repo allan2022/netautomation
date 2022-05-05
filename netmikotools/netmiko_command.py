@@ -72,7 +72,7 @@ class NetmikoCommand:
             commands = all_commands[a_device['device_type']]
             
             print("################# commands for each device ###################")
-            print(commands)
+            print(all_commands.key() + " : " + commands)
             t1 = threading.Thread(target=self.run_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
             t1.start()
             t1.join()
