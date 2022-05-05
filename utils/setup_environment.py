@@ -1,5 +1,6 @@
 import os
 from utils.load_file import full_load_yaml, full_load_csv
+from utils.new_folder import create_folder
 
 class SetupEnvironment:
 
@@ -15,10 +16,11 @@ class SetupEnvironment:
         self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
         self.testbed_file = ""
 
-        path = "testbed"
-        if not os.path.exists(path):
-            print("#"*5 + f' create new direcotry {path} ' + "#"*5)
-            os.makedirs(path)
+        create_folder("testbed")
+        # path = "testbed"
+        # if not os.path.exists(path):
+        #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
+        #     os.makedirs(path)
 
         self.testbed_file = f'testbed/testbed_{self.change_number}.yaml'
         if not os.path.exists(self.testbed_file):
