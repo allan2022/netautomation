@@ -11,6 +11,7 @@ CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
 class CoreValidation:
     def __init__(self):
+        self.devices = ""
         self.commands = ""
         self.testbed = ""
     
@@ -19,6 +20,7 @@ class CoreValidation:
         if core_validation.change_number != "":
             core_validation.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT)
 
+            self.devices = core_validation.device_list
             self.commands = core_validation.command_list
             self.testbed = core_validation.testbed_file
 
@@ -31,7 +33,8 @@ class CoreValidation:
         core_validation = SetupEnvironment()
         if core_validation.change_number != "":
             core_validation.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT)
-
+            
+            self.devices = core_validation.device_list
             self.commands = core_validation.command_list
 
             a = create_folder("output")
