@@ -16,9 +16,9 @@ class SetupEnvironment:
 
 
 
-    def setup_pyats(self, device_filename, config_filename):
-        self.device_list = full_load_csv(device_filename)
-        self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
+    def setup_pyats(self, dev_filename, env_filename):
+        self.device_list = full_load_csv(dev_filename)
+        self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
         self.testbed_file = ""
 
         create_folder("testbed")
@@ -31,9 +31,18 @@ class SetupEnvironment:
         return self
 
 
-    def setup_netmiko(self, device_filename, config_filename):
-        self.device_list = full_load_csv(device_filename)
-        self.command_list = full_load_yaml(config_filename)['iosxe_self_learn_commands']
+    def setup_netmiko(self, dev_filename, env_filename):
+        self.device_list = full_load_csv(dev_filename)
+        self.command_list = []
+        for dev in self.device_list:
+            if dev.os == 'nxos':
+                self.command_list = full_load_yaml(env_filename)['nxos_learn_commands']
+            elif dev.os == 'iosxr':
+                self.command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
+            else:
+                print("\n device type not supported. ")
+        print(self.command_list)
+        
         # task_list = output[task].split()
         
         return self

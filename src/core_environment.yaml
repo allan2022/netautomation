@@ -36,10 +36,10 @@ threads_number:
 pyats_learn_features:
   interface ospf
 
-nxos_self_learn_commands:
+nxos_learn_commands:
   - show ip route vrf all
   - show interface brief
 
-iosxe_self_learn_commands:
+iosxe_learn_commands:
   - show ip interface brief
   - show ip route 

@@ -15,10 +15,10 @@ from os import getcwd
 from utils.get_task import get_task
 from core_validation import CoreValidation
 
-NETWORK_VALIDATION = getcwd() + "/src/core_environment.yaml"
+CORE_ENVIRONMENT = getcwd() + "/src/core_environment.yaml"
 
 try:    
-    task_list, task_select = get_task(NETWORK_VALIDATION, 'main_tasks')
+    task_list, task_select = get_task(CORE_ENVIRONMENT, 'main_tasks')
 except KeyboardInterrupt:
     pass
 
@@ -42,7 +42,7 @@ except KeyboardInterrupt:
 def main():
     if task_select == "core_validation_pyats":
         task = CoreValidation()
-        task.core_validation()
+        task.core_validation_pyats()
     elif task_select == "core_validation_netmiko":
         print("core_validation_netmiko")
     elif task_select == "aci_validation":
