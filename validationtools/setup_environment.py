@@ -5,6 +5,7 @@ from utils.new_folder import create_folder
 class SetupEnvironment:
 
     def __init__(self):
+        self.device_filename = ""
         self.device_list = ""
         self.command_list = ""
         self.change_number = ""
@@ -32,6 +33,7 @@ class SetupEnvironment:
 
 
     def setup_netmiko(self, dev_filename, env_filename):
+        self.device_filename = dev_filename
         self.device_list = full_load_csv(dev_filename)
         self.command_list = []
         # print(self.device_list)

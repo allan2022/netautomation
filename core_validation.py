@@ -36,7 +36,7 @@ class CoreValidation:
         if core_validation.change_number != "":
             core_validation.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT)
             
-            self.devices = core_validation.device_list
+            self.devices = core_validation.device_filename
             self.commands = core_validation.command_list
             self.type = 'prechange'
 
