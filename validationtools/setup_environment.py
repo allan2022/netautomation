@@ -47,12 +47,12 @@ class SetupEnvironment:
                 command_list = full_load_yaml(env_filename)['nxos_learn_commands']
                 dev['device_type'] = "cisco_nxos"
                 dev.pop('os')
-                self.command_list['nxos'] = command_list
+                self.command_list['cisco_nxos'] = command_list
             elif dev_type == 'iosxr':
                 command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
                 dev['device_type'] = "cisco_xr"
                 dev.pop('os')
-                self.command_list['iosxr'] = command_list
+                self.command_list['cisco_xr'] = command_list
             else:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')

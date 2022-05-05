@@ -18,6 +18,8 @@ class NetmikoCommand:
     # log configuration for one device
     def run_command(self, a_device, all_commands, changenumber, compare_folder, parse_folder):
         netconnect = netmiko.ConnectHandler(**a_device)        
+        
+        
         for a_command in all_commands:
 
             # connect to device
@@ -66,6 +68,7 @@ class NetmikoCommand:
 
         # multi threads - one thread per device    
         for a_device in all_devices:
-            t1 = threading.Thread(target=self.run_command, args=(a_device,all_commands, changenumber, self.compare_folder, self.parse_folder)) 
+            commands = all_commands[a_device['device_type']]
+            t1 = threading.Thread(target=self.run_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
             t1.start()
             t1.join()
