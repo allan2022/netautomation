@@ -39,9 +39,9 @@ class CoreValidation:
             self.type = 'prechange'
             self.output_folder = core_validation.output_folder
 
-            print("######################################################################")
+            print("################## all devices #######################################")
             print(self.devices)
-            print("######################################################################")
+            print("################## all device with all commands ######################")
             print(self.commands)
             print("###################### run netmiko commands ##########################")
 
