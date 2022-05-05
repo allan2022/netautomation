@@ -37,8 +37,13 @@ class SetupEnvironment:
         self.device_list = self.command_list = full_load_csv(dev_filename)
         
         for dev in self.device_list:    
+            print(dev)
+            print("#################################")
+            
             # dev['host'] = dev.pop('hostname')    
-            dev.pop('protocol')
+            
+            
+            dev.pop("protocol")
             dev.pop('platform')
 
             dev_type = dev['os']
