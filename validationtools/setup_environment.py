@@ -37,23 +37,25 @@ class SetupEnvironment:
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
         if test_type.startswith('prechange_snapshot'):
-            self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(0)))
-            if os.path.exists(self.snapshot_folder):
-                n = self.snapshot_folder.rsplit('_', 1)[-1]
-                i = int(n) + 1
+            for i in range(20):
                 self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-            create_folder(self.snapshot_folder)
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
         elif test_type.startswith('postchange_snapshot'):
-            self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(0)))
-            if os.path.exists(self.snapshot_folder):
-                n = self.snapshot_folder.rsplit('_', 1)[-1]
-                i = int(n) + 1
+            for i in range(20):
                 self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-            create_folder(self.snapshot_folder)
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
         else:
             print("test type not supported")
 
         return self
+
+
+        if(not os.path.isdir(change_folder)):
+            os.mkdir(change_folder)
 
 
     def setup_netmiko(self, dev_filename, env_filename, test_type):
