@@ -12,6 +12,7 @@ class SetupEnvironment:
 
     def setup_pyats(self, device_filename, config_filename):
         self.device_list = full_load_csv(device_filename)[0]['hostname']
+        self.device_list = full_load_csv(device_filename)[1]['hostname']
         self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
         # print(os.getcwd())
         path = "testbed"
