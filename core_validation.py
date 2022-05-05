@@ -38,7 +38,9 @@ class CoreValidation:
             os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.snapshot_folder}')
 
             if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
-                print("compare postchange with prechange")
+                print("#####################  compare postchange with prechange #########################")
+                before_folder = os.path.join(self.change_folder, 'prechange_snapshot_0')
+                os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
                 print("compare postchange with last poastchange")
 
