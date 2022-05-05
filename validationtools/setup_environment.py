@@ -39,7 +39,7 @@ class SetupEnvironment:
 
     def setup_netmiko(self, dev_filename, env_filename):
         self.device_filename = dev_filename
-        self.device_list = self.command_list = full_load_csv(dev_filename)
+        self.device_list = full_load_csv(dev_filename)
         self.command_list = {}        
 
         for dev in self.device_list:               
@@ -62,7 +62,6 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-        # print(self.command_list)
         return self
 
 
