@@ -1,29 +1,15 @@
 devices:
-  R1:
+  LEAF1:
     connections:
       cli:
-        ip: 192.168.126.140
+        ip: 131.226.217.151
         protocol: ssh
     credentials:
       default:
-        password: cisco
-        username: cisco
+        password: Admin_1234!
+        username: admin
       enable:
-        password: cisco
-    os: ios
+        password: Admin_1234!
+    os: nxos
     platform: cisco
-    type: ios
-  R2:
-    connections:
-      cli:
-        ip: 192.168.126.173
-        protocol: ssh
-    credentials:
-      default:
-        password: cisco
-        username: cisco
-      enable:
-        password: cisco
-    os: ios
-    platform: cisco
-    type: ios
+    type: nxos
