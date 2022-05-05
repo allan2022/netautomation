@@ -37,9 +37,9 @@ pyats_learn_features:
   interface ospf
 
 nxos_learn_commands:
-  - show ip route vrf all
+  - show interface status
   - show interface brief
 
 iosxe_learn_commands:
   - show ip interface brief
-  - show ip route 
+  - show inventory
