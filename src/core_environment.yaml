@@ -1,4 +1,12 @@
-tasks:
+main_tasks:
+  core_validation
+  aci_validation
+  juniper_validation
+  f5_validation
+  fortinet_validation
+  paloalto_validation
+
+sub_tasks:
   prechange_snapshot
   postchange_snapshot_and_diff_prechange_snapshot
   postchange_snapshot_and_diff_last_postchange_snapshot

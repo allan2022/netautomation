@@ -15,10 +15,10 @@ from os import getcwd
 from utils.get_task import get_task
 from core_validation import CoreValidation
 
-NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
+NETWORK_VALIDATION = getcwd() + "/src/core_environment.yaml"
 
 try:    
-    task_list, task_select = get_task(NETWORK_VALIDATION, 'tasks')
+    task_list, task_select = get_task(NETWORK_VALIDATION, 'main_tasks')
 except KeyboardInterrupt:
     pass
 
