@@ -1,0 +1,69 @@
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive' +++
+show ospf vrf all-inclusive
+Thu May  5 10:45:55.911 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show protocols afi-all all' +++
+show protocols afi-all all
+Thu May  5 10:45:56.260 UTC
+% No active protocols found on router
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf mpls traffic-eng link' +++
+show ospf mpls traffic-eng link
+Thu May  5 10:45:56.573 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive database router' +++
+show ospf vrf all-inclusive database router
+Thu May  5 10:45:56.948 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive database network' +++
+show ospf vrf all-inclusive database network
+Thu May  5 10:45:57.301 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive database external' +++
+show ospf vrf all-inclusive database external
+Thu May  5 10:45:57.643 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive database summary' +++
+show ospf vrf all-inclusive database summary
+Thu May  5 10:45:57.977 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive database opaque-area' +++
+show ospf vrf all-inclusive database opaque-area
+Thu May  5 10:45:58.311 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive virtual-links' +++
+show ospf vrf all-inclusive virtual-links
+Thu May  5 10:45:58.643 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive interface' +++
+show ospf vrf all-inclusive interface
+Thu May  5 10:45:58.993 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive neighbor detail' +++
+show ospf vrf all-inclusive neighbor detail
+Thu May  5 10:45:59.344 UTC
+RP/0/RP0/CPU0:iosxr1#
++++ iosxr1 with via 'cli': executing command 'show ospf vrf all-inclusive sham-links' +++
+show ospf vrf all-inclusive sham-links
+Thu May  5 10:45:59.691 UTC
+RP/0/RP0/CPU0:iosxr1#
+Could not learn <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveShamLinks'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Ospf'                                                                                                               |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusive'>, arguments: {'vrf':''}                                                  |
+|   cmd: <class 'genie.libs.parser.iosxr.show_protocol.ShowProtocolsAfiAllAll'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfMplsTrafficEngLink'>                                                                      |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveDatabaseRouter'>, arguments: {'vrf':''}                                    |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveDatabaseNetwork'>, arguments: {'vrf':''}                                   |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveDatabaseExternal'>, arguments: {'vrf':''}                                  |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveDatabaseSummary'>, arguments: {'vrf':''}                                   |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveDatabaseOpaqueArea'>, arguments: {'vrf':''}                                |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveVirtualLinks'>, arguments: {'vrf':''}                                      |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveInterface'>, arguments: {'interface':'','vrf':''}                          |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveNeighborDetail'>, arguments: {'interface':'','neighbor':'','vrf':''}       |
+|   cmd: <class 'genie.libs.parser.iosxr.show_ospf.ShowOspfVrfAllInclusiveShamLinks'>, arguments: {'vrf':''}                                         |
+|====================================================================================================================================================|

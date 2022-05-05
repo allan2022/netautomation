@@ -1,0 +1,4525 @@
++++ LEAF1 with via 'cli': executing command 'show vrf all interface' +++
+show vrf all interface
+Interface                 VRF-Name                        VRF-ID  Site-of-Origin
+Ethernet1/10              VRF1                               N/A  --
+Vlan1                     default                              1  --
+Vlan100                   default                              1  --
+Vlan101                   default                              1  --
+Vlan102                   default                              1  --
+Vlan103                   default                              1  --
+Vlan104                   default                              1  --
+Vlan105                   default                              1  --
+loopback1                 default                              1  --
+loopback30                default                              1  --
+loopback98                default                              1  --
+loopback99                default                              1  --
+Ethernet1/5               default                              1  --
+Ethernet1/62              default                              1  --
+Ethernet1/63              default                              1  --
+mgmt0                     management                           2  --
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show interface' +++
+show interface
+mgmt0 is up
+admin state is up,
+  Hardware: Ethernet, address: 0050.56bf.5f70 (bia 0050.56bf.5f70)
+  Description: DO NOT TOUCH CONFIG ON THIS INTERFACE
+  Internet Address is 10.10.20.95/24
+  MTU 1500 bytes, BW 1000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  full-duplex, 1000 Mb/s
+  Auto-Negotiation is turned on
+  Auto-mdix is turned off
+  EtherType is 0x0000 
+  1 minute input rate 232 bits/sec, 0 packets/sec
+  1 minute output rate 960 bits/sec, 0 packets/sec
+  Rx
+    34927 input packets 34910 unicast packets 17 multicast packets
+    0 broadcast packets 5003246 bytes
+  Tx
+    25415 output packets 24384 unicast packets 1027 multicast packets
+    4 broadcast packets 9124462 bytes
+
+Ethernet1/1 is up
+admin state is up, Dedicated Interface
+  Belongs to Po11
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0101 (bia 00bf.5f70.0101)
+  Description: Updated description
+  MTU 1500 bytes, BW 1000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 1000 Mb/s
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped 17:00:48
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/2 is up
+admin state is up, Dedicated Interface
+  Belongs to Po11
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0102 (bia 00bf.5f70.0102)
+  MTU 1500 bytes, BW 1000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 1000 Mb/s
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped 17:00:48
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/3 is up
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0103 (bia 00bf.5f70.0103)
+  MTU 1500 bytes, BW 1000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  full-duplex, 1000 Mb/s
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped 17:00:48
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/4 is up
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0104 (bia 00bf.5f70.0104)
+  MTU 1500 bytes, BW 1000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  full-duplex, 1000 Mb/s
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped 17:00:48
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/5 is down (Administratively down)
+admin state is down, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.1b08 (bia 00bf.5f70.0105)
+  Description: L3 Link
+  Internet Address is 192.0.1.1/30
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/6 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0106 (bia 00bf.5f70.0106)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/7 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0107 (bia 00bf.5f70.0107)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/8 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0108 (bia 00bf.5f70.0108)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/9 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0109 (bia 00bf.5f70.0109)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/10 is down (VRF Unusable)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bb.2cfc.1b08 (bia 00bf.5f70.010a)
+  Description: My Description
+  MTU 1500 bytes, BW 1000 Kbit , DLY 100 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/11 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.010b (bia 00bf.5f70.010b)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/12 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.010c (bia 00bf.5f70.010c)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/13 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.010d (bia 00bf.5f70.010d)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/14 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.010e (bia 00bf.5f70.010e)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/15 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.010f (bia 00bf.5f70.010f)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/16 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0110 (bia 00bf.5f70.0110)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/17 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0111 (bia 00bf.5f70.0111)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/18 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0112 (bia 00bf.5f70.0112)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/19 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0113 (bia 00bf.5f70.0113)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/20 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0114 (bia 00bf.5f70.0114)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/21 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0115 (bia 00bf.5f70.0115)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/22 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0116 (bia 00bf.5f70.0116)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/23 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0117 (bia 00bf.5f70.0117)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/24 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0118 (bia 00bf.5f70.0118)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/25 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0119 (bia 00bf.5f70.0119)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/26 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011a (bia 00bf.5f70.011a)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/27 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011b (bia 00bf.5f70.011b)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/28 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011c (bia 00bf.5f70.011c)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/29 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011d (bia 00bf.5f70.011d)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/30 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011e (bia 00bf.5f70.011e)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/31 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.011f (bia 00bf.5f70.011f)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/32 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0120 (bia 00bf.5f70.0120)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/33 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0121 (bia 00bf.5f70.0121)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/34 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0122 (bia 00bf.5f70.0122)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/35 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0123 (bia 00bf.5f70.0123)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/36 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0124 (bia 00bf.5f70.0124)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/37 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0125 (bia 00bf.5f70.0125)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/38 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0126 (bia 00bf.5f70.0126)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/39 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0127 (bia 00bf.5f70.0127)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/40 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0128 (bia 00bf.5f70.0128)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/41 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0129 (bia 00bf.5f70.0129)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/42 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012a (bia 00bf.5f70.012a)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/43 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012b (bia 00bf.5f70.012b)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/44 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012c (bia 00bf.5f70.012c)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/45 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012d (bia 00bf.5f70.012d)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/46 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012e (bia 00bf.5f70.012e)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/47 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.012f (bia 00bf.5f70.012f)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/48 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0130 (bia 00bf.5f70.0130)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/49 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0131 (bia 00bf.5f70.0131)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/50 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0132 (bia 00bf.5f70.0132)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/51 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0133 (bia 00bf.5f70.0133)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/52 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0134 (bia 00bf.5f70.0134)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/53 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0135 (bia 00bf.5f70.0135)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/54 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0136 (bia 00bf.5f70.0136)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/55 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0137 (bia 00bf.5f70.0137)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/56 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0138 (bia 00bf.5f70.0138)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/57 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0139 (bia 00bf.5f70.0139)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/58 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.013a (bia 00bf.5f70.013a)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/59 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.013b (bia 00bf.5f70.013b)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/60 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.013c (bia 00bf.5f70.013c)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/61 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.013d (bia 00bf.5f70.013d)
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/62 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bb.2cfc.1b08 (bia 00bf.5f70.013e)
+  Description: Test_pyATS_genie_62
+  Internet Address is 192.168.62.1/24
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/63 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bb.2cfc.1b08 (bia 00bf.5f70.013f)
+  Description: Test_pyATS_genie_6333
+  Internet Address is 192.168.10.3/24
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+Ethernet1/64 is down (Link not connected)
+admin state is up, Dedicated Interface
+  Hardware: 100/1000/10000 Ethernet, address: 00bf.5f70.0140 (bia 00bf.5f70.0140)
+  Description: Test_pyATS_genie
+  MTU 1500 bytes, BW 10000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is access
+  auto-duplex, auto-speed
+  Beacon is turned off
+  Auto-Negotiation is turned on  FEC mode is Auto
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  EEE (efficient-ethernet) : n/a
+    admin fec state is auto, oper fec state is off
+  Last link flapped never
+  Last clearing of "show interface" counters never
+  0 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+port-channel11 is up
+admin state is up,
+  Hardware: Port-Channel, address: 00bf.5f70.0101 (bia 00bf.5f70.0101)
+  MTU 1500 bytes, BW 2000000 Kbit , DLY 10 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, medium is broadcast
+  Port mode is trunk
+  full-duplex, 1000 Mb/s
+  Input flow-control is off, output flow-control is off
+  Auto-mdix is turned off
+  Switchport monitor is off 
+  EtherType is 0x8100 
+  Members in this channel: Eth1/1, Eth1/2
+  Last clearing of "show interface" counters never
+  1 interface resets
+  Load-Interval #1: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  Load-Interval #2: 0 seconds
+    0 seconds input rate 0 bits/sec, 0 packets/sec
+    0 seconds output rate 0 bits/sec, 0 packets/sec
+    input rate 0 bps, 0 pps; output rate 0 bps, 0 pps
+  RX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 input packets  0 bytes
+    0 jumbo packets  0 storm suppression packets
+    0 runts  0 giants  0 CRC  0 no buffer
+    0 input error  0 short frame  0 overrun   0 underrun  0 ignored
+    0 watchdog  0 bad etype drop  0 bad proto drop  0 if down drop
+    0 input with dribble  0 input discard
+    0 Rx pause
+  TX
+    0 unicast packets  0 multicast packets  0 broadcast packets
+    0 output packets  0 bytes
+    0 jumbo packets
+    0 output error  0 collision  0 deferred  0 late collision
+    0 lost carrier  0 no carrier  0 babble  0 output discard
+    0 Tx pause
+
+loopback1 is up
+admin state is up,
+  Hardware: Loopback
+  MTU 1500 bytes, BW 8000000 Kbit , DLY 5000 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, medium is broadcast
+  Auto-mdix is turned off
+    7 packets input 532 bytes
+    0 multicast frames 0 compressed
+    0 input errors 0 frame 0 overrun 0 fifo
+    7 packets output 532 bytes 0 underruns
+    0 output errors 0 collisions 0 fifo
+    0 out_carrier_errors
+
+loopback30 is up
+admin state is up,
+  Hardware: Loopback
+  Description: My Learning Lab Loopback
+  MTU 1500 bytes, BW 8000000 Kbit , DLY 5000 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, medium is broadcast
+  Auto-mdix is turned off
+    0 packets input 0 bytes
+    0 multicast frames 0 compressed
+    0 input errors 0 frame 0 overrun 0 fifo
+    0 packets output 0 bytes 0 underruns
+    0 output errors 0 collisions 0 fifo
+    0 out_carrier_errors
+
+loopback98 is up
+admin state is up,
+  Hardware: Loopback
+  Description: Configured using OpenConfig Model
+  MTU 1500 bytes, BW 8000000 Kbit , DLY 5000 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, medium is broadcast
+  Auto-mdix is turned off
+    0 packets input 0 bytes
+    0 multicast frames 0 compressed
+    0 input errors 0 frame 0 overrun 0 fifo
+    0 packets output 0 bytes 0 underruns
+    0 output errors 0 collisions 0 fifo
+    0 out_carrier_errors
+
+loopback99 is up
+admin state is up,
+  Hardware: Loopback
+  Description: Full intf config via NETCONF
+  MTU 1500 bytes, BW 8000000 Kbit , DLY 5000 usec
+  reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, medium is broadcast
+  Auto-mdix is turned off
+    0 packets input 0 bytes
+    0 multicast frames 0 compressed
+    0 input errors 0 frame 0 overrun 0 fifo
+    0 packets output 0 bytes 0 underruns
+    0 output errors 0 collisions 0 fifo
+    0 out_carrier_errors
+
+Vlan1 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan100 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: mgmt svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan101 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: prod svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan102 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: dev svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan103 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: test svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan104 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: security svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+Vlan105 is down (Administratively down), line protocol is down, autostate enabled
+  Hardware is EtherSVI, address is  00bf.5f70.1b08
+  Description: iot svi - DEMO PLEASE DON'T TOUCH  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+   reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported
+  ARP type: ARPA
+  Last clearing of "show interface" counters never
+  L3 in Switched:
+    ucast: 0 pkts, 0 bytes
+  L3 out Switched:
+    ucast: 0 pkts, 0 bytes
+
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show interface switchport' +++
+show interface switchport
+Name: Ethernet1/1
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: trunk
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 100-110
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/2
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: trunk
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 100-110
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/3
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/4
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/6
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/7
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/8
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/9
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/11
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/12
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/13
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/14
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/15
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/16
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/17
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/18
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/19
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/20
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/21
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/22
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/23
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/24
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/25
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/26
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/27
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/28
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/29
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/30
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/31
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/32
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/33
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/34
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/35
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/36
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/37
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/38
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/39
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/40
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/41
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/42
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/43
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/44
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/45
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/46
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/47
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/48
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/49
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/50
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/51
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/52
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/53
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/54
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/55
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/56
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/57
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/58
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/59
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/60
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/61
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: Ethernet1/64
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: access
+  Access Mode VLAN: 8 (VLAN0008)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 1-4094
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+Name: port-channel11
+  Switchport: Enabled
+  Switchport Monitor: Not enabled 
+  Switchport Isolated : Not enabled 
+  Switchport Block Multicast: Not enabled 
+  Switchport Block Unicast: Not enabled 
+  Operational Mode: trunk
+  Access Mode VLAN: 1 (default)
+  Trunking Native Mode VLAN: 1 (default)
+  Trunking VLANs Allowed: 100-110
+  Voice VLAN: none
+  Extended Trust State : not trusted [COS = 0]
+  Administrative private-vlan primary host-association: none
+  Administrative private-vlan secondary host-association: none
+  Administrative private-vlan primary mapping: none
+  Administrative private-vlan secondary mapping: none
+  Administrative private-vlan trunk native VLAN: none
+  Administrative private-vlan trunk encapsulation: dot1q
+  Administrative private-vlan trunk normal VLANs: none
+  Administrative private-vlan trunk private VLANs: none
+  Operational private-vlan: none
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show ip interface vrf all' +++
+show ip interface vrf all
+
+IP Interface Status for VRF "default"
+Ethernet1/5, Interface status: protocol-down/link-down/admin-down, iod: 21,
+  IP address: 192.0.1.1, IP subnet: 192.0.1.0/30 route-preference: 0, tag: 0 
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined: none
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: disabled
+  IP icmp redirects: enabled
+  IP directed-broadcast: disabled 
+  IP Forwarding: disabled 
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: none
+  IP load sharing: none 
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 0/0/0/0/0
+    Unicast bytes      : 0/0/0/0/0
+    Multicast packets  : 0/0/0/0/0
+    Multicast bytes    : 0/0/0/0/0
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled
+Ethernet1/62, Interface status: protocol-down/link-down/admin-up, iod: 78,
+  IP address: 192.168.62.1, IP subnet: 192.168.62.0/24 route-preference: 0, tag: 0 
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined: none
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: disabled
+  IP icmp redirects: enabled
+  IP directed-broadcast: disabled 
+  IP Forwarding: disabled 
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: none
+  IP load sharing: none 
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 0/0/0/0/0
+    Unicast bytes      : 0/0/0/0/0
+    Multicast packets  : 0/0/0/0/0
+    Multicast bytes    : 0/0/0/0/0
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled
+Ethernet1/63, Interface status: protocol-down/link-down/admin-up, iod: 79,
+  IP address: 192.168.10.3, IP subnet: 192.168.10.0/24 route-preference: 0, tag: 0 
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined: none
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: disabled
+  IP icmp redirects: enabled
+  IP directed-broadcast: disabled 
+  IP Forwarding: disabled 
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: none
+  IP load sharing: none 
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 0/0/0/0/0
+    Unicast bytes      : 0/0/0/0/0
+    Multicast packets  : 0/0/0/0/0
+    Multicast bytes    : 0/0/0/0/0
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled
+
+IP Interface Status for VRF "management"
+mgmt0, Interface status: protocol-up/link-up/admin-up, iod: 9,
+  IP address: 10.10.20.95, IP subnet: 10.10.20.0/24 route-preference: 0, tag: 0 
+  IP broadcast address: 255.255.255.255
+  IP multicast groups locally joined: none
+  IP MTU: 1500 bytes (using link MTU)
+  IP primary address route-preference: 0, tag: 0
+  IP proxy ARP : disabled
+  IP Local Proxy ARP : disabled
+  IP multicast routing: disabled
+  IP icmp redirects: enabled
+  IP directed-broadcast: disabled 
+  IP Forwarding: disabled 
+  IP icmp unreachables (except port): disabled
+  IP icmp port-unreachable: enabled
+  IP unicast reverse path forwarding: none
+  IP load sharing: none 
+  IP interface statistics last reset: never
+  IP interface software stats: (sent/received/forwarded/originated/consumed)
+    Unicast packets    : 24358/34820/0/24358/69640
+    Unicast bytes      : 9058074/4370848/0/9058074/8733062
+    Multicast packets  : 0/0/0/0/0
+    Multicast bytes    : 0/0/0/0/0
+    Broadcast packets  : 0/0/0/0/0
+    Broadcast bytes    : 0/0/0/0/0
+    Labeled packets    : 0/0/0/0/0
+    Labeled bytes      : 0/0/0/0/0
+  WCCP Redirect outbound: disabled
+  WCCP Redirect inbound: disabled
+  WCCP Redirect exclude: disabled
+
+IP Interface Status for VRF "anbtest"
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show routing vrf all' +++
+show routing vrf all
+IP Route Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+
+IP Route Table for VRF "management"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+0.0.0.0/0, ubest/mbest: 1/0
+    *via 10.10.20.254, [1/0], 17:04:53, static
+10.10.20.0/24, ubest/mbest: 1/0, attached
+    *via 10.10.20.95, mgmt0, [0/0], 17:04:53, direct
+10.10.20.95/32, ubest/mbest: 1/0, attached
+    *via 10.10.20.95, mgmt0, [0/0], 17:04:53, local
+
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show ipv6 interface vrf all' +++
+show ipv6 interface vrf all
+IPv6 Interface Status for VRF "default"
+
+IPv6 Interface Status for VRF "management"
+
+IPv6 Interface Status for VRF "anbtest"
+
+LEAF1# 
++++ LEAF1 with via 'cli': executing command 'show routing ipv6 vrf all' +++
+show routing ipv6 vrf all
+IPv6 Routing Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+
+
+LEAF1# 
+Could not learn <class 'genie.libs.parser.nxos.show_routing.ShowRoutingIpv6VrfAll'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Interface'                                                                                                          |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_interface.ShowVrfAllInterface'>, arguments: {'interface':'','vrf':''}                                   |
+|   cmd: <class 'genie.libs.parser.nxos.show_interface.ShowInterface'>, arguments: {'interface':''}                                                  |
+|   cmd: <class 'genie.libs.parser.nxos.show_interface.ShowInterfaceSwitchport'>, arguments: {'interface':''}                                        |
+|   cmd: <class 'genie.libs.parser.nxos.show_interface.ShowIpInterfaceVrfAll'>, arguments: {'interface':'','vrf':''}                                 |
+|   cmd: <class 'genie.libs.parser.nxos.show_routing.ShowRoutingVrfAll'>, arguments: {'vrf':''}                                                      |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_interface.ShowIpv6InterfaceVrfAll'>, arguments: {'interface':'','vrf':''}                               |
+|   cmd: <class 'genie.libs.parser.nxos.show_routing.ShowRoutingIpv6VrfAll'>, arguments: {'vrf':''}                                                  |
+|====================================================================================================================================================|
