@@ -13,6 +13,7 @@
 """
 from os import getcwd
 from utils.get_task import get_task
+from core_validation import CoreValidation
 
 NETWORK_VALIDATION = getcwd() + "/src/all_validation.yaml"
 
@@ -42,7 +43,8 @@ def main():
     
     try:        
         if task_select == "core_validation":
-            print("core_validation")
+            task = CoreValidation()
+            task.core_validation()
         elif task_select == "aci_validation":
             print("aci_validation")
         elif task_select == "juniper_validation":
