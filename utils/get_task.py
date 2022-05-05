@@ -11,6 +11,7 @@ def get_task(yaml_filename, task=None):
 
     if task_list != None:
         for item in task_list:
+            print("\n")
             print(f'{task_list.index(item) + 1}. {item}')        
         ans = input("\nSelect a task: ")
         try:
