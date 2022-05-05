@@ -11,8 +11,7 @@ class SetupEnvironment:
 
 
     def setup_pyats(self, device_filename, config_filename):
-        self.device_list = full_load_csv(device_filename)[0]['hostname']
-        self.device_list = full_load_csv(device_filename)[1]['hostname']
+        self.device_list = full_load_csv(device_filename)
         self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
         # print(os.getcwd())
         path = "testbed"
@@ -27,7 +26,8 @@ class SetupEnvironment:
             os.system(f'pyats create testbed file --path {device_filename} --output {testbed_file}')
         # else:
         #     print(f'{testbed_file} exists')
-        print(self.device_list)
+        print(self.device_list[0]["hostname"])
+        print(self.device_list[1]["hostname"])        
         print(self.command_list)
 
         return self
