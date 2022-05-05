@@ -16,12 +16,13 @@ class NetmikoCommand:
         self.parse_folder = ""
 
     # log configuration for one device
-    def run_command(self, a_device, all_commands, changenumber, compare_folder, parse_folder):
+    def run_command(self, a_device, commands, changenumber, compare_folder, parse_folder):
         netconnect = netmiko.ConnectHandler(**a_device)        
         
         
-        for a_command in all_commands:
+        for a_command in commands:
 
+            print(a_command)
             # connect to device
             output = netconnect.send_command(a_command)
             command_to_run = a_command["command"].replace(" ", "_")
@@ -69,6 +70,7 @@ class NetmikoCommand:
         # multi threads - one thread per device    
         for a_device in all_devices:
             commands = all_commands[a_device['device_type']]
+            print(commands)
             t1 = threading.Thread(target=self.run_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
             t1.start()
             t1.join()
