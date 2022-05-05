@@ -13,6 +13,7 @@ class SetupEnvironment:
     def setup_pyats(self, device_filename, config_filename):
         self.device_list = full_load_csv(device_filename)
         self.command_list = full_load_yaml(config_filename)['pyats_learn_features']
+        print(os.getcwd())
         path = "../testbed"
         if not os.path.exists(path):
             print("#"*5 + f' create new direcotry {path} ' + "#"*5)
