@@ -15,7 +15,7 @@ class CoreValidation:
         self.devices = ""
         self.commands = ""
         self.testbed = ""
-        self.output_folder = ""
+        self.change_folder = ""
         self.task_list = []
         self.task_select = ""
 
@@ -32,9 +32,9 @@ class CoreValidation:
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
             self.testbed = core_validation.testbed_file
-            self.output_folder = core_validation.output_folder
+            self.change_folder = core_validation.change_folder
 
-            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.output_folder}')
+            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.change_folder}')
 
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
@@ -43,8 +43,7 @@ class CoreValidation:
             
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
-            self.type = 'prechange'
-            self.output_folder = core_validation.output_folder
+            self.change_folder = core_validation.change_folder
 
             print("\n" + "-"*20 + " all devices to be validated " + "-"*20)
             for dev in self.devices:
@@ -52,7 +51,7 @@ class CoreValidation:
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             dev = NetmikoCommand()
-            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select)
+            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select, self.change_folder)
 
 
 def main():

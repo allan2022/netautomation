@@ -9,7 +9,7 @@ class SetupEnvironment:
         self.device_list = ""
         self.command_list = ""
         self.change_number = ""
-        self.output_folder = ""
+        self.change_folder = ""
         self.testbed_file = ""
         self.test_type = ""
 
@@ -20,7 +20,7 @@ class SetupEnvironment:
 
         create_folder("output")
         if self.change_number != "":
-            self.output_folder = create_folder(f'output/{self.change_number}')
+            self.change_folder = create_folder(f'output/{self.change_number}')
 
 
     def setup_pyats(self, dev_filename, env_filename):

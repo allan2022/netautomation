@@ -4,6 +4,7 @@ import netmiko
 from parsertools.parser_cli import parse_output
 import threading
 from datetime import datetime
+from utils.new_folder import create_folder
 
 class NetmikoCommand:
     def __init__(self):
@@ -12,11 +13,11 @@ class NetmikoCommand:
         self.changenumber = ""
         self.testtype = ""
         self.change_folder = ""
-        self.compare_folder = ""
+        self.snapshot_folder = ""
         self.parse_folder = ""
 
     # log configuration for one device
-    def exec_command(self, a_device, commands, changenumber, compare_folder, parse_folder):
+    def exec_command(self, a_device, commands, changenumber, snapshot_folder, parse_folder):
         netconnect = netmiko.ConnectHandler(**a_device)        
         
         
@@ -26,7 +27,7 @@ class NetmikoCommand:
             output = netconnect.send_command(a_command)
             command_to_run = a_command.replace(" ", "_")
 
-            console_file = compare_folder + "/" + changenumber + "_" + a_device["host"] + "_" + command_to_run + "_" + "console.txt"
+            console_file = snapshot_folder + "/" + changenumber + "_" + a_device["host"] + "_" + command_to_run + "_" + "console.txt"
             with open(console_file, "w") as file:
                 file.write(output + "\n")
 
@@ -34,7 +35,7 @@ class NetmikoCommand:
             parser_template = parse_folder + "/" + device_type + "_" + command_to_run + ".textfsm"
 
             ops_input = parse_output(console_file, parser_template) 
-            ops_file = compare_folder + "/" + str(changenumber) + "_" + a_device["host"] + "_" + command_to_run + "_" + "ops.txt"            
+            ops_file = snapshot_folder + "/" + str(changenumber) + "_" + a_device["host"] + "_" + command_to_run + "_" + "ops.txt"            
             with open(ops_file, "w") as file:
                 file.write(json.dumps(ops_input))
 
@@ -43,27 +44,18 @@ class NetmikoCommand:
 
 
     # log configuration for all devices by calling exec_command
-    def snapshot (self, all_devices, all_commands, changenumber, testtype):    
-        current_dir = os.getcwd()
-        output_folder = "output"
-
-        # create ouput folder for all validations
-        if(not os.path.isdir(output_folder)):
-            os.mkdir(output_folder)
- 
+    def snapshot (self, all_devices, all_commands, changenumber, testtype, output_folder):    
         # create subfolder for specific change
-        change_folder = os.path.join(output_folder, changenumber)  
-        if(not os.path.isdir(change_folder)):
-            os.mkdir(change_folder)
+        change_folder = output_folder
 
-        # create subfolder for before & after for specific change
-        compare_folder = changenumber + "_" + testtype + "_" + str(datetime.now()).replace(" ", "_")
-        compare_folder = os.path.join(change_folder, compare_folder)
-        if(not os.path.isdir(compare_folder)):
-            os.mkdir(compare_folder)   
+        # create subfolder for each snapshot
+        snapshot_folder = changenumber + "_" + testtype + "_" + str(datetime.now()).replace(" ", "_")
+        snapshot_folder = os.path.join(change_folder, snapshot_folder)
+        if(not os.path.isdir(snapshot_folder)):
+            os.mkdir(snapshot_folder)   
     
         self.change_folder = os.path.join(current_dir, change_folder)    
-        self.compare_folder = os.path.join(current_dir, compare_folder)
+        self.snapshot_folder = os.path.join(current_dir, snapshot_folder)
         self.parse_folder = os.path.join(current_dir, 'parsertemplate')    
 
         # multi threads - one thread per device    
@@ -76,6 +68,6 @@ class NetmikoCommand:
                 print(c)
             print("\n")
 
-            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
+            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, self.snapshot_folder, self.parse_folder)) 
             t1.start()
             t1.join()
