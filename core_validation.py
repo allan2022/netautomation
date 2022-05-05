@@ -1,6 +1,5 @@
 import os
 from validationtools.setup_environment import SetupEnvironment
-from utils.new_folder import create_folder
 from netmikotools.netmiko_command import NetmikoCommand
 
 # from pyatstools.pyatslearn import PyatsLearn
