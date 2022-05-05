@@ -13,10 +13,14 @@ core_validation.setup_pyats(DEVICE_LIST_FILENAME, CORE_CONFIG_FILENAME)
 commands = core_validation.command_list
 testbed = core_validation.testbed_file
 
-create_folder("output")
+a = create_folder("output")
+b = create_folder(f'output\{core_validation.change_number}')
 # path = "testbed"
 # if not os.path.exists(path):
 #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
 #     os.makedirs(path)
+
+print(a)
+print(b)
 
 os.system(f'pyats learn {commands} --testbed-file {testbed} --output output')
