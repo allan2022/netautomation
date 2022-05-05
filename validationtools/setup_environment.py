@@ -39,19 +39,10 @@ class SetupEnvironment:
         print(self.device_list)
         i = 0
 
-        for dev in self.device_list:    
-            print(i)
-            i = i + 1
-            print(dev)
-            print("#################################")
-            
+        for dev in self.device_list:               
             dev['host'] = dev.pop('hostname')           
             dev.pop("protocol")
             dev.pop('platform')
-            print(dev)
-            print("#################################")
-
-
 
             dev_type = dev['os']
             if dev_type == 'nxos':
@@ -65,9 +56,7 @@ class SetupEnvironment:
             else:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
-            # self.command_list.append(command_list)
-            print(dev)
-            print("#################################")            
+            # self.command_list.append(command_list)      
         
         return self
 
