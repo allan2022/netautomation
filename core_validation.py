@@ -39,7 +39,7 @@ class CoreValidation:
             self.type = 'prechange'
             self.output_folder = core_validation.output_folder
 
-            print("#"*20 + " all devices to be validated " + "#"*20)
+            print("-"*20 + " all devices to be validated " + "-"*20)
             for dev in self.devices:
                 print('{} : {} '.format(dev['device_type'], dev['host'] ))
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
