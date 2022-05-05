@@ -51,7 +51,7 @@ class SetupEnvironment:
             self.command_list.append(command_list)
             print(type(dev))
             print(dev)
-            dev.update('commands', command_list)
+            dev["commands"] = command_list
         # print(self.command_list)       
         # command = command_list.split()
         
