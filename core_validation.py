@@ -14,7 +14,7 @@ commands = core_validation.command_list
 testbed = core_validation.testbed_file
 
 a = create_folder("output")
-b = create_folder(f'output\{core_validation.change_number}')
+b = create_folder(f'output/{core_validation.change_number}')
 # path = "testbed"
 # if not os.path.exists(path):
 #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
