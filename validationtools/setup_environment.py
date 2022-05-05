@@ -53,11 +53,6 @@ class SetupEnvironment:
 
         return self
 
-
-        if(not os.path.isdir(change_folder)):
-            os.mkdir(change_folder)
-
-
     def setup_netmiko(self, dev_filename, env_filename, test_type):
         self.device_filename = dev_filename
         self.device_list = full_load_csv(dev_filename)
