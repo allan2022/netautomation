@@ -34,10 +34,11 @@ class SetupEnvironment:
     def setup_netmiko(self, dev_filename, env_filename):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = []
+        print(self.device_list)
         for dev in self.device_list:
-            if dev.os == 'nxos':
+            if dev['os'] == 'nxos':
                 self.command_list = full_load_yaml(env_filename)['nxos_learn_commands']
-            elif dev.os == 'iosxr':
+            elif dev['os'] == 'iosxr':
                 self.command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
             else:
                 print("\n device type not supported. ")
