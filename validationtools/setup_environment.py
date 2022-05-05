@@ -14,7 +14,7 @@ class SetupEnvironment:
         self.test_type = ""
 
         try:
-            self.change_number = input("Specify change numebr: ")
+            self.change_number = input("\nSpecify change numebr: ")
         except KeyboardInterrupt:
             print("\ntask aborted")
 
