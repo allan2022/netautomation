@@ -14,7 +14,7 @@ commands = core_validation.command_list
 testbed = core_validation.testbed_file
 
 a = create_folder("output")
-b = create_folder(f'output/{core_validation.change_number}')
+output_folder = create_folder(f'output/{core_validation.change_number}')
 # path = "testbed"
 # if not os.path.exists(path):
 #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
@@ -23,4 +23,4 @@ b = create_folder(f'output/{core_validation.change_number}')
 print(a)
 print(b)
 
-os.system(f'pyats learn {commands} --testbed-file {testbed} --output output')
+os.system(f'pyats learn {commands} --testbed-file {testbed} --output {output_folder}')
