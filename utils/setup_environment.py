@@ -21,9 +21,12 @@ class SetupEnvironment:
         testbed_file = "testbed/testbed.yaml"
         # self.command_list = full_load_yaml(config_filename)
         # self.change_number = input("Specify change numebr: ")
-        print("#"*5 +  " create testbed.yaml " + "#"*5)
-        os.system(f'pyats create testbed file --path {device_filename} --output {testbed_file}')
-        
+        if not os.path.exists(testbed_file):
+            print("#"*5 +  " create testbed.yaml " + "#"*5)
+            os.system(f'pyats create testbed file --path {device_filename} --output {testbed_file}')
+        else:
+            print(f'{testbed_file} exists')
+
         return self
 
 
