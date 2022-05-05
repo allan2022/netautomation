@@ -1,3 +1,4 @@
 hostname,ip,username,password,protocol,os,platform
 LEAF1,131.226.217.151,admin,Admin_1234!,ssh,nxos,cisco
 iosxr1,131.226.217.150,admin,C1sco12345,ssh,iosxr,cisco
+iosxe1,192.168.1.1,cisco,cisco,ssh,f5,f5
