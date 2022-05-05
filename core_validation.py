@@ -42,7 +42,7 @@ class CoreValidation:
             print("#"*20 + " all devices to be validated " + "#"*20)
             for dev in self.devices:
                 print('{} : {} '.format(dev['device_type'], dev['host'] ))
-            print("#"*20 + " starting netmiko commands " + "#"*20 + "\n")
+            print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             dev = NetmikoCommand()
             dev.connect_execute_output(self.devices, self.commands, core_validation.change_number, self.type)
