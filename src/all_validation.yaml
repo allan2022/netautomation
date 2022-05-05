@@ -1,7 +1,0 @@
-tasks:
-  core_validation
-  aci_validation
-  juniper_validation
-  f5_validation
-  fortinet_validation
-  paloalto_validation
