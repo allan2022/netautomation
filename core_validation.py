@@ -39,11 +39,10 @@ class CoreValidation:
             self.type = 'prechange'
             self.output_folder = core_validation.output_folder
 
-            print("################## all devices #######################################")
-            print(self.devices)
-            print("################## all device with all commands ######################")
-            print(self.commands)
-            print("###################### run netmiko commands ##########################")
+            print("#"*20 + " all devices to be validated " + "#"*20)
+            for dev in self.devices:
+                print('host : {} with os {} \n:'.format(dev['host'], dev['device_type'] ))
+            print("#"*20 + " starting netmiko commands " + "#"*20 + "\n")
 
             dev = NetmikoCommand()
             dev.connect_execute_output(self.devices, self.commands, core_validation.change_number, self.type)
