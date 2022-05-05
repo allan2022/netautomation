@@ -24,11 +24,6 @@ class SetupEnvironment:
         if not os.path.exists(testbed_file):
             print("#"*5 +  " create testbed.yaml " + "#"*5)
             os.system(f'pyats create testbed file --path {device_filename} --output {testbed_file}')
-        # else:
-        #     print(f'{testbed_file} exists')
-        print(self.device_list[0]["hostname"])
-        print(self.device_list[1]["hostname"])        
-        print(self.command_list)
 
         return self
 
