@@ -19,4 +19,4 @@ create_folder("output")
 #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
 #     os.makedirs(path)
 
-os.system(f'pyats learn {commands} --testbed-file {testbed} --output {output_folder}')
+os.system(f'pyats learn {commands} --testbed-file {testbed} --output output')
