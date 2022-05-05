@@ -57,7 +57,7 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-        print(self.command_list)
+        # print(self.command_list)
         return self
 
 
