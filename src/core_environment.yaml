@@ -25,7 +25,7 @@ threads_number:
   6
 
 pyats_learn_features:
-  config interface ospf
+  interface ospf
 
 nxos_self_learn_commands:
   - show ip route vrf all
