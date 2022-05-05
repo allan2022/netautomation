@@ -41,10 +41,13 @@ class SetupEnvironment:
             print("#################################")
             
             # dev['host'] = dev.pop('hostname')    
-            
-            
+                        
             dev.pop("protocol")
             dev.pop('platform')
+            print(dev)
+            print("#################################")
+
+
 
             dev_type = dev['os']
             if dev_type == 'nxos':
