@@ -62,7 +62,7 @@ class NetmikoCommand:
     
         self.change_folder = os.path.join(current_dir, change_folder)    
         self.compare_folder = os.path.join(current_dir, compare_folder)
-        self.parse_folder = os.path.join(current_dir, 'parser')    
+        self.parse_folder = os.path.join(current_dir, 'parsertemplate')    
 
         # multi threads - one thread per device    
         for a_device in all_devices:
