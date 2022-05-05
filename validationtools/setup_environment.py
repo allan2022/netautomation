@@ -38,6 +38,9 @@ class SetupEnvironment:
         self.command_list = []
         
         for dev in self.device_list:
+            dev['host'] = dev['hostname']
+            dev.pop('hostname')
+
             dev_type = dev['os']
             if dev_type == 'nxos':
                 command_list = full_load_yaml(env_filename)['nxos_learn_commands']
