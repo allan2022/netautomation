@@ -39,6 +39,7 @@ class CoreValidation:
             self.type = 'prechange'
             self.output_folder = core_validation.output_folder
 
+            print("######################################################################")
             print(self.devices)
             print("######################################################################")
             print(self.commands)

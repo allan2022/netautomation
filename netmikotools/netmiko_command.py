@@ -47,6 +47,8 @@ class NetmikoCommand:
     def connect_execute_output(self, all_devices, all_commands, changenumber, testtype):    
         current_dir = os.getcwd()
         output_folder = "output"
+        print(all_commands)
+
 
         # create ouput folder for all validations
         if(not os.path.isdir(output_folder)):
@@ -69,8 +71,9 @@ class NetmikoCommand:
 
         # multi threads - one thread per device    
         for a_device in all_devices:
-            print(all_commands)
             commands = all_commands[a_device['device_type']]
+            
+            print("################# commands for each device ###################")
             print(commands)
             t1 = threading.Thread(target=self.run_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
             t1.start()
