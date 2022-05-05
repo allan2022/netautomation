@@ -10,6 +10,7 @@ class SetupEnvironment:
         self.command_list = ""
         self.change_number = ""
         self.change_folder = ""
+        self.snapshot_folder = ""
         self.testbed_file = ""
         self.test_type = ""
 
@@ -23,7 +24,7 @@ class SetupEnvironment:
             self.change_folder = create_folder(f'output/{self.change_number}')
 
 
-    def setup_pyats(self, dev_filename, env_filename):
+    def setup_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
 
@@ -34,10 +35,27 @@ class SetupEnvironment:
             print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
+        if test_type.startwith("prechange_snapshot"):
+            self.snapshot_folder = os.path.join(self.change_folder, 'prechange_snapshot_', str(0))
+            if os.path.exists(self.snapshot_folder):
+                n = self.snapshot_folder.resplit('_', 1)[-1]
+                i = int(n) + 1
+                self.snapshot_folder = os.path.join(self.change_folder, 'prechange_snapshot_', str(i))
+            create_folder(self.snapshot_folder)
+        elif test_type.startwith("postchange_snapshot"):
+            self.snapshot_folder = os.path.join(self.change_folder, 'postchange_snapshot_', str(0))
+            if os.path.exists(self.snapshot_folder):
+                n = self.snapshot_folder.resplit('_', 1)[-1]
+                i = int(n) + 1
+                self.snapshot_folder = os.path.join(self.change_folder, 'postchange_snapshot_', str(i))
+            create_folder(self.snapshot_folder)
+        else:
+            print("test type not supported")
+
         return self
 
 
-    def setup_netmiko(self, dev_filename, env_filename):
+    def setup_netmiko(self, dev_filename, env_filename, test_type):
         self.device_filename = dev_filename
         self.device_list = full_load_csv(dev_filename)
         self.command_list = {}        

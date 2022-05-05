@@ -27,7 +27,7 @@ class CoreValidation:
     def core_validation_pyats(self):
         core_validation = SetupEnvironment()
         if core_validation.change_number != "":
-            core_validation.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT)
+            core_validation.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
@@ -39,7 +39,7 @@ class CoreValidation:
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
         if core_validation.change_number != "":
-            core_validation.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT)
+            core_validation.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
             
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
