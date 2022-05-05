@@ -36,13 +36,13 @@ class SetupEnvironment:
         self.device_filename = dev_filename
         self.device_list = self.command_list = full_load_csv(dev_filename)
         
-        for dev, com in zip(self.device_list, self.command_list):
-            
+        # for dev, com in zip(self.device_list, self.command_list):
+        for dev in self.device_list:    
             print(type(dev))
             print(dev)
             print("############################")
-            print(type(com))
-            print(com)
+            # print(type(com))
+            # print(com)
             print("############################")
             print(dev['hostname'])
 
