@@ -47,7 +47,7 @@ class CoreValidation:
             print("run netmiko commands")
 
             dev = NetmikoCommand()
-            dev.connect_execute_output(self.fdevices, self.commands, core_validation.change_number, type)
+            dev.connect_execute_output(self.devices, self.commands, core_validation.change_number, self.type)
 
 
 def main():
