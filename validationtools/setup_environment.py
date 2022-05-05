@@ -41,6 +41,7 @@ class SetupEnvironment:
             dev['host'] = dev['hostname']
             dev.pop('hostname')
             dev.pop('protocol')
+            dev.pop('platform')
 
             dev_type = dev['os']
             if dev_type == 'nxos':
