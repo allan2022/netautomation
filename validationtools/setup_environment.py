@@ -64,8 +64,6 @@ class SetupEnvironment:
             print(dev)
             print("#################################")            
         
-        print(self.device_list)
-        print(self.command_list)
         return self
 
 
