@@ -37,11 +37,12 @@ class SetupEnvironment:
         print(self.device_list)
         for dev in self.device_list:
             if dev['os'] == 'nxos':
-                self.command_list = full_load_yaml(env_filename)['nxos_learn_commands']
+                command_list = full_load_yaml(env_filename)['nxos_learn_commands']
             elif dev['os'] == 'iosxr':
-                self.command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
+                command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
             else:
                 print("\n device type not supported. ")
+            self.command_list.append(command_list)
         print(self.command_list)
         
         # task_list = output[task].split()
