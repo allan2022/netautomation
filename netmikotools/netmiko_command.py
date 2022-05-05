@@ -22,7 +22,6 @@ class NetmikoCommand:
         
         for a_command in commands:
 
-            print(a_command)
             # connect to device
             output = netconnect.send_command(a_command)
             command_to_run = a_command.replace(" ", "_")
