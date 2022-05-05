@@ -33,8 +33,9 @@ class CoreValidation:
             self.commands = core_validation.command_list
             self.testbed = core_validation.testbed_file
             self.change_folder = core_validation.change_folder
+            self.snapshot_folder = core_validation.snapshot_folder
 
-            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.change_folder}')
+            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.snapshot_folder}')
 
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
