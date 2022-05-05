@@ -1,11 +1,11 @@
 import os
 import json
 import netmiko
-from parse_all import parse_output
+from parsertools.parser_cli import parse_output
 import threading
 from datetime import datetime
 
-class TestDevice:
+class NetmikoCommand:
     def __init__(self):
         self.all_devices = []
         self.all_command = []
@@ -21,7 +21,7 @@ class TestDevice:
         for a_command in all_commands:
 
             # connect to device
-            output = netconnect.send_command(a_command["command"])
+            output = netconnect.send_command(a_command)
             command_to_run = a_command["command"].replace(" ", "_")
 
             console_file = compare_folder + "/" + changenumber + "_" + a_device["host"] + "_" + command_to_run + "_" + "console.txt"
