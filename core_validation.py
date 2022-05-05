@@ -1,5 +1,5 @@
 import os
-from utils.setup_environment import SetupEnvironment
+from validationtools.setup_environment import SetupEnvironment
 from utils.new_folder import create_folder
 
 # from pyatstools.pyatslearn import PyatsLearn
