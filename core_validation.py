@@ -1,4 +1,5 @@
 import os
+from utils.get_task import get_task
 from validationtools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
@@ -15,8 +16,14 @@ class CoreValidation:
         self.commands = ""
         self.testbed = ""
         self.output_folder = ""
-        self.type = ""
-    
+        self.task_list = []
+        self.task_select = ""
+
+        try:
+            self.task_list, self.task_select = get_task(CORE_ENVIRONMENT, 'sub_tasks')
+        except KeyboardInterrupt:
+            pass
+
     def core_validation_pyats(self):
         core_validation = SetupEnvironment()
         if core_validation.change_number != "":
@@ -45,7 +52,7 @@ class CoreValidation:
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             dev = NetmikoCommand()
-            dev.connect_execute_output(self.devices, self.commands, core_validation.change_number, self.type)
+            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select)
 
 
 def main():

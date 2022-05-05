@@ -8,7 +8,7 @@ from datetime import datetime
 class NetmikoCommand:
     def __init__(self):
         self.all_devices = []
-        self.all_command = []
+        self.all_commands = []
         self.changenumber = ""
         self.testtype = ""
         self.change_folder = ""
@@ -16,7 +16,7 @@ class NetmikoCommand:
         self.parse_folder = ""
 
     # log configuration for one device
-    def run_command(self, a_device, commands, changenumber, compare_folder, parse_folder):
+    def exec_command(self, a_device, commands, changenumber, compare_folder, parse_folder):
         netconnect = netmiko.ConnectHandler(**a_device)        
         
         
@@ -42,8 +42,8 @@ class NetmikoCommand:
         netconnect.disconnect()    
 
 
-    # log configuration for all devices by calling run_command
-    def connect_execute_output(self, all_devices, all_commands, changenumber, testtype):    
+    # log configuration for all devices by calling exec_command
+    def snapshot (self, all_devices, all_commands, changenumber, testtype):    
         current_dir = os.getcwd()
         output_folder = "output"
 
@@ -76,6 +76,6 @@ class NetmikoCommand:
                 print(c)
             print("\n")
 
-            t1 = threading.Thread(target=self.run_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
+            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, self.compare_folder, self.parse_folder)) 
             t1.start()
             t1.join()
