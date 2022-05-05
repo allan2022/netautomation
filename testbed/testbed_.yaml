@@ -13,3 +13,17 @@ devices:
     os: nxos
     platform: cisco
     type: nxos
+  iosxr1:
+    connections:
+      cli:
+        ip: 131.226.217.150
+        protocol: ssh
+    credentials:
+      default:
+        password: C1sco12345
+        username: admin
+      enable:
+        password: C1sco12345
+    os: iosxr
+    platform: cisco
+    type: iosxr
