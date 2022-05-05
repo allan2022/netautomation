@@ -1,5 +1,6 @@
 main_tasks:
-  core_validation
+  core_validation_pyats
+  core_validation_netmiko  
   aci_validation
   juniper_validation
   f5_validation

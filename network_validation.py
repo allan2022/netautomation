@@ -40,9 +40,11 @@ except KeyboardInterrupt:
 #             print("\ntask not available")
 
 def main():
-    if task_select == "core_validation":
+    if task_select == "core_validation_pyats":
         task = CoreValidation()
         task.core_validation()
+    elif task_select == "core_validation_netmiko":
+        print("core_validation_netmiko")
     elif task_select == "aci_validation":
         print("aci_validation")
     elif task_select == "juniper_validation":
