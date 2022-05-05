@@ -40,25 +40,24 @@ except KeyboardInterrupt:
 #             print("\ntask not available")
 
 def main():
-    
-    try:        
-        if task_select == "core_validation":
-            task = CoreValidation()
-            task.core_validation()
-        elif task_select == "aci_validation":
-            print("aci_validation")
-        elif task_select == "juniper_validation":
-            print("juniper_validation")
-        elif task_select == "f5_validation":
-            print("f5_validation")
-        elif task_select == "fortinet_validation":
-            print("fortinet_validation")
-        elif task_select == "paloalto_validation":
-            print("paloalto_validation")
-        else:
-            print("\ntask not available")
-    except NameError:
-        print("\ntask aborted")
+    if task_select == "core_validation":
+        task = CoreValidation()
+        task.core_validation()
+    elif task_select == "aci_validation":
+        print("aci_validation")
+    elif task_select == "juniper_validation":
+        print("juniper_validation")
+    elif task_select == "f5_validation":
+        print("f5_validation")
+    elif task_select == "fortinet_validation":
+        print("fortinet_validation")
+    elif task_select == "paloalto_validation":
+        print("paloalto_validation")
+    else:
+        print("\ntask not available")
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except  (NameError, KeyboardInterrupt):
+        print("\n task aborted")
