@@ -50,6 +50,7 @@ class SetupEnvironment:
                 print(f'\n device type {dev_type} not supported. ')
             self.command_list.append(command_list)
             print(type(dev))
+            print(dev)
             dev.update('commands', command_list)
         # print(self.command_list)       
         # command = command_list.split()
