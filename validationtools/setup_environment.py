@@ -38,6 +38,11 @@ class SetupEnvironment:
         
         for dev, com in zip(self.device_list, self.command_list):
             
+            print(type(dev))
+            print(dev)
+            print(type(com))
+            print(com)
+
             dev['host'] = dev['hostname']
             dev.pop('hostname')
             dev.pop('protocol')
@@ -56,7 +61,7 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
             self.command_list.append(command_list)
-            com["commands"] = command_list
+            com['commands'] = command_list
         
         return self
 
