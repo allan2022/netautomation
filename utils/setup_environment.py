@@ -22,7 +22,7 @@ class SetupEnvironment:
         # self.command_list = full_load_yaml(config_filename)
         # self.change_number = input("Specify change numebr: ")
         print("#"*5 +  " create testbed.yaml " + "#"*5)
-        os.system(f'pyats create testbed file --path {device_filename} --ouput {testbed_file}')
+        os.system(f'pyats create testbed file --path {device_filename} --output {testbed_file}')
         
         return self
 
