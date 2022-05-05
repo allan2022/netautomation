@@ -20,7 +20,4 @@ output_folder = create_folder(f'output/{core_validation.change_number}')
 #     print("#"*5 + f' create new direcotry {path} ' + "#"*5)
 #     os.makedirs(path)
 
-print(a)
-print(b)
-
 os.system(f'pyats learn {commands} --testbed-file {testbed} --output {output_folder}')
