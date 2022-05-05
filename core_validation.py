@@ -1,6 +1,7 @@
 import os
 from validationtools.setup_environment import SetupEnvironment
 from utils.new_folder import create_folder
+from netmikotools.netmiko_command import NetmikoCommand
 
 # from pyatstools.pyatslearn import PyatsLearn
 # from pyatstools.pyatsdiff import PyatsDiff
@@ -14,6 +15,7 @@ class CoreValidation:
         self.devices = ""
         self.commands = ""
         self.testbed = ""
+        self.type = ""
     
     def core_validation_pyats(self):
         core_validation = SetupEnvironment()
@@ -36,12 +38,17 @@ class CoreValidation:
             
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
+            self.type = 'prechange'
 
             a = create_folder("output")
             output_folder = create_folder(f'output/{core_validation.change_number}')
 
             print(self.commands)
             print("run netmiko commands")
+
+            dev = NetmikoCommand()
+            dev.connect_execute_output(self.fdevices, self.commands, core_validation.change_number, type)
+
 
 def main():
     cv = CoreValidation()
