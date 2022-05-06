@@ -8,3 +8,8 @@ R2,192.168.126.173,cisco,cisco,ssh,iosxe,cisco
 
 LEAF1,131.226.217.151,admin,Admin_1234!,ssh,nxos,cisco
 iosxr1,131.226.217.150,admin,C1sco12345,ssh,iosxr,cisco
+
+
+## netmiko inventory ##
+
+bigip1,192.168.126.138,root,Red8856662,f5_tmsh

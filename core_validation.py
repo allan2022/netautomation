@@ -3,7 +3,8 @@ from utils.get_task import get_task
 from validationtools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
-DEVICE_LIST = os.getcwd() + '/src/device_inventory.csv'
+PYATS_DEVICE_LIST = os.getcwd() + '/src/pyats_device_inventory.csv'
+NETMIKO_DEVICE_LIST = os.getcwd() + '/src/netmiko_device_inventory.csv'
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
 class CoreValidation:
@@ -19,7 +20,7 @@ class CoreValidation:
     def core_validation_pyats(self):
         pyats_env = SetupEnvironment(CORE_ENVIRONMENT)
         if pyats_env.change_number != "":
-            pyats_env.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
+            pyats_env.setup_pyats(PYATS_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
             commands = pyats_env.command_list
             testbed = pyats_env.testbed_file
@@ -45,7 +46,7 @@ class CoreValidation:
     def core_validation_netmiko(self):
         netmiko_env = SetupEnvironment(CORE_ENVIRONMENT)
         if netmiko_env.change_number != "":
-            netmiko_env.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
+            netmiko_env.setup_netmiko(NETMIKO_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
             
             devices = netmiko_env.device_list
             commands = netmiko_env.command_list
