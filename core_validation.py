@@ -65,14 +65,19 @@ class CoreValidation:
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             dev = NetmikoCommand()
-            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select, self.change_folder)
+            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select, self.snapshot_folder)
 
             if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
                 print("#####################  compare postchange with prechange #########################")
                 before_folder = os.path.join(self.change_folder, 'prechange_snapshot_0')
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
-                print("compare postchange with last poastchange")
+                print("#####################  compare postchange with last postchange #########################")
+                i = int(self.snapshot_folder.rsplit('_', 1)[-1]) - 1
+                before_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+                os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
+            else:
+                print("task not supported")    
 
 def main():
     cv = CoreValidation()
