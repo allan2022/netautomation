@@ -43,8 +43,8 @@ class CoreValidation:
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
                 print("#####################  compare postchange with last postchange #########################")
-                i = self.snapshot_folder.rsplit('_', 1)[-1]
-                before_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+                i = self.snapshot_folder.rsplit('_', 1)[-1] - 1
+                before_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             else:
                 print("task not supported")    
