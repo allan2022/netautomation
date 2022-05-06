@@ -44,7 +44,7 @@ class NetmikoCommand:
 
 
     # log configuration for all devices by calling exec_command
-    def snapshot (self, all_devices, all_commands, changenumber, testtype, output_folder, parser_folder):    
+    def snapshot (self, all_devices, all_commands, changenumber, snapshot_folder, parser_folder):    
     
         # multi threads - one thread per device    
         for a_device in all_devices:
@@ -56,6 +56,6 @@ class NetmikoCommand:
                 print(c)
             print("\n")
 
-            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, testtype, output_folder, parser_folder)) 
+            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, snapshot_folder, parser_folder)) 
             t1.start()
             t1.join()
