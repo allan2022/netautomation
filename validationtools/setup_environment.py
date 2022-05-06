@@ -15,9 +15,6 @@ class SetupEnvironment:
         self.testbed_file = ""
         # self.test_type = ""
 
-        output_folder = full_load_yaml(env_filename)['output_directory']
-        create_folder(output_folder)
-
         try:
             self.change_number = input("\nSpecify change numebr: ")
         except KeyboardInterrupt:
@@ -27,6 +24,8 @@ class SetupEnvironment:
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
+        output_folder = full_load_yaml(env_filename)['output_directory']
+        create_folder(output_folder)
 
     def setup_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
@@ -38,7 +37,7 @@ class SetupEnvironment:
         self.testbed_file = os.path.join(os.getcwd(), f'{testbed_folder}/{testbed_folder}_{self.change_number}.yaml')
         print(self.testbed_file)
         if not os.path.exists(self.testbed_file):
-            print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
+            # print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
         if test_type.startswith('prechange_snapshot'):
