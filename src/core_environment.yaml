@@ -49,3 +49,7 @@ nxos_learn_commands:
 iosxe_learn_commands:
   - show ip interface brief
   - show inventory
+
+f5_tmsh_learn_commands:
+  - show net interface
+  - show net route
