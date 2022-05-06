@@ -17,7 +17,7 @@ class CoreValidation:
             pass
 
     def core_validation_pyats(self):
-        pyats_env = SetupEnvironment()
+        pyats_env = SetupEnvironment(CORE_ENVIRONMENT)
         if pyats_env.change_number != "":
             pyats_env.setup_pyats(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
