@@ -32,7 +32,7 @@ class SetupEnvironment:
 
         self.testbed_file = os.path.join(os.getcwd(), f'{testbed_folder}/{testbed_folder}_{self.change_number}.yaml')
         print(self.testbed_file)
-        
+
         if not os.path.exists(self.testbed_file):
             # print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
@@ -60,6 +60,19 @@ class SetupEnvironment:
         
         parsertemplate = full_load_yaml(env_filename)['parsertemplate_direcotry']
         self.parser_folder = os.path.join(os.getcwd(), parsertemplate)     
+
+
+        for dev in self.device_list:
+            dev_type = dev['device_type']
+            if dev_type == "cisco_nxos":
+                command_list = full_load_yaml(env_filename)['nxos_learn_commands']
+                self.command_list['cisco_nxos'] = command_list
+            elif dev_type == "cisco_xr":
+                command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
+                self.command_list['cisco_xr'] = command_list
+            else:
+                command_list = ""
+                print(f'\n device type {dev_type} not supported. ')
 
         # for dev in self.device_list:               
         #     dev['host'] = dev.pop('hostname')           
