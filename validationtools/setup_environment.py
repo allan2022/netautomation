@@ -20,11 +20,11 @@ class SetupEnvironment:
         except KeyboardInterrupt:
             print("\ntask aborted")
 
+        output_folder = full_load_yaml(env_filename)['output_directory']
         if self.change_number != "":
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
-        output_folder = full_load_yaml(env_filename)['output_directory']
         create_folder(output_folder)
 
     def setup_pyats(self, dev_filename, env_filename, test_type):
