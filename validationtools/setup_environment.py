@@ -31,7 +31,7 @@ class SetupEnvironment:
         create_folder(testbed_folder)
 
         self.testbed_file = os.path.join(os.getcwd(), f'{testbed_folder}/{testbed_folder}_{self.change_number}.yaml')
-        print(self.testbed_file)
+        # print(self.testbed_file)
 
         if not os.path.exists(self.testbed_file):
             # print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
