@@ -42,7 +42,12 @@ class CoreValidation:
                 before_folder = os.path.join(self.change_folder, 'prechange_snapshot_0')
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
-                print("compare postchange with last poastchange")
+                print("#####################  compare postchange with last postchange #########################")
+                i = self.snapshot_folder.rsplit('_', 1)[-1]
+                before_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+                os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
+            else:
+                print("task not supported")    
 
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
@@ -52,6 +57,7 @@ class CoreValidation:
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
             self.change_folder = core_validation.change_folder
+            self.snapshot_folder = core_validation.snapshot_folder
 
             print("\n" + "-"*20 + " all devices to be validated " + "-"*20)
             for dev in self.devices:
@@ -61,6 +67,12 @@ class CoreValidation:
             dev = NetmikoCommand()
             dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select, self.change_folder)
 
+            if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
+                print("#####################  compare postchange with prechange #########################")
+                before_folder = os.path.join(self.change_folder, 'prechange_snapshot_0')
+                os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
+            elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
+                print("compare postchange with last poastchange")
 
 def main():
     cv = CoreValidation()
