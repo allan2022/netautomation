@@ -51,7 +51,7 @@ class NetmikoCommand:
             dev_type = a_device['device_type']
             commands = all_commands[dev_type]
             
-            print("-"*20 + " commands for " + dev_type + "-"*20)
+            print("-"*20 + " commands for " + dev_type + " " + "-"*20)
             for c in commands:
                 print(c)
             print("\n")
