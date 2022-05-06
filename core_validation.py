@@ -48,7 +48,7 @@ class CoreValidation:
                 before_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             else:
-                print("task not supported")    
+                pass    
 
     def core_validation_netmiko(self):
         core_validation = SetupEnvironment()
@@ -81,7 +81,7 @@ class CoreValidation:
                 before_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
                 os.system(f'pyats diff {before_folder} {self.snapshot_folder} --output {self.change_folder}/diff_dir')
             else:
-                print("task not supported")    
+                pass    
 
 def main():
     cv = CoreValidation()
