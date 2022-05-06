@@ -11,6 +11,7 @@ class SetupEnvironment:
         self.change_number = ""
         self.change_folder = ""
         self.snapshot_folder = ""
+        self.parser_folder = ""
         self.testbed_file = ""
         self.test_type = ""
 
@@ -56,6 +57,7 @@ class SetupEnvironment:
     def setup_netmiko(self, dev_filename, env_filename, test_type):
         self.device_filename = dev_filename
         self.device_list = full_load_csv(dev_filename)
+        self.parser_folder = os.path.join(os.getcwd(), "parsertemplate")
         self.command_list = {}        
 
         for dev in self.device_list:               

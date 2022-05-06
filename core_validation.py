@@ -14,8 +14,8 @@ class CoreValidation:
     def __init__(self):
         self.devices = ""
         self.commands = ""
-        self.testbed = ""
         self.change_folder = ""
+        self.snapshot_folder = ""
         self.task_list = []
         self.task_select = ""
 
@@ -31,11 +31,12 @@ class CoreValidation:
 
             self.devices = core_validation.device_list
             self.commands = core_validation.command_list
-            self.testbed = core_validation.testbed_file
             self.change_folder = core_validation.change_folder
             self.snapshot_folder = core_validation.snapshot_folder
+            
+            testbed = core_validation.testbed_file
 
-            os.system(f'pyats learn {self.commands} --testbed-file {self.testbed} --output {self.snapshot_folder}')
+            os.system(f'pyats learn {self.commands} --testbed-file {testbed} --output {self.snapshot_folder}')
 
             if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
                 print("#####################  compare postchange with prechange #########################")
@@ -58,6 +59,9 @@ class CoreValidation:
             self.commands = core_validation.command_list
             self.change_folder = core_validation.change_folder
             self.snapshot_folder = core_validation.snapshot_folder
+            
+            changenumber = core_validation.change_number
+            parser = core_validation.parser_folder
 
             print("\n" + "-"*20 + " all devices to be validated " + "-"*20)
             for dev in self.devices:
@@ -65,7 +69,7 @@ class CoreValidation:
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             dev = NetmikoCommand()
-            dev.snapshot(self.devices, self.commands, core_validation.change_number, self.task_select, self.snapshot_folder)
+            dev.snapshot(self.devices, self.commands, changenumber, self.task_select, self.snapshot_folder, parser)
 
             if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
                 print("#####################  compare postchange with prechange #########################")

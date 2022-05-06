@@ -14,10 +14,10 @@ class NetmikoCommand:
         self.testtype = ""
         self.change_folder = ""
         self.snapshot_folder = ""
-        self.parse_folder = ""
+        self.parser_folder = ""
 
     # log configuration for one device
-    def exec_command(self, a_device, commands, changenumber, snapshot_folder, parse_folder):
+    def exec_command(self, a_device, commands, changenumber, snapshot_folder, parser_folder):
         netconnect = netmiko.ConnectHandler(**a_device)        
         
         
@@ -32,7 +32,7 @@ class NetmikoCommand:
                 file.write(output + "\n")
 
             device_type = a_device["device_type"]
-            parser_template = parse_folder + "/" + device_type + "_" + command_to_run + ".textfsm"
+            parser_template = parser_folder + "/" + device_type + "_" + command_to_run + ".textfsm"
 
             ops_input = parse_output(console_file, parser_template) 
             ops_file = snapshot_folder + "/" + str(changenumber) + "_" + a_device["host"] + "_" + command_to_run + "_" + "ops.txt"            
@@ -44,20 +44,8 @@ class NetmikoCommand:
 
 
     # log configuration for all devices by calling exec_command
-    def snapshot (self, all_devices, all_commands, changenumber, testtype, output_folder):    
-        # create subfolder for specific change
-        change_folder = output_folder
-
-        # create subfolder for each snapshot
-        snapshot_folder = changenumber + "_" + testtype + "_" + str(datetime.now()).replace(" ", "_")
-        snapshot_folder = os.path.join(change_folder, snapshot_folder)
-        if(not os.path.isdir(snapshot_folder)):
-            os.mkdir(snapshot_folder)   
+    def snapshot (self, all_devices, all_commands, changenumber, testtype, output_folder, parser_folder):    
     
-        self.change_folder = os.path.join(current_dir, change_folder)    
-        self.snapshot_folder = os.path.join(current_dir, snapshot_folder)
-        self.parse_folder = os.path.join(current_dir, 'parsertemplate')    
-
         # multi threads - one thread per device    
         for a_device in all_devices:
             dev_type = a_device['device_type']
@@ -68,6 +56,6 @@ class NetmikoCommand:
                 print(c)
             print("\n")
 
-            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, self.snapshot_folder, self.parse_folder)) 
+            t1 = threading.Thread(target=self.exec_command, args=(a_device, commands, changenumber, testtype, output_folder, parser_folder)) 
             t1.start()
             t1.join()
