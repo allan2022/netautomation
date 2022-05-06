@@ -18,6 +18,9 @@ output_directory:
 testbed_directory:
   testbed
 
+parsertemplate_direcotry:
+  parsertemplate
+
 result_folder_suffix:
   ChangeNumber
 

@@ -1,25 +1,25 @@
-import os
+# import os
 import json
 import netmiko
 from parsertools.parser_cli import parse_output
 import threading
-from datetime import datetime
-from utils.new_folder import create_folder
+# from datetime import datetime
+# from utils.new_folder import create_folder
 
 class NetmikoCommand:
     def __init__(self):
-        self.all_devices = []
-        self.all_commands = []
-        self.changenumber = ""
-        self.testtype = ""
-        self.change_folder = ""
-        self.snapshot_folder = ""
-        self.parser_folder = ""
+        # self.all_devices = []
+        # self.all_commands = []
+        # self.changenumber = ""
+        # self.testtype = ""
+        # self.change_folder = ""
+        # self.snapshot_folder = ""
+        # self.parser_folder = ""
+        pass
 
     # log configuration for one device
     def exec_command(self, a_device, commands, changenumber, snapshot_folder, parser_folder):
-        netconnect = netmiko.ConnectHandler(**a_device)        
-        
+        netconnect = netmiko.ConnectHandler(**a_device)
         
         for a_command in commands:
 

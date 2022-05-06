@@ -5,7 +5,6 @@ from utils.new_folder import create_folder
 class SetupEnvironment:
 
     def __init__(self, env_filename):
-        # self.device_filename = ""
         self.device_list = ""
         self.command_list = ""
         self.change_number = ""
@@ -13,7 +12,6 @@ class SetupEnvironment:
         self.snapshot_folder = ""
         self.parser_folder = ""
         self.testbed_file = ""
-        # self.test_type = ""
 
         try:
             self.change_number = input("\nSpecify change numebr: ")
@@ -24,8 +22,6 @@ class SetupEnvironment:
         if self.change_number != "":
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
-
-        create_folder(output_folder)
 
     def setup_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
@@ -57,11 +53,12 @@ class SetupEnvironment:
 
         return self
 
-    def setup_netmiko(self, dev_filename, env_filename, test_type):
-        # self.device_filename = dev_filename
+    def setup_netmiko(self, dev_filename, env_filename, test_type):  
         self.device_list = full_load_csv(dev_filename)
-        self.parser_folder = os.path.join(os.getcwd(), "parsertemplate")
-        self.command_list = {}        
+        self.command_list = {}   
+        
+        parsertemplate = full_load_yaml(env_filename)['parsertemplate_direcotry']
+        self.parser_folder = os.path.join(os.getcwd(), parsertemplate)     
 
         for dev in self.device_list:               
             dev['host'] = dev.pop('hostname')           
