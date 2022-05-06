@@ -13,7 +13,10 @@ sub_tasks:
   postchange_snapshot_and_diff_last_postchange_snapshot
 
 output_directory:
-  /output
+  output
+
+testbed_directory:
+  testbed
 
 result_folder_suffix:
   ChangeNumber

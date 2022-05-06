@@ -8,10 +8,6 @@ CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
 class CoreValidation:
     def __init__(self):
-        # self.devices = ""
-        # self.commands = ""
-        # self.change_folder = ""
-        # self.snapshot_folder = ""
         self.task_list = []
         self.task_select = ""
 
@@ -48,7 +44,7 @@ class CoreValidation:
                 pass    
 
     def core_validation_netmiko(self):
-        netmiko_env = SetupEnvironment()
+        netmiko_env = SetupEnvironment(CORE_ENVIRONMENT)
         if netmiko_env.change_number != "":
             netmiko_env.setup_netmiko(DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
             

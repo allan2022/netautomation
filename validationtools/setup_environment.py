@@ -4,8 +4,8 @@ from utils.new_folder import create_folder
 
 class SetupEnvironment:
 
-    def __init__(self):
-        self.device_filename = ""
+    def __init__(self, env_filename):
+        # self.device_filename = ""
         self.device_list = ""
         self.command_list = ""
         self.change_number = ""
@@ -13,16 +13,18 @@ class SetupEnvironment:
         self.snapshot_folder = ""
         self.parser_folder = ""
         self.testbed_file = ""
-        self.test_type = ""
+        # self.test_type = ""
+
+        output_folder = full_load_yaml(env_filename)['output_directory']
+        create_folder(output_folder)
 
         try:
             self.change_number = input("\nSpecify change numebr: ")
         except KeyboardInterrupt:
             print("\ntask aborted")
 
-        create_folder("output")
         if self.change_number != "":
-            self.change_folder = os.path.join(os.getcwd(), "output", self.change_number)
+            self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
 
@@ -30,9 +32,11 @@ class SetupEnvironment:
         self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
 
-        create_folder("testbed")
+        testbed_folder = full_load_yaml(env_filename)['testbed_directory']
+        create_folder(testbed_folder)
 
-        self.testbed_file = f'testbed/testbed_{self.change_number}.yaml'
+        self.testbed_file = os.path.join(os.getcwd(), f'{testbed_folder}/{testbed_folder}_{self.change_number}.yaml')
+        print(self.testbed_file)
         if not os.path.exists(self.testbed_file):
             print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
@@ -55,7 +59,7 @@ class SetupEnvironment:
         return self
 
     def setup_netmiko(self, dev_filename, env_filename, test_type):
-        self.device_filename = dev_filename
+        # self.device_filename = dev_filename
         self.device_list = full_load_csv(dev_filename)
         self.parser_folder = os.path.join(os.getcwd(), "parsertemplate")
         self.command_list = {}        
