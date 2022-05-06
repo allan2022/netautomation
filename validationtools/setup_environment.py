@@ -24,17 +24,15 @@ class SetupEnvironment:
             self.change_folder = create_folder(self.change_folder)
 
     def setup_pyats(self, dev_filename, env_filename, test_type):
-        # self.device_list = full_load_csv(dev_filename)
+        self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
 
         testbed_folder = full_load_yaml(env_filename)['testbed_directory']
         create_folder(testbed_folder)
 
         self.testbed_file = os.path.join(os.getcwd(), f'{testbed_folder}/{testbed_folder}_{self.change_number}.yaml')
-        # print(self.testbed_file)
 
         if not os.path.exists(self.testbed_file):
-            # print("#"*5 +  f' create testbed_{self.change_number}.yaml ' + "#"*5)
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
         if test_type.startswith('prechange_snapshot'):
