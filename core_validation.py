@@ -62,6 +62,9 @@ class CoreValidation:
             print("-" * (40 + len(" all devices to be validated ")) +"\n")
 
             netmiko_dev = NetmikoCommand()
+
+            print(devices)
+            print(commands)
             netmiko_dev.snapshot(devices, commands, changenumber, snapshot_folder, parser)
 
             if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
