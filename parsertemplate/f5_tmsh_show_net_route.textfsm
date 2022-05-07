@@ -1,0 +1,8 @@
+Value NAME (\S+)
+Value DESTINATION (\S+)
+Value TYPE (interface)
+Value NEXTHOP (\S+)
+Value ORIGIN (connected)
+
+Start
+  ^${NAME}\s+${DESTINATION}\s+${TYPE}\s+${NEXTHOP}\s+${ORIGIN}
