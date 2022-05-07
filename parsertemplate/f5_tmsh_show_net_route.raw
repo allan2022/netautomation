@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------------
+Net::Routes
+Name                Destination         Type       NextHop               Origin
+----------------------------------------------------------------------------------
+127.20.0.0/16       127.20.0.0/16       interface  tmm_bp                connected
+127.1.1.0/24        127.1.1.0/24        interface  tmm                   connected
+ff02:fff::/64       ff02:fff::/64       interface  tmm_bp                connected
+fe80::%vlan4095/64  fe80::%vlan4095/64  interface  tmm_bp                connected
+fe80::/64           fe80::/64           interface  /Common/socks-tunnel  connected
+fe80::/64           fe80::/64           interface  /Common/http-tunnel   connected
+fe80::%vlan4095/64  fe80::%vlan4095/64  interface  /Common/tmm_bp        connected
+ff02:fff::/64       ff02:fff::/64       interface  /Common/tmm_bp        connected
+ff02::/64           ff02::/64           interface  tmm                   connected
+fe80::/64           fe80::/64           interface  tmm                   connected
+
