@@ -3,4 +3,4 @@ Value STATUS (uninit|up|disable|down)
 Value MEDIA (none|100TX-FD)
 
 Start
-  ^${INTF}\s+${STATUS}\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+{MEDIA} -> Record
+  ^${INTF}\s+${STATUS}\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+${MEDIA} -> Record
