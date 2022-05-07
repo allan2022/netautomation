@@ -4,7 +4,7 @@ from setuptools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
 NETMIKO_DEVICE_LIST = os.getcwd() + '/src/f5_device_inventory.csv'
-F5_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
+F5_ENVIRONMENT = os.getcwd() + '/src/configuration_environment.yaml'
 
 class F5Validation:
     def __init__(self):
@@ -12,14 +12,14 @@ class F5Validation:
         self.task_select = ""
 
         try:
-            self.task_list, self.task_select = get_task(F5_ENVIRONMENT, 'sub_tasks')
+            self.task_list, self.task_select = get_task(F5_ENVIRONMENT, 'config_tasks')
         except KeyboardInterrupt:
             pass
 
     def f5_validation_netmiko(self):
         netmiko_env = SetupEnvironment(F5_ENVIRONMENT)
         if netmiko_env.change_number != "":
-            netmiko_env.setup_netmiko(NETMIKO_DEVICE_LIST, F5_ENVIRONMENT, self.task_select)
+            netmiko_env.setup_validation_netmiko(NETMIKO_DEVICE_LIST, F5_ENVIRONMENT, self.task_select)
             
             devices = netmiko_env.device_list
             commands = netmiko_env.command_list

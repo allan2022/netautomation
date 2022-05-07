@@ -23,7 +23,7 @@ class SetupEnvironment:
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
-    def setup_pyats(self, dev_filename, env_filename, test_type):
+    def setup_validation_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
 
@@ -52,7 +52,7 @@ class SetupEnvironment:
 
         return self
 
-    def setup_netmiko(self, dev_filename, env_filename, test_type):  
+    def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
         self.device_list = full_load_csv(dev_filename)
         self.command_list = {}   
         
@@ -75,26 +75,6 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-        # for dev in self.device_list:               
-        #     dev['host'] = dev.pop('hostname')           
-        #     dev.pop("protocol")
-        #     dev.pop('platform')
-
-        #     dev_type = dev['os']
-        #     if dev_type == 'nxos':
-        #         command_list = full_load_yaml(env_filename)['nxos_learn_commands']
-        #         dev['device_type'] = "cisco_nxos"
-        #         dev.pop('os')
-        #         self.command_list['cisco_nxos'] = command_list
-        #     elif dev_type == 'iosxr':
-        #         command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
-        #         dev['device_type'] = "cisco_xr"
-        #         dev.pop('os')
-        #         self.command_list['cisco_xr'] = command_list
-        #     else:
-        #         command_list = ""
-        #         print(f'\n device type {dev_type} not supported. ')
-
         if test_type.startswith('prechange_snapshot'):
             for i in range(20):
                 self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
@@ -110,8 +90,10 @@ class SetupEnvironment:
         else:
             print("test type not supported")
 
-
         return self
 
+    def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
+        self.device_list = full_load_csv(dev_filename)
+        self.command_list = {}  
 
         

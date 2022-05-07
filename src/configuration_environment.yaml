@@ -1,0 +1,30 @@
+main_tasks:
+  core_configuraiton
+  f5_configuration
+
+sub_tasks:
+  config_from_file
+  config_from_commands  
+
+output_directory:
+  output
+
+config_file_directory:
+  src/configuration
+
+parsertemplate_direcotry:
+  parsertemplate
+
+result_folder_suffix:
+  ChangeNumber
+
+core_networks:
+  lab1:
+    username: cisco
+    password: cisco
+
+  prod1:
+    username: input username
+    password: input password
+    
+
