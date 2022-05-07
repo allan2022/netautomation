@@ -5,4 +5,4 @@ Value NEXTHOP (\S+)
 Value ORIGIN (connected)
 
 Start
-  ^${NAME}\s+${DESTINATION}\s+${TYPE}\s+${NEXTHOP}\s+${ORIGIN}
+  ^${NAME}\s+${DESTINATION}\s+${TYPE}\s+${NEXTHOP}\s+${ORIGIN} -> Record
