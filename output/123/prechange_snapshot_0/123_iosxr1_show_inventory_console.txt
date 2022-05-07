@@ -1,0 +1,31 @@
+Fri May  6 23:42:16.017 UTC
+NAME: "0/0", DESCR: "Cisco IOS-XRv 9000 Centralized Line Card"
+PID: R-IOSXRV9000-LC-C , VID: V01, SN: 6475A28D725
+
+NAME: "0/0/0", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/1", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/2", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/3", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/4", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/5", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/0/6", DESCR: "N/A"
+PID: PORT-1G-NIC       , VID: N/A, SN: N/A
+
+NAME: "0/RP0", DESCR: "Cisco IOS-XRv 9000 Centralized Route Processor"
+PID: R-IOSXRV9000-RP-C , VID: V01, SN: 986AF9109D3
+
+NAME: "Rack 0", DESCR: "Cisco IOS-XRv 9000 Centralized Virtual Router"
+PID: R-IOSXRV9000-CC   , VID: V01, SN: 8F21767F3A3
+

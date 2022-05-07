@@ -1,25 +1,0 @@
-
-2022-05-05 10:45:42,106: %UNICON-INFO: +++ iosxr1 logfile /home/redlobster/netautomation/output/123/connection_iosxr1.txt +++
-
-2022-05-05 10:45:42,106: %UNICON-INFO: +++ Unicon plugin iosxr (unicon.plugins.iosxr) +++
-Password: 
-
-2022-05-05 10:45:42,938: %UNICON-INFO: +++ connection to spawn: ssh -l admin 131.226.217.150, id: 140131823907456 +++
-
-2022-05-05 10:45:42,939: %UNICON-INFO: connection to iosxr1
-
-
-
-RP/0/RP0/CPU0:iosxr1#
-
-2022-05-05 10:45:43,456: %UNICON-INFO: +++ initializing handle +++
-
-2022-05-05 10:45:43,523: %UNICON-INFO: +++ iosxr1 with via 'cli': executing command 'terminal length 0' +++
-terminal length 0
-Thu May  5 10:45:21.980 UTC
-RP/0/RP0/CPU0:iosxr1#
-
-2022-05-05 10:45:43,850: %UNICON-INFO: +++ iosxr1 with via 'cli': executing command 'terminal width 0' +++
-terminal width 0
-Thu May  5 10:45:22.304 UTC
-RP/0/RP0/CPU0:iosxr1#

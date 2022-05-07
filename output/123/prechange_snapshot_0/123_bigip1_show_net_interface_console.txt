@@ -1,0 +1,11 @@
+
+---------------------------------------------------------------
+Net::Interface
+Name  Status    Bits  Bits    Pkts  Pkts  Drops  Errs     Media
+                  In   Out      In   Out                       
+---------------------------------------------------------------
+1.1   uninit       0     0       0     0      0     0      none
+1.2   uninit       0     0       0     0      0     0      none
+1.3   uninit       0     0       0     0      0     0      none
+mgmt      up  328.4M  2.0M  172.1K  1.7K    107     0  100TX-FD
+

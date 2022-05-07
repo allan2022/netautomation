@@ -13,6 +13,20 @@ devices:
     os: nxos
     platform: cisco
     type: nxos
+  bigip1:
+    connections:
+      cli:
+        ip: 192.168.126.138
+        protocol: ssh
+    credentials:
+      default:
+        password: Red8856662
+        username: root
+      enable:
+        password: Red8856662
+    os: f5
+    platform: f5_tmsh
+    type: f5
   iosxr1:
     connections:
       cli:

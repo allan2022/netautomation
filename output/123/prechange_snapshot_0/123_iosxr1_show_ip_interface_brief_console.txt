@@ -1,0 +1,18 @@
+Fri May  6 23:42:15.693 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+BVI511                         10.200.188.33   Down            Down     blue    
+Loopback100                    1.1.1.100       Up              Up       default 
+Loopback111                    unassigned      Up              Up       default 
+Loopback200                    1.1.1.200       Up              Up       default 
+Loopback701                    10.0.0.1        Shutdown        Down     blue    
+Loopback702                    10.0.1.1        Up              Up       blue    
+tunnel-ip99                    1.1.1.1         Up              Up       default 
+MgmtEth0/RP0/CPU0/0            10.10.20.175    Up              Up       default 
+GigabitEthernet0/0/0/0         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/1         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/2         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/3         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/4         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/5         unassigned      Shutdown        Down     default 
+GigabitEthernet0/0/0/6         unassigned      Shutdown        Down     default 
