@@ -22,10 +22,20 @@ class CoreValidation:
         if pyats_env.change_number != "":
             pyats_env.setup_validation_pyats(PYATS_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
+            devices = pyats_env.device_list
             commands = pyats_env.command_list
             testbed = pyats_env.testbed_file
             change_folder = pyats_env.change_folder
             snapshot_folder = pyats_env.snapshot_folder          
+
+            print(devices)
+            print("##############")
+            print(commands)
+            print("##############")
+            print(change_folder)
+            print("##############")
+            print(snapshot_folder)         
+
 
             os.system(f'pyats learn {commands} --testbed-file {testbed} --output {snapshot_folder}')
 
