@@ -52,4 +52,3 @@ iosxe_learn_commands:
 
 f5_tmsh_learn_commands:
   - show net interface
-  - show net route
