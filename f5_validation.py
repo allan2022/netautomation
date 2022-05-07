@@ -19,7 +19,7 @@ class F5Validation:
     def f5_validation_netmiko(self):
         netmiko_env = SetupEnvironment(F5_ENVIRONMENT)
         if netmiko_env.change_number != "":
-            netmiko_env.setup_netmiko(NETMIKO_DEVICE_LIST, F5_ENVIRONMENT, self.task_select)
+            netmiko_env.setup_validation_netmiko(NETMIKO_DEVICE_LIST, F5_ENVIRONMENT, self.task_select)
             
             devices = netmiko_env.device_list
             commands = netmiko_env.command_list
