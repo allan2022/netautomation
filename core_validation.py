@@ -64,6 +64,7 @@ class CoreValidation:
             netmiko_dev = NetmikoCommand()
 
             print(devices)
+            print("##############")
             print(commands)
             netmiko_dev.snapshot(devices, commands, changenumber, snapshot_folder, parser)
 
@@ -81,13 +82,13 @@ class CoreValidation:
             else:
                 pass    
 
-# def main():
-#     cv = CoreValidation()
-#     cv.core_validation_pyats()
-#     cv.core_validation_netmiko()
+def main():
+    cv = CoreValidation()
+    cv.core_validation_pyats()
+    cv.core_validation_netmiko()
 
-# if __name__ == "__main__":
-#     try:
-#         main()
-#     except KeyboardInterrupt:
-#         print("\n tast aborted")
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n tast aborted")
