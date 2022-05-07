@@ -1,5 +1,5 @@
 Value INTF (\S+)
-Value STATUS (uninit|up|disable|down)
+Value STATUS (uninit|up|disabled|down)
 Value MEDIA (none|100TX-FD)
 
 Start
