@@ -1,6 +1,6 @@
 import os
 from utils.get_task import get_task
-from setuptools.setup_environment import SetupEnvironment
+from envtools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
 NETMIKO_DEVICE_LIST = os.getcwd() + '/src/f5_device_inventory.csv'
