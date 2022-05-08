@@ -51,6 +51,8 @@ class NetmikoCommand:
         netconnect = netmiko.ConnectHandler(**device)
         
         for command in commands:
+            print(type(command))
+            print(command)
             output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
             print(f'########### {command_name} is implemented {output}################')
@@ -65,7 +67,6 @@ class NetmikoCommand:
           
             print("-"*20 + " commands for " + device['host'] + " " + "-"*20)
             for command in commands:
-                print(type(command))
                 print(command)
             print("\n")
 
