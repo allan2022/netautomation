@@ -52,7 +52,7 @@ class CoreValidation:
 
     def core_validation_netmiko(self):
 
-        if self.tasktask_select_list != None:
+        if self.task_select != None:
             netmiko_env = SetupEnvironment(CORE_ENVIRONMENT)
 
             if netmiko_env.change_number != "":
