@@ -34,11 +34,8 @@ def load_command_csv(csv_filename = None):
         print(f'{csv_filename} not found!')
     else:
         with open(csv_filename, 'r') as f:
-            reader = csv.reader(f)
-            for row in reader:
-                print("##########row###########")
-                print(type(row))
-                print(row)
-                print("#######row end##############")
-                output.append(row)
+            output = f.readlines()
+            print("########readline outpu#############")
+            print(type(output))
+            print(output)
     return output
