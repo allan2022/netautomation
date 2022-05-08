@@ -1,2 +1,2 @@
-create ltm pool R1VS description "R1 Loopback 100" load-balancing-mode round-robin monitor gateway_icmp members add {10.1.1.1:22 {address 10.1.1.1}}
-create ltm pool R2VS description "R1 Loopback 100" load-balancing-mode round-robin monitor gateway_icmp members add {20.1.1.1:22 {address 20.1.1.1}}
+create ltm pool R1-POOL description "R1 Loopback 100" load-balancing-mode round-robin monitor tcp members add {10.1.1.1:22 {address 10.1.1.1}}
+create ltm pool R2-POOL description "R2 Loopback 100" load-balancing-mode round-robin monitor tcp members add {20.1.1.1:22 {address 20.1.1.1}}
