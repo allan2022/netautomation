@@ -56,9 +56,9 @@ class NetmikoCommand:
             output = netconnect.send_command(command)
 
             if output == "":
-                print(f'{command} --- succeed')
+                print(f'{command} --- succeed\n')
             else:
-                print(f'{command} --- failed')
+                print(f'{command} --- failed\n')
 
         netconnect.disconnect()   
 
