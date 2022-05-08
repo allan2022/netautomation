@@ -101,7 +101,7 @@ class SetupEnvironment:
                 command = input("\ntype tmsh command: ")
             except KeyboardInterrupt:
                 print("\ntask aborted")
-            self.command_list[self.device_list['host']] = command
+            self.command_list['f5_tmsh'] = command
 
         elif (config_type == "config_from_file"):
             config_file = full_load_yaml(env_filename)['config_file']
