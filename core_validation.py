@@ -17,7 +17,7 @@ class CoreValidation:
         except KeyboardInterrupt:
             pass
 
-        if self.task_select == "":
+        if self.task_select == None:
             print("\ntask not available")
 
     def core_validation_pyats(self):
