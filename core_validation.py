@@ -22,8 +22,9 @@ class CoreValidation:
 
     def core_validation_pyats(self):
         
-        if self.task_list != None:
+        if self.task_select != None:
             pyats_env = SetupEnvironment(CORE_ENVIRONMENT)
+
             if pyats_env.change_number != "":
                 pyats_env.setup_validation_pyats(PYATS_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
@@ -50,8 +51,10 @@ class CoreValidation:
                     pass    
 
     def core_validation_netmiko(self):
-        if self.task_list != None:
+
+        if self.tasktask_select_list != None:
             netmiko_env = SetupEnvironment(CORE_ENVIRONMENT)
+
             if netmiko_env.change_number != "":
                 netmiko_env.setup_validation_netmiko(NETMIKO_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
                 
