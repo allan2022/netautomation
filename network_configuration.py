@@ -13,8 +13,8 @@
 """
 from os import getcwd
 from utils.get_task import get_task
-# from core_validation import CoreValidation
-# from f5_validation import F5Validation
+from core_configuration import CoreConfiguration
+from f5_configuration import F5Configuration
 
 CONFIG_ENVIRONMENT = getcwd() + "/src/configuration_environment.yaml"
 
