@@ -1,2 +1,2 @@
-  create net self 192.168.126.181/30 vlan Internal
-  create net self 192.168.126.185/30 vlan External
+	create net route R1 network 10.1.1.0/24 gw 192.168.126.182
+  create net route R2 network 20.1.1.0/24 gw 192.168.126.186
