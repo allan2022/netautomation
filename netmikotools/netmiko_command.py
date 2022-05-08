@@ -30,17 +30,6 @@ class NetmikoCommand:
 
         netconnect.disconnect()    
 
-    def exec_config(self, device, commands):
-        netconnect = netmiko.ConnectHandler(**device)
-        
-        for command in commands:
-            output = netconnect.send_command(command)
-            command_name = command.replace(" ", "_")
-            print(f'########### {command_name} is implemented {output}################')
-
-        netconnect.disconnect()   
-
-
     # log configuration for all devices by calling exec_snapshot
     def snapshot (self, devices, all_commands, changenumber, snapshot_folder, parser_folder):    
     
@@ -58,21 +47,23 @@ class NetmikoCommand:
             t1.start()
             t1.join()
 
+    def exec_config(self, device, commands):
+        netconnect = netmiko.ConnectHandler(**device)
+        
+        for command in commands:
+            output = netconnect.send_command(command)
+            command_name = command.replace(" ", "_")
+            print(f'########### {command_name} is implemented {output}################')
+
+        netconnect.disconnect()   
+
     # config for all devices by calling exec_command
-    def config (self, devices, all_commands):    
+    def config (self, devices, commands):    
     
         # multi threads - one thread per device    
         for device in devices:
-            devname = device['host']
-            print("##############")
-            print(device)
-            print("#############")
-            print(devname)
-            print("###########")
-            print(all_commands)
-            commands = all_commands[devname]
-            
-            print("-"*20 + " commands for " + devname + " " + "-"*20)
+          
+            print("-"*20 + " commands for " + device['host'] + " " + "-"*20)
             for command in commands:
                 print(command)
             print("\n")
