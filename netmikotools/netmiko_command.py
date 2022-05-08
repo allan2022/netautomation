@@ -62,15 +62,13 @@ class NetmikoCommand:
 
     # config for all devices by calling exec_command
     def config (self, devices, commands):    
-    
-        # multi threads - one thread per device    
-        for device in devices:
-          
-            print("-"*20 + " commands for " + device['host'] + " " + "-"*20)
-            for command in commands:
-                print(command)
-            print("\n")
 
+        print("-"*20 + " commands for all devices " + "-"*20)
+        for command in commands:
+            print(command)
+
+        # multi threads - one thread per device    
+        for device in devices:        
             t1 = threading.Thread(target=self.exec_config, args=(device, commands)) 
             t1.start()
             t1.join()
