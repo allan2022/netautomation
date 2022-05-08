@@ -4,7 +4,7 @@ main_tasks:
 
 sub_tasks:
   config_from_file
-  config_from_commands  
+  config_from_command 
 
 output_directory:
   output
