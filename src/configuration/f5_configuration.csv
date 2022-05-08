@@ -1,3 +1,2 @@
-	create ltm node 10.1.1.1 monitor icmp
-  create ltm node 20.1.1.1 monitor icmp
-  
+create ltm node 10.1.1.1 monitor icmp
+create ltm node 20.1.1.1 monitor icmp
