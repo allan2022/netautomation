@@ -1,2 +1,2 @@
-create net vlan Internal interfaces add {1.1}
-create net vlan External interfaces add {1.2}
+  create net self 10.1.1.1/24 vlan Internal
+  create net self 10.1.2.1/24 vlan External
