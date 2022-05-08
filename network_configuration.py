@@ -27,7 +27,8 @@ def main():
     if task_select == "core_configuraiton":
         print("core_configuration")
     elif task_select == "f5_configuration":
-        print("f5_configuraiton")
+        task = F5Configuration()
+        task.f5_config()
     else:
         print("\ntask not available")
 
