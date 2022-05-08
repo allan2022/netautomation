@@ -95,7 +95,7 @@ class SetupEnvironment:
 
         return self
 
-    def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
+    def setup_configuration_netmiko(self, dev_filename, env_filename, test_type):  
         self.device_list = full_load_csv(dev_filename)
         self.command_list = {}  
 

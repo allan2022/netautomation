@@ -73,6 +73,7 @@ class CoreValidation:
 
             netmiko_dev = NetmikoCommand()
 
+            print(f'######### core_validation_netmiko ###############')
             print(devices)
             print("##############")
             print(commands)
