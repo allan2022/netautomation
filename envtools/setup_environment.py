@@ -56,6 +56,8 @@ class SetupEnvironment:
         self.device_list = full_load_csv(dev_filename)
         self.command_list = {}   
         
+        print("#### setup_validatin_netmiko####")
+        print(self.device_list)
         parsertemplate = full_load_yaml(env_filename)['parsertemplate_direcotry']
         self.parser_folder = os.path.join(os.getcwd(), parsertemplate)     
 
