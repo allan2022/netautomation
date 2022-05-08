@@ -65,8 +65,6 @@ class NetmikoCommand:
     def config (self, devices, commands):    
 
         print("-"*20 + " commands for all devices " + "-"*20)
-        for command in commands:
-            print(command)
 
         # multi threads - one thread per device    
         for device in devices:        
