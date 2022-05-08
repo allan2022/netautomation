@@ -24,6 +24,10 @@ class F5Configuration:
             devices = f5_env.device_list
             commands = f5_env.command_list
 
+            print("####### devices ############")
+            print(devices)
+            print("########### commands #############")
+            print(commands)
             print("\n" + "-"*20 + " all devices to be configured " + "-"*20)
             for dev in devices:
                 print('{} : {} '.format(dev['device_type'], dev['host'] ))
