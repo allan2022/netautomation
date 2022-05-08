@@ -22,7 +22,7 @@ class CoreValidation:
         if pyats_env.change_number != "":
             pyats_env.setup_validation_pyats(PYATS_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
 
-            # devices = pyats_env.device_list
+            devices = pyats_env.device_list
             commands = pyats_env.command_list
             testbed = pyats_env.testbed_file
             change_folder = pyats_env.change_folder
@@ -82,7 +82,7 @@ class CoreValidation:
 def main():
     cv = CoreValidation()
     cv.core_validation_pyats()
-    cv.core_validation_netmiko()
+    # cv.core_validation_netmiko()
 
 if __name__ == "__main__":
     try:
