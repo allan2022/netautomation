@@ -54,7 +54,8 @@ class NetmikoCommand:
             output = netconnect.send_command(command)
             print("########################exec_config ###############")
             print(type(output))
-            print(f'this is output = {output}')
+            if output == "":
+                print("succeeded")
 
         netconnect.disconnect()   
 
