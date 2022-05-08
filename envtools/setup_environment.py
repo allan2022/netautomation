@@ -1,5 +1,5 @@
 import os
-from utils.load_file import full_load_yaml, full_load_csv
+from utils.load_file import full_load_yaml, full_load_csv, load_command_csv
 from utils.new_folder import create_folder
 
 class SetupEnvironment:
@@ -93,7 +93,7 @@ class SetupEnvironment:
 
     def setup_configuration_netmiko(self, dev_filename, env_filename, config_type):  
         self.device_list = full_load_csv(dev_filename)
-        self.command_list = {}  
+        self.command_list = []
 
         print(self.device_list)
         if (config_type == "config_from_command"):
@@ -106,8 +106,8 @@ class SetupEnvironment:
         elif (config_type == "config_from_file"):
             config_file = full_load_yaml(env_filename)['config_file']
             config_file = os.path.join(os.getcwd(), config_file)
-            print(config_file)
-            self.command_list = full_load_csv(config_file) 
+            self.command_list = load_command_csv(config_file) 
+            print(self.command_list)
 
         else:
             pass
