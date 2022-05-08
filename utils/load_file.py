@@ -36,7 +36,9 @@ def load_command_csv(csv_filename = None):
         with open(csv_filename, 'r') as f:
             reader = csv.reader(f)
             for row in reader:
+                print("##########row###########")
                 print(type(row))
                 print(row)
+                print("#######row end##############")
                 output.append(row)
     return output
