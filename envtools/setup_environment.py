@@ -95,6 +95,7 @@ class SetupEnvironment:
         self.device_list = full_load_csv(dev_filename)
         self.command_list = {}  
 
+        print(self.device_list)
         if (config_type == "config_from_command"):
             try:
                 command = input("\ntype tmsh command: ")
