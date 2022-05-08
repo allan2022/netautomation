@@ -5,3 +5,32 @@ create_vlan:
 create_selfip:
   create net self 10.1.1.1/24 vlan Internal
   create net self 10.1.2.1/24 vlan External
+
+create vs:
+  ltm virtual example_vs {
+      destination 172.16.1.154:any
+      ip-protocol tcp
+      mask 255.255.255.255
+      persist {
+          example_msrdp {
+              default no
+          }
+          example_srcaddr {
+              default yes
+          }
+          example_ssl {
+              default no
+          }
+      }
+      pool example_pool
+      profiles {
+          tcp-lan-optimized { }
+      }
+      rules {
+          example_persist_select_rule
+      }
+      source 0.0.0.0/0
+      translate-address enabled
+      translate-port disabled
+      vs-index 43
+  }  
