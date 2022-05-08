@@ -35,7 +35,4 @@ def load_command_csv(csv_filename = None):
     else:
         with open(csv_filename, 'r') as f:
             output = f.readlines()
-            print("########readline outpu#############")
-            print(type(output))
-            print(output)
     return output
