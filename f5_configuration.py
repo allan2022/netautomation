@@ -12,7 +12,7 @@ class F5Configuration:
         self.task_select = ""
 
         try:
-            self.task_list, self.task_select = get_task(F5_ENVIRONMENT, 'config_tasks')
+            self.task_list, self.task_select = get_task(F5_ENVIRONMENT, 'main_tasks')
         except KeyboardInterrupt:
             pass
 
