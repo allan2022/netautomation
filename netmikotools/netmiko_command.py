@@ -51,13 +51,14 @@ class NetmikoCommand:
         netconnect = netmiko.ConnectHandler(**device)
         devname = device['host']
 
+        print("-"*20 + f' commands for {devname} ' + "-"*20)
         for command in commands:
             output = netconnect.send_command(command)
 
             if output == "":
-                print(f'{command} --- succeeds for {devname}')
+                print(f'{command} --- succeeds')
             else:
-                print(f'{command} --- fails for {devname}')
+                print(f'{command} --- fails')
 
         netconnect.disconnect()   
 
