@@ -35,6 +35,8 @@ class NetmikoCommand:
     def snapshot (self, devices, all_commands, changenumber, snapshot_folder, parser_folder):    
     
         # multi threads - one thread per device    
+        print("#### netmiko_command #####")
+        print(devices)
         for device in devices:
             dev_type = device['device_type']
             commands = all_commands[dev_type]
