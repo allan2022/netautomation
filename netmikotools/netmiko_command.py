@@ -68,6 +68,8 @@ class NetmikoCommand:
             print(device)
             print("#############")
             print(devname)
+            print("###########")
+            print(all_commands)
             commands = all_commands[devname]
             
             print("-"*20 + " commands for " + devname + " " + "-"*20)
