@@ -52,8 +52,7 @@ class NetmikoCommand:
         
         for command in commands:
             output = netconnect.send_command(command)
-
-            print(f'########### {command} is implemented {output}################')
+            print(output)
 
         netconnect.disconnect()   
 
