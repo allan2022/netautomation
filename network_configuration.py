@@ -23,6 +23,8 @@ try:
 except KeyboardInterrupt:
     pass
 
+print(task_select)
+
 def main():
     if task_select == "core_configuraiton":
         print("core_configuration")
