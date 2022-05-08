@@ -65,6 +65,7 @@ class NetmikoCommand:
           
             print("-"*20 + " commands for " + device['host'] + " " + "-"*20)
             for command in commands:
+                print(type(command))
                 print(command)
             print("\n")
 

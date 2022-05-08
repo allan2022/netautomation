@@ -95,7 +95,6 @@ class SetupEnvironment:
         self.device_list = full_load_csv(dev_filename)
         self.command_list = []
 
-        print(self.device_list)
         if (config_type == "config_from_command"):
             try:
                 command = input("\ntype tmsh command: ")
@@ -107,7 +106,6 @@ class SetupEnvironment:
             config_file = full_load_yaml(env_filename)['config_file']
             config_file = os.path.join(os.getcwd(), config_file)
             self.command_list = load_command_csv(config_file) 
-            print(self.command_list)
 
         else:
             pass
