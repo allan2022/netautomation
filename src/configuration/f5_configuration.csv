@@ -1,2 +1,2 @@
-	create net route R1 network 10.1.1.0/24 gw 192.168.126.182
-  create net route R2 network 20.1.1.0/24 gw 192.168.126.186
+	create ltm node 10.1.1.1 monitor icmp
+  create ltm node 20.1.1.1 montor icmp
