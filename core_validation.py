@@ -17,9 +17,9 @@ class CoreValidation:
         except KeyboardInterrupt:
             pass
 
-        if self.task_select != "prechange_snapshot" or "postchange_snapshot_and_diff_prechange_snapshot" or "postchange_snapshot_and_diff_last_postchange_snapshot":
+        if self.task_select == "":
             print("\ntask not available")
-            
+
     def core_validation_pyats(self):
         pyats_env = SetupEnvironment(CORE_ENVIRONMENT)
         if pyats_env.change_number != "":
