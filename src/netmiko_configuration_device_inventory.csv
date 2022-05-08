@@ -1,0 +1,4 @@
+host,ip,username,password,device_type
+LEAF1,131.226.217.151,admin,Admin_1234!,cisco_nxos
+iosxr1,131.226.217.150,admin,C1sco12345,cisco_xr
+bigip1,192.168.126.138,root,Red8856662,f5_tmsh
