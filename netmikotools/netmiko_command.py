@@ -50,6 +50,7 @@ class NetmikoCommand:
     def exec_config(self, device, commands):
         netconnect = netmiko.ConnectHandler(**device)
         devname = device['host']
+        print(commands)
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
         for command in commands:
