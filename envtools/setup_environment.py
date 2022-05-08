@@ -63,6 +63,7 @@ class SetupEnvironment:
 
 
         for dev in self.device_list:
+            print(f'### setup_validation_netmiko ={dev} ############')
             dev_type = dev['device_type']
             if dev_type == "cisco_nxos":
                 command_list = full_load_yaml(env_filename)['nxos_learn_commands']
