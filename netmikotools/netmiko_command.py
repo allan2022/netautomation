@@ -56,16 +56,14 @@ class NetmikoCommand:
             output = netconnect.send_command(command)
 
             if output == "":
-                print(f'{command} --- succeeds')
+                print(f'{command} --- succeed')
             else:
-                print(f'{command} --- fails')
+                print(f'{command} --- failed')
 
         netconnect.disconnect()   
 
     # config for all devices by calling exec_command
     def config (self, devices, commands):    
-
-        print("-"*20 + " commands for all devices " + "-"*20)
 
         # multi threads - one thread per device    
         for device in devices:        
