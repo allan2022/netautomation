@@ -91,8 +91,43 @@ class SetupEnvironment:
 
         return self
 
-    # def setup_configuration_netmiko(self, dev_filename, env_filename, test_type):  
-    #     self.device_list = full_load_csv(dev_filename)
-    #     self.command_list = {}  
+    def setup_configuration_netmiko(self, dev_filename, env_filename, test_type):  
+        self.device_list = full_load_csv(dev_filename)
+        self.command_list = {}   
+        
+        parsertemplate = full_load_yaml(env_filename)['parsertemplate_direcotry']
+        self.parser_folder = os.path.join(os.getcwd(), parsertemplate)     
+
+        for dev in self.device_list:
+            dev_type = dev['device_type']
+            if dev_type == "cisco_nxos":
+                command_list = full_load_yaml(env_filename)['nxos_learn_commands']
+                self.command_list['cisco_nxos'] = command_list
+            elif dev_type == "cisco_xr":
+                command_list = full_load_yaml(env_filename)['iosxe_learn_commands']
+                self.command_list['cisco_xr'] = command_list
+            elif dev_type == "f5_tmsh":
+                command_list = full_load_yaml(env_filename)['f5_tmsh_learn_commands']
+                self.command_list['f5_tmsh'] = command_list
+            else:
+                command_list = ""
+                print(f'\n device type {dev_type} not supported. ')
+
+        if test_type.startswith('prechange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
+        elif test_type.startswith('postchange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
+        else:
+            print("test type not supported")
+
+        return self
 
         
