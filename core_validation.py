@@ -3,8 +3,8 @@ from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
-PYATS_DEVICE_LIST = os.getcwd() + '/src/pyats_device_inventory.csv'
-NETMIKO_DEVICE_LIST = os.getcwd() + '/src/netmiko_device_inventory.csv'
+PYATS_DEVICE_LIST = os.getcwd() + '/src/pyats_validation_device_inventory.csv'
+NETMIKO_DEVICE_LIST = os.getcwd() + '/src/netmiko_validation_device_inventory.csv'
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
 class CoreValidation:
