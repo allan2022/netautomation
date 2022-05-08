@@ -51,11 +51,9 @@ class NetmikoCommand:
         netconnect = netmiko.ConnectHandler(**device)
         
         for command in commands:
-            print(type(command))
-            print(command)
-            output = netconnect.send_command(command[0])
+            output = netconnect.send_command(command)
 
-            print(f'########### {command[0]} is implemented {output}################')
+            print(f'########### {command} is implemented {output}################')
 
         netconnect.disconnect()   
 
