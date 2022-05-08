@@ -25,3 +25,16 @@ def full_load_csv(csv_filename = None):
             for row in reader:
                 output.append(row)
     return output
+
+def load_command_csv(csv_filename = None):
+    output = []
+    if csv_filename == None:
+        print(f'{csv_filename} not found!')
+    elif not exists(csv_filename):
+        print(f'{csv_filename} not found!')
+    else:
+        with open(csv_filename, 'r') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                output.append(row)
+    return output
