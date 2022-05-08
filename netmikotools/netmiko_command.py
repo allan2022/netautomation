@@ -52,8 +52,7 @@ class NetmikoCommand:
         
         for command in commands:
             output = netconnect.send_command(command)
-            print("########################exec_config ###############")
-            print(type(output))
+
             if output == "":
                 print("command execution succeeded")
             else:
