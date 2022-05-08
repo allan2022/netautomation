@@ -9,14 +9,8 @@ sub_tasks:
 output_directory:
   output
 
-config_file_directory:
-  src/configuration
-
-parsertemplate_direcotry:
-  parsertemplate
-
-result_folder_suffix:
-  ChangeNumber
+config_file:
+  src/configuration/f5_configuration.csv
 
 core_networks:
   lab1:

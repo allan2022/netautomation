@@ -8,7 +8,7 @@ class NetmikoCommand:
         pass
 
     # log configuration for one device
-    def exec_command(self, device, commands, changenumber, snapshot_folder, parser_folder):
+    def exec_snapshot(self, device, commands, changenumber, snapshot_folder, parser_folder):
         netconnect = netmiko.ConnectHandler(**device)
         
         for command in commands:
@@ -30,8 +30,18 @@ class NetmikoCommand:
 
         netconnect.disconnect()    
 
+    def exec_config(self, device, commands):
+        netconnect = netmiko.ConnectHandler(**device)
+        
+        for command in commands:
+            output = netconnect.send_command(command)
+            command_name = command.replace(" ", "_")
+            print(f'########### {command_name} is implemented {output}################')
 
-    # log configuration for all devices by calling exec_command
+        netconnect.disconnect()   
+
+
+    # log configuration for all devices by calling exec_snapshot
     def snapshot (self, devices, all_commands, changenumber, snapshot_folder, parser_folder):    
     
         # multi threads - one thread per device    
@@ -44,6 +54,23 @@ class NetmikoCommand:
                 print(command)
             print("\n")
 
-            t1 = threading.Thread(target=self.exec_command, args=(device, commands, changenumber, snapshot_folder, parser_folder)) 
+            t1 = threading.Thread(target=self.exec_snapshot, args=(device, commands, changenumber, snapshot_folder, parser_folder)) 
+            t1.start()
+            t1.join()
+
+    # config for all devices by calling exec_command
+    def config (self, devices, all_commands):    
+    
+        # multi threads - one thread per device    
+        for device in devices:
+            devname = device['host']
+            commands = all_commands[devname]
+            
+            print("-"*20 + " commands for " + devname + " " + "-"*20)
+            for command in commands:
+                print(command)
+            print("\n")
+
+            t1 = threading.Thread(target=self.exec_config, args=(device, commands)) 
             t1.start()
             t1.join()

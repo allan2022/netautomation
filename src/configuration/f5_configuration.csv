@@ -1,0 +1,3 @@
+host,command
+bigip1,create net vlan Internal interfaces add {1.1}
+bigip2,create net vlan Internal interfaces add {1.1}
