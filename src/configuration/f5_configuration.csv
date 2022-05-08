@@ -1,2 +1,2 @@
-create ltm virtual R1VS source 0.0.0.0/0 destination 100.1.1.1:22 ip-protocol tcp profiles add {http} source-address-translation { type automap } pool R1-POOL persist replace-all-with { source_addr }
-create ltm virtual R2VS source 0.0.0.0/0 destination 200.1.1.1:22 ip-protocol tcp profiles add {http} source-address-translation { type automap } pool R2-POOL persist replace-all-with { source_addr }
+create ltm virtual R1VS source 0.0.0.0/0 destination 100.1.1.1:22 ip-protocol tcp profiles add {http} pool R1-POOL
+create ltm virtual R2VS source 0.0.0.0/0 destination 200.1.1.1:22 ip-protocol tcp profiles add {http} pool R2-POOL
