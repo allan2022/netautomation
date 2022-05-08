@@ -34,5 +34,5 @@ def load_command_csv(csv_filename = None):
         print(f'{csv_filename} not found!')
     else:
         with open(csv_filename, 'r') as f:
-            output = f.readlines()
+            output = f.read().splitlines()
     return output
