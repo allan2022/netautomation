@@ -30,9 +30,6 @@ class FortinetValidation:
                 devices = netmiko_env.device_list
                 commands = netmiko_env.command_list
 
-                print("#############fortinet commands############")
-                print(commands)
-
                 change_folder = netmiko_env.change_folder
                 snapshot_folder = netmiko_env.snapshot_folder
                 
