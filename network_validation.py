@@ -2,6 +2,7 @@ from os import getcwd
 from utils.get_task import get_task
 from core_validation import CoreValidation
 from f5_validation import F5Validation
+from fortinet_validation import FortinetValidation
 
 CORE_ENVIRONMENT = getcwd() + "/src/core_environment.yaml"
 
@@ -42,7 +43,8 @@ def main():
         task = F5Validation()
         task.f5_validation_netmiko()
     elif task_select == "fortinet_validation":
-        print("fortinet_validation")
+        task = FortinetValidation()
+        task.fortinet_validation_netmiko()
     elif task_select == "paloalto_validation":
         print("paloalto_validation")
     else:
