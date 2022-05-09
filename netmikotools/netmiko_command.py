@@ -19,7 +19,7 @@ class NetmikoCommand:
                 print("##################command########################")
                 print(command['cmd'])
                 output = netconnect.send_config_set(command['cmd'])
-                command_name = "get_system_sesson_list"
+                command_name = "get_system_session_list"
             else:
                 output = netconnect.send_command(command)
                 command_name = command.replace(" ", "_")
