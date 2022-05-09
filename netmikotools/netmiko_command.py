@@ -18,12 +18,11 @@ class NetmikoCommand:
             if device_type == "fortinet":
                 print("##################command########################")
                 print(command['cmd'])
-                command = command['cmd']
-                output = netconnect.send_config_set(command)
+                output = netconnect.send_config_set(command['cmd'])
+                command_name = "get_system_sesson_list"
             else:
                 output = netconnect.send_command(command)
-
-            command_name = command.replace(" ", "_")
+                command_name = command.replace(" ", "_")
 
             console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
             with open(console_file, "w") as file:
