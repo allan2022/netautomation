@@ -35,4 +35,5 @@ def load_command_csv(csv_filename = None):
     else:
         with open(csv_filename, 'r') as f:
             output = f.read().splitlines()
+            print(len(output))
     return output
