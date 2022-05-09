@@ -56,3 +56,5 @@ f5_tmsh_learn_commands:
 
 fortinet_learn_commands:
   - config vdom
+    edit root
+    get system session list
