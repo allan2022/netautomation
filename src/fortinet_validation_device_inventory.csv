@@ -1,2 +1,2 @@
-host,username,password,device_type
-192.168.126.51,admin,4848,fortinet
+host,ip,username,password,device_type,fast_cli
+FGFW1,192.168.126.51,admin,4848,fortinet,False
