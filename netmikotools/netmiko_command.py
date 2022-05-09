@@ -17,8 +17,8 @@ class NetmikoCommand:
 
             if device_type == "fortinet":
                 print("##################command########################")
-                print(command)
-                output = netconnect.send_config_set(command)
+                print(command['cmd'])
+                output = netconnect.send_config_set(command['cmd'])
             else:
                 output = netconnect.send_command(command)
 
