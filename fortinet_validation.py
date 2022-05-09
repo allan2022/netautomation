@@ -28,7 +28,15 @@ class FortinetValidation:
                 netmiko_env.setup_validation_netmiko(NETMIKO_DEVICE_LIST, FORTINET_ENVIRONMENT, self.task_select)
                 
                 devices = netmiko_env.device_list
-                commands = netmiko_env.command_list
+                # commands = netmiko_env.command_list
+
+                commands = [[
+                    "config vdom",
+                    "edit root",
+                    "get system session list",
+                ]]
+
+
                 change_folder = netmiko_env.change_folder
                 snapshot_folder = netmiko_env.snapshot_folder
                 
