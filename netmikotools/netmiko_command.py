@@ -56,7 +56,8 @@ class NetmikoCommand:
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
         for command in commands:
-            output = netconnect.send_command_expect(command, command_verify=False)
+            expect_prompt = r"(root@.*#|\s*|[#|\$]\s*$)"
+            output = netconnect.send_command_expect(command, expect_string=expect_prompt, command_verify=False)
 
             if output == "":
                 print(f'{command} \n -- succeed\n')
