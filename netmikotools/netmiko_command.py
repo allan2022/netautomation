@@ -14,13 +14,13 @@ class NetmikoCommand:
 
         for command in commands:
             device_type = device["device_type"]          
-            
-            output = netconnect.send_command(command)
-            # if device_type == "fortinet":
-            #     expect_prompt = r"(.*#$)"
-            # else:
-            #     expect_prompt = netconnect.find_prompt()
-            # output = netconnect.send_command_expect(command, expect_string=expect_prompt, cmd_verify=False)
+
+            if device_type == "fortinet":
+                expect_prompt = r"(.*#$)"
+                expect_prompt = netconnect.find_prompt()
+                output = netconnect.send_command_expect(command, expect_string=expect_prompt, cmd_verify=False)
+            else:
+                output = netconnect.send_command(command)
 
             command_name = command.replace(" ", "_")
 
