@@ -5,4 +5,4 @@ Value DST_IP (\S+)
 Value DST_PORT (\d+)
 
 Start
-  ^{PROTO}\s+\d+\s+(SRC_IP):(SRC_PORT)\s+\S+\s+(DST_IP):(DST_PORT)\s+\S+-> Record
+  ^${PROTO}\s+\d+\s+${SRC_IP}:${SRC_PORT}\s+\S+\s+${DST_IP}:${DST_PORT}\s+\S+ -> Record
