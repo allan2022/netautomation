@@ -70,6 +70,9 @@ class SetupEnvironment:
             elif dev_type == "f5_tmsh":
                 command_list = full_load_yaml(env_filename)['f5_tmsh_learn_commands']
                 self.command_list['f5_tmsh'] = command_list
+            elif dev_type == "fortinet":
+                command_list = full_load_yaml(env_filename)['fortinet_learn_commands']
+                self.command_list['fortinet'] = command_list 
             else:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')

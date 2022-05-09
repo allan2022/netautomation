@@ -53,3 +53,8 @@ iosxe_learn_commands:
 f5_tmsh_learn_commands:
   - show net interface
   - show net route
+
+fortinet_learn_commands:
+  - config vdom
+  - edit root
+  - get system session list  

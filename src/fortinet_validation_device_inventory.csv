@@ -1,0 +1,2 @@
+host,ip,username,password,device_type
+FGFW1,192.168.126.51,admin,4848,fortinet
