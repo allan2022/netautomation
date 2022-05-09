@@ -13,15 +13,21 @@ class NetmikoCommand:
         print(netconnect.find_prompt())
 
         for command in commands:
+            device_type = device["device_type"]          
+            
+            # output = netconnect.send_command(command)
+            if device_type == "fortinet":
+                expect_prompt = r"(.*#$)"
+            else:
+                expect_prompt = netconnect.find_prompt()
+            output = netconnect.send_command_expect(command, expect_string=expect_prompt, cmd_verify=False)
 
-            output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
 
             console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
             with open(console_file, "w") as file:
                 file.write(output + "\n")
 
-            device_type = device["device_type"]
             parser_template = parser_folder + "/" + device_type + "_" + command_name + ".textfsm"
 
             ops_input = parse_output(console_file, parser_template) 
@@ -56,14 +62,14 @@ class NetmikoCommand:
         # print(prompt)
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
-        for cmd in commands:
+        for command in commands:
             expect_prompt = r"(root@.*#|\s*|[#|\$]\s*$)"
-            output = netconnect.send_command_expect(cmd, expect_string=expect_prompt, cmd_verify=False)
+            output = netconnect.send_command_expect(command, expect_string=expect_prompt, cmd_verify=False)
 
             if output == "":
-                print(f'{cmd} \n -- succeed\n')
+                print(f'{command} \n -- succeed\n')
             else:
-                print(f'{cmd} \n -- failed\n')
+                print(f'{command} \n -- failed\n')
 
         netconnect.disconnect()   
 
