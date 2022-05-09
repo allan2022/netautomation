@@ -53,10 +53,7 @@ class NetmikoCommand:
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
         for command in commands:
-            print("#############line length######################")
-            print(len(command))
-            print(command)
-            output = netconnect.send_command(command)
+            output = netconnect.send_command_expect(command, command_verify=False)
 
             if output == "":
                 print(f'{command} \n -- succeed\n')
