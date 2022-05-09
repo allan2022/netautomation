@@ -47,7 +47,7 @@ class NetmikoCommand:
             t1.start()
             t1.join()
 
-    def exec_config(self, device, commands):
+    def exec_f5_config(self, device, commands):
         netconnect = netmiko.ConnectHandler(**device)
         devname = device['host']
         # prompt = netconnect.find_prompt()
@@ -71,6 +71,6 @@ class NetmikoCommand:
 
         # multi threads - one thread per device    
         for device in devices:        
-            t1 = threading.Thread(target=self.exec_config, args=(device, commands)) 
+            t1 = threading.Thread(target=self.exec_f5_config, args=(device, commands)) 
             t1.start()
             t1.join()
