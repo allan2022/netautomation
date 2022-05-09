@@ -10,14 +10,11 @@ class NetmikoCommand:
     # log configuration for one device
     def exec_snapshot(self, device, commands, changenumber, snapshot_folder, parser_folder):
         netconnect = netmiko.ConnectHandler(**device)
-        print(netconnect.find_prompt())
 
         for command in commands:
             device_type = device["device_type"]          
 
             if device_type == "fortinet":
-                print("##################command########################")
-                print(command['cmd'])
                 output = netconnect.send_config_set(command['cmd'])
                 command_name = "get_system_session_list"
             else:
