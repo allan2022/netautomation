@@ -22,8 +22,10 @@ class NetmikoCommand:
             #     command_name = command.replace(" ", "_")
 
             if device_type == "fortinet":
-                netconnect.send_command("config vdom")
-                netconnect.send_command("edit root")
+                # netconnect.send_command("config vdom")
+                # netconnect.send_command("edit root")
+                netconnect.send_config_set(['config vdom', 'edit root'])
+
 
             output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
