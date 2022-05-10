@@ -20,7 +20,6 @@ class NetmikoCommand:
             output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
 
-
             console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
             with open(console_file, "w") as file:
                 file.write(output + "\n")
