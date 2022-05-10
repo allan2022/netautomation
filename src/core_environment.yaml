@@ -55,7 +55,8 @@ f5_tmsh_learn_commands:
   - show net route
 
 fortinet_learn_commands:
-  - cmd:
-    - config vdom
-    - edit root
-    - get system session list
+  - get system session list
+
+fortinet_vdom_commands:
+  - config vdom
+  - edit root
