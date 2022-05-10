@@ -14,18 +14,8 @@ class NetmikoCommand:
         for command in commands:
             device_type = device["device_type"]          
 
-            # if device_type == "fortinet":
-            #     output = netconnect.send_config_set(command['cmd'])
-            #     command_name = "get_system_session_list"
-            # else:
-            #     output = netconnect.send_command(command)
-            #     command_name = command.replace(" ", "_")
-
             if device_type == "fortinet":
-                # netconnect.send_command("config vdom")
-                # netconnect.send_command("edit root")
                 netconnect.send_config_set(['config vdom', 'edit root'])
-
 
             output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
