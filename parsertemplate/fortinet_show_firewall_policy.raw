@@ -1,0 +1,25 @@
+config firewall policy
+    edit 1
+        set uuid e62af3ba-cfc3-51ec-3f9d-bd993310e4ac
+        set srcintf "port2"
+        set dstintf "port3"
+        set action accept
+        set srcaddr "inside_address"
+        set dstaddr "outside_vip" "outside_address"
+        set schedule "always"
+        set service "SSH" "PING"
+        set logtraffic all
+    next
+    edit 2
+        set uuid b5066bd0-cfc7-51ec-29dd-f9032c65b371
+        set srcintf "port3"
+        set dstintf "port2"
+        set action accept
+        set srcaddr "outside_address"
+        set dstaddr "inside_R1"
+        set schedule "always"
+        set service "PING" "SSH"
+        set logtraffic all
+    next
+end
+

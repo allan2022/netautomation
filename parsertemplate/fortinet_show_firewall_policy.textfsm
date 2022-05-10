@@ -1,0 +1,21 @@
+Value POLICY_ID (\d+)
+Value UUID (.*)
+Value SRC_INTF (.*)
+Value DST_INTF (.*)
+Value ACTION (.*)
+Value SRC_ADDR (.*)
+Value DST_ADDR (.*)
+Value SCHEDULE (.*)
+Value SERVICE (.*)
+Value LOG (.*)
+
+Start
+  ^.*edit\s${POLICY_ID}
+  ^.*uuid${UUID}
+  ^.*srcintf\s${SRC_INTF} 
+  ^.*dstintf\s${DST_INTF} 
+  ^.*action\s${ACTION} 
+  ^.*srcaddr\s${SRC_ADDR} 
+  ^.*dstaddr\s${DST_ADDR}
+  ^.*service\s${SERVICE} 
+  ^.*logtraffic\s${LOG} -> Record
