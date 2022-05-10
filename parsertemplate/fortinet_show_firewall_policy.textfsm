@@ -1,21 +1,41 @@
 Value POLICY_ID (\d+)
 Value UUID (.*)
-Value SRC_INTF (.*)
-Value DST_INTF (.*)
-Value ACTION (.*)
-Value SRC_ADDR (.*)
-Value DST_ADDR (.*)
-Value SCHEDULE (.*)
-Value SERVICE (.*)
+Value List SRC_INTF (\S+)
+Value List DST_INTF (\S+)
+Value ACTION (\S+)
+Value List SRC_ADDR (\S+)
+Value List DST_ADDR (\S+)
+Value SCHEDULE (\S+)
+Value List SERVICE (\S+)
 Value LOG (.*)
 
 Start
   ^.*edit\s${POLICY_ID}
   ^.*uuid${UUID}
-  ^.*srcintf\s${SRC_INTF} 
-  ^.*dstintf\s${DST_INTF} 
+  ^.*srcintf +"${SRC_INTF}" -> Continue
+  ^.*srcintf +("\S+" +){1}"${SRC_INTF}" -> Continue 
+  ^.*srcintf +("\S+" +){2}"${SRC_INTF}" -> Continue
+  ^.*srcintf +("\S+" +){3}"${SRC_INTF}" -> Continue
+  ^.*srcintf +("\S+" +){4}"${SRC_INTF}" -> Continue
+  ^.*dstintf +"${DST_INTF}" -> Continue
+  ^.*dstintf +("\S+" +){1}"${DST_INTF}" -> Continue
+  ^.*dstintf +("\S+" +){2}"${DST_INTF}" -> Continue
+  ^.*dstintf +("\S+" +){3}"${DST_INTF}" -> Continue
+  ^.*dstintf +("\S+" +){4}"${DST_INTF}" -> Continue
   ^.*action\s${ACTION} 
-  ^.*srcaddr\s${SRC_ADDR} 
-  ^.*dstaddr\s${DST_ADDR}
-  ^.*service\s${SERVICE} 
+  ^.*srcaddr +"${SRC_ADDR}" -> Continue
+  ^.*srcaddr +("\S+" +){1}"${SRC_ADDR}" -> Continue
+  ^.*srcaddr +("\S+" +){2}"${SRC_ADDR}" -> Continue
+  ^.*srcaddr +("\S+" +){3}"${SRC_ADDR}" -> Continue
+  ^.*srcaddr +("\S+" +){4}"${SRC_ADDR}" -> Continue
+  ^.*dstaddr +"${DST_ADDR}" -> Continue
+  ^.*dstaddr +("\S+" +){1}"${DST_ADDR}" -> Continue
+  ^.*dstaddr +("\S+" +){2}"${DST_ADDR}"	-> Continue
+  ^.*dstaddr +("\S+" +){3}"${DST_ADDR}"	-> Continue
+  ^.*dstaddr +("\S+" +){4}"${DST_ADDR}"	-> Continue
+  ^.*service +"${SERVICE}" -> Continue
+  ^.*service +("\S+" +){1}"${SERVICE}" -> Continue
+  ^.*service +("\S+" +){2}"${SERVICE}" -> Continue
+  ^.*service +("\S+" +){3}"${SERVICE}" -> Continue
+  ^.*service +("\S+" +){4}"${SERVICE}" -> Continue
   ^.*logtraffic\s${LOG} -> Record
