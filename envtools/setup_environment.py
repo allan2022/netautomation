@@ -1,6 +1,7 @@
 import os
 from utils.load_file import full_load_yaml, full_load_csv, load_command_csv
 from utils.new_folder import create_folder
+from utils.get_login import get_login
 
 class SetupEnvironment:
 
@@ -22,6 +23,22 @@ class SetupEnvironment:
         if self.change_number != "":
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
+
+    def check_folder(self, test_type):
+        if test_type.startswith('prechange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
+        elif test_type.startswith('postchange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
+        else:
+            print("test type not supported")
 
     def setup_validation_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
@@ -50,6 +67,7 @@ class SetupEnvironment:
         else:
             print("test type not supported")
 
+        self.checkfolder()
         return self
 
     def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
@@ -77,20 +95,21 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-        if test_type.startswith('prechange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        elif test_type.startswith('postchange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        else:
-            print("test type not supported")
+            self.check_folder(test_type)
+        # if test_type.startswith('prechange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # elif test_type.startswith('postchange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # else:
+        #     print("test type not supported")
 
         return self
 
@@ -115,25 +134,23 @@ class SetupEnvironment:
 
         return self
 
-    def setup_validation_aci(self, env_filename, env_type):  
-        self.hostname = full_load_yaml(env_filename)['aci_networks'][env_type]['hostname']
-        self.username = full_load_yaml(env_filename)['aci_networks'][env_type]['username']
-        self.password = full_load_yaml(env_filename)['aci_networks'][env_type]['password']
+    def setup_validation_aci(self, env_filename, test_type, env):  
+        hostname, username, password = get_login(env_filename, env)
 
-        if (config_type == "config_from_command"):
-            try:
-                command = input("\ntype tmsh command: ")
-            except KeyboardInterrupt:
-                print("\ntask aborted")
-            self.command_list.append(command)
-
-        elif (config_type == "config_from_file"):
-            config_file = full_load_yaml(env_filename)['config_file']
-            config_file = os.path.join(os.getcwd(), config_file)
-            self.command_list = load_command_csv(config_file) 
-
+        if test_type.startswith('prechange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
+        elif test_type.startswith('postchange_snapshot'):
+            for i in range(20):
+                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+                if not os.path.exists(self.snapshot_folder):
+                    create_folder(self.snapshot_folder)
+                    break
         else:
-            pass
+            print("test type not supported")
 
         return self
         
