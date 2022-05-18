@@ -35,10 +35,12 @@ core_networks:
 
 aci_networks:
   lab1:
+    hostname: 10.1.1.1
     username: cisco
     password: cisco
 
   prod1:
+    hostname: input hostname
     username: input username
     password: input password
     

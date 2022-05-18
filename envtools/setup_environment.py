@@ -115,9 +115,10 @@ class SetupEnvironment:
 
         return self
 
-    def setup_validation_aci(self, dev_filename, env_filename, config_type):  
-        self.device_list = full_load_csv(dev_filename)
-        self.command_list = []
+    def setup_validation_aci(self, env_filename, env_type):  
+        self.hostname = full_load_yaml(env_filename)['aci_networks'][env_type]['hostname']
+        self.username = full_load_yaml(env_filename)['aci_networks'][env_type]['username']
+        self.password = full_load_yaml(env_filename)['aci_networks'][env_type]['password']
 
         if (config_type == "config_from_command"):
             try:
