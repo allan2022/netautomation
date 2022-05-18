@@ -52,22 +52,23 @@ class SetupEnvironment:
         if not os.path.exists(self.testbed_file):
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
-        if test_type.startswith('prechange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        elif test_type.startswith('postchange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        else:
-            print("test type not supported")
+        self.check_folder(test_type)
 
-        self.checkfolder()
+        # if test_type.startswith('prechange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # elif test_type.startswith('postchange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # else:
+        #     print("test type not supported")
+
         return self
 
     def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
@@ -137,20 +138,23 @@ class SetupEnvironment:
     def setup_validation_aci(self, env_filename, test_type, env):  
         hostname, username, password = get_login(env_filename, env)
 
-        if test_type.startswith('prechange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        elif test_type.startswith('postchange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        else:
-            print("test type not supported")
+
+        self.check_folder(test_type)
+
+        # if test_type.startswith('prechange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # elif test_type.startswith('postchange_snapshot'):
+        #     for i in range(20):
+        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+        #         if not os.path.exists(self.snapshot_folder):
+        #             create_folder(self.snapshot_folder)
+        #             break
+        # else:
+        #     print("test type not supported")
 
         return self
         
