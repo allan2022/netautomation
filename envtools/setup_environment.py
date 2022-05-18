@@ -115,4 +115,24 @@ class SetupEnvironment:
 
         return self
 
+    def setup_validation_aci(self, dev_filename, env_filename, config_type):  
+        self.device_list = full_load_csv(dev_filename)
+        self.command_list = []
+
+        if (config_type == "config_from_command"):
+            try:
+                command = input("\ntype tmsh command: ")
+            except KeyboardInterrupt:
+                print("\ntask aborted")
+            self.command_list.append(command)
+
+        elif (config_type == "config_from_file"):
+            config_file = full_load_yaml(env_filename)['config_file']
+            config_file = os.path.join(os.getcwd(), config_file)
+            self.command_list = load_command_csv(config_file) 
+
+        else:
+            pass
+
+        return self
         

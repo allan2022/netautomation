@@ -32,6 +32,15 @@ core_networks:
   prod1:
     username: input username
     password: input password
+
+aci_networks:
+  lab1:
+    username: cisco
+    password: cisco
+
+  prod1:
+    username: input username
+    password: input password
     
 diff_organize_keywords:
   config interface routing bgp ospf routes
