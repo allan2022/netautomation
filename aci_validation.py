@@ -1,4 +1,5 @@
 import os
+from socketserver import ThreadingUnixStreamServer
 from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
@@ -52,11 +53,12 @@ class ACIValidation:
               
                 if auth_res:
                     aci_info = aciinfo.collect()
+                    aci_info.aci_query_obj(session, base_url)
 
+                    tenants = aci_info.tenant_list
+                    tenants_json = aci_info.tenants_json
 
                     # list all tenants
-
-                    tenants, tenants_json = aci_info.aci_query_obj(session, base_url)
                     print(tenants)
 
                     for item in tenants:
