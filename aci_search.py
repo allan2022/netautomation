@@ -2,7 +2,7 @@ import os
 from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
-import acitools.aci_collect_info
+import acitools.aci_collect_info as aciinfo
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -45,7 +45,7 @@ class ACISearch:
                 session, auth_res = aci_auth(auth_url, auth_data)
 
                 if auth_res:                
-                    aci_info = acitools.aci_collect_info.collect()
+                    aci_info = aciinfo.collect()
 
                     while True:
                         print("""
