@@ -11,15 +11,7 @@ class ACIValidation:
         self.task_list = []
         self.aci_list = []
         self.task_select = ""
-        self.aci_select = ""
-
-        try:
-            self.aci_list, self.aci_select = get_task(CORE_ENVIRONMENT, 'aci_list')
-        except KeyboardInterrupt:
-            pass
-
-        if self.aci_select == None:
-            print("\nACI not found")        
+        self.aci_select = ""   
 
         try:
             self.task_list, self.task_select = get_task(CORE_ENVIRONMENT, 'sub_tasks')
@@ -28,6 +20,14 @@ class ACIValidation:
 
         if self.task_select == None:
             print("\ntask not available")
+
+        try:
+            self.aci_list, self.aci_select = get_task(CORE_ENVIRONMENT, 'aci_list')
+        except KeyboardInterrupt:
+            pass
+
+        if self.aci_select == None:
+            print("\nACI not found")   
 
     def aci_validation(self):
         
