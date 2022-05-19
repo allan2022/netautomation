@@ -44,6 +44,11 @@ aci_networks:
     username: admin
     password: C1sco12345
 
+  lab2:
+    hostname: 131.226.217.153
+    username: admin
+    password: "!v3G@!4@Y"
+
   prod1:
     hostname: input hostname
     username: input username
