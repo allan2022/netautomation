@@ -13,8 +13,10 @@ def collect_all_epgs(session, base_url):
 
     print(type(tenants))
     print(tenants)
-    # self.tenants_json = tenants.json()
-    # self.total_count = int(self.tenants_json["totalCount"])
+    tenants_json = tenants.json()
+    total_count = int(tenants_json["totalCount"])
+
+    print(tenants_json)
 
     try:
         index = 0
