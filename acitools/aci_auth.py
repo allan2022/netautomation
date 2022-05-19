@@ -1,4 +1,3 @@
-from typing import Tuple
 import requests
 
 def aci_auth(auth_url, auth_data):
