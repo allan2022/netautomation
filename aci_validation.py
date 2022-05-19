@@ -63,6 +63,11 @@ class ACIValidation:
                     with open(json_file, "w") as file:
                         json.dump(output, file)
 
+                    json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_vrfs.json"
+                    with open(json_file, "w") as file:
+                        json.dump(output, file)
+
+
                     # for tenant in tenants:
                     #     vrfs = aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
                     #     for item in vrfs:
