@@ -5,6 +5,7 @@ from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
 from acitools.aci_epgs import collect_all_epgs
 from acitools.aci_vrfs import collect_all_vrfs
+from acitools.aci_bds import collect_all_bds
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -55,25 +56,22 @@ class ACIValidation:
                 if auth_res:
                     tenants, output = collect_all_epgs(session, base_url)
                    
-                    print(type(tenants))
-                    print(tenants)
-                    print(type(output))
-                    print(output)                   
-
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
                     with open(json_file, "w") as file:
                         json.dump(output, file)
 
                     vrfs, output = collect_all_vrfs(session, base_url)
 
-                    print(type(vrfs))
-                    print(vrfs)
-                    print(type(output))
-                    print(output)    
-
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_vrfs.json"
                     with open(json_file, "w") as file:
                         json.dump(output, file)
+
+                    bds, output = collect_all_bds(session, base_url)
+
+                    json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_bds.json"
+                    with open(json_file, "w") as file:
+                        json.dump(output, file)
+
 
 
                     # for tenant in tenants:
