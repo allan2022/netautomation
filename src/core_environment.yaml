@@ -39,9 +39,9 @@ core_networks:
 
 aci_networks:
   lab1:
-    hostname: 10.1.1.1
-    username: cisco
-    password: cisco
+    hostname: 10.10.20.14
+    username: admin
+    password: C1sco12345
 
   prod1:
     hostname: input hostname
