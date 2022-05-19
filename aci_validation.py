@@ -45,7 +45,8 @@ class ACIValidation:
                 session = aci_auth(auth_url, auth_data)
 
                 print(session)
-                # aci_info = acitools.aci_collect_info.collect()
+                
+                aci_info = acitools.aci_collect_info.collect()
 
 
 
