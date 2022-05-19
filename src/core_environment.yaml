@@ -27,6 +27,7 @@ result_folder_suffix:
 
 aci_list:
   lab1
+  lab2
   prod1
 
 core_networks:
