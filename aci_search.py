@@ -74,7 +74,8 @@ class ACISearch:
                         # list all VRF of a tenant
                         elif task == "2":
                             tenant = input("Enter tenant name: ")
-                            vrfs = aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
+                            vrfs = aci_info.vrf_list
                             for item in vrfs:
                                 print(item)   
                             print("Total {number} VRFs.".format(number=str(len(vrfs))))                  
@@ -82,7 +83,8 @@ class ACISearch:
                         # list all BD of a tenant
                         elif task == "3":
                             tenant = input("Enter tenant name: ")
-                            bds = aci_info.aci_query_obj(session, base_url, tenant=tenant, bd="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, bd="all")
+                            bds = aci_info.bd_list
                             for item in bds:
                                 print(item)       
                             print("Total {number} BDs.".format(number=str(len(bds))))            
@@ -90,7 +92,8 @@ class ACISearch:
                         # list all AP of a tenant
                         elif task == "4":
                             tenant = input("Enter tenant name: ")
-                            aps = aci_info.aci_query_obj(session, base_url, tenant=tenant, ap="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, ap="all")
+                            aps = aci_info.ap_list
                             for item in aps:
                                 print(item)   
                             print("Total {number} APs.".format(number=str(len(aps))))            
@@ -99,7 +102,8 @@ class ACISearch:
                         elif task == "5":
                             tenant = input("Enter tenant name: ")
                             ap = input("Enter ap name: ")
-                            epgs = aci_info.aci_query_obj(session, base_url, tenant=tenant, ap=ap, epg="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, ap=ap, epg="all")
+                            epgs = aci_info.epg_list
                             for item in epgs:
                                 print(item) 
                             print("Total {number} EPGs.".format(number=str(len(epgs))))              
@@ -107,7 +111,8 @@ class ACISearch:
                         # find tenant   
                         elif task == "6":
                             tenant = input("Enter tenant name: ")
-                            tenants = aci_info.aci_query_obj(session, base_url)
+                            aci_info.aci_query_obj(session, base_url)
+                            tenants = aci_info.tenant_list
                             if tenant in tenants:
                                 print("\nTenant \"{tenant}\" is found".format(tenant=tenant))
                             else:
@@ -117,7 +122,8 @@ class ACISearch:
                         elif task == "7":
                             tenant = input("Enter tenant name: ")
                             vrf = input("Enter VRF name: ")
-                            vrfs = aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
+                            vrfs = aci_info.vrf_list
                             if vrf in vrfs:
                                 print("\nVRF \"{vrf}\" is found".format(vrf=vrf))
                             else:
@@ -127,7 +133,8 @@ class ACISearch:
                         elif task == "8":
                             tenant = input("Enter tenant name: ")
                             bd = input("Enter BD name: ")
-                            bds = aci_info.aci_query_obj(session, base_url, tenant=tenant, bd="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, bd="all")
+                            bds = aci_info.bd_list
                             if bd in bds:
                                 print("\nBD \"{bd}\" is found".format(bd=bd))
                             else:
@@ -137,7 +144,8 @@ class ACISearch:
                         elif task == "9":
                             tenant = input("Enter tenant name: ")
                             ap = input("Enter AP name: ")
-                            aps = aci_info.aci_query_obj(session, base_url, tenant=tenant, ap="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, ap="all")
+                            aps = aci_info.ap_list
                             if bd in bds:
                                 print("\nAP \"{ap}\" is found".format(ap=ap))
                             else:
@@ -148,7 +156,8 @@ class ACISearch:
                             tenant = input("Enter tenant name: ")
                             ap = input("Enter AP name: ")
                             epg = input("Enter EPG name: ")
-                            epgs = aci_info.aci_query_obj(session, base_url, tenant=tenant, ap=ap, epg="all")
+                            aci_info.aci_query_obj(session, base_url, tenant=tenant, ap=ap, epg="all")
+                            epgs = aci_info.epg_list
                             if epg in epgs:
                                 print("\nEPG \"{epg}\" is found".format(epg=epg))
                             else:
