@@ -44,7 +44,7 @@ class ACISearch:
 
                 session, res = aci_auth(auth_url, auth_data)
 
-                if res != "Login failed":                
+                if res:                
                     aci_info = acitools.aci_collect_info.collect()
 
                     while True:
