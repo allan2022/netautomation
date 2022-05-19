@@ -40,12 +40,10 @@ class ACIValidation:
                 base_url = aci_env.base_url
                 auth_url = aci_env.auth_url
                 auth_data = aci_env.auth_data
-                snapshot_folder = aci_env.snapshot_folder          
+                # snapshot_folder = aci_env.snapshot_folder          
 
                 session = aci_auth(auth_url, auth_data)
-
-                print(session)
-                
+              
                 aci_info = acitools.aci_collect_info.collect()
 
                 while True:
