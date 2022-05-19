@@ -1,7 +1,7 @@
 import requests
 import json
   
-def collect_all_epgs(session, base_url):        
+def collect_all_vrfs(session, base_url):        
     vrfs_list = []
     vrfs_json = {}
     total_count = 0

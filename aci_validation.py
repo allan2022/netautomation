@@ -4,6 +4,7 @@ from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
 from acitools.aci_epgs import collect_all_epgs
+from acitools.aci_vrfs import collect_all_vrfs
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -62,6 +63,13 @@ class ACIValidation:
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
                     with open(json_file, "w") as file:
                         json.dump(output, file)
+
+                    vrfs, output = collect_all_vrfs(session, base_url)
+
+                    print(type(vrfs))
+                    print(vrfs)
+                    print(type(output))
+                    print(output)    
 
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_vrfs.json"
                     with open(json_file, "w") as file:
