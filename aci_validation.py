@@ -73,7 +73,7 @@ class ACIValidation:
                     with open(json_file, "w") as file:
                         json.dump(output, file)
 
-                    vlanpools, output = collect_all_bds(session, base_url)
+                    vlanpools, output = collect_all_vlanpools(session, base_url)
 
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_vlanpools.json"
                     with open(json_file, "w") as file:
