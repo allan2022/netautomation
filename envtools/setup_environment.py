@@ -55,21 +55,6 @@ class SetupEnvironment:
 
         self.snapshot_folder = check_folder(self.change_folder, test_type)
 
-        # if test_type.startswith('prechange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # elif test_type.startswith('postchange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # else:
-        #     print("test type not supported")
-
         return self
 
     def setup_validation_netmiko(self, dev_filename, env_filename, test_type):  
@@ -99,21 +84,6 @@ class SetupEnvironment:
 
         self.snapshot_folder = check_folder(self.change_folder, test_type)
 
-        # if test_type.startswith('prechange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # elif test_type.startswith('postchange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # else:
-        #     print("test type not supported")
-
         return self
 
     def setup_configuration_netmiko(self, dev_filename, env_filename, config_type):  
@@ -142,21 +112,6 @@ class SetupEnvironment:
 
 
         self.snapshot_folder = check_folder(self.change_folder, test_type)
-
-        # if test_type.startswith('prechange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # elif test_type.startswith('postchange_snapshot'):
-        #     for i in range(20):
-        #         self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-        #         if not os.path.exists(self.snapshot_folder):
-        #             create_folder(self.snapshot_folder)
-        #             break
-        # else:
-        #     print("test type not supported")
 
         return self
         
