@@ -11,12 +11,8 @@ def collect_all_epgs(session, base_url):
 
     tenants = session.get(tenant_url, verify=False)
 
-    print(type(tenants))
-    print(tenants)
     tenants_json = tenants.json()
     total_count = int(tenants_json["totalCount"])
-
-    print(tenants_json)
 
     try:
         index = 0
@@ -26,5 +22,13 @@ def collect_all_epgs(session, base_url):
             index = index + 1
     except IndexError:
         pass
+    
+    print(tenants_list)
+    print("#############")
+    print(tenants_json)
+    print("##############")
+    print(total_count)
+
+
     return tenants_list, tenants_json
 
