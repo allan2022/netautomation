@@ -6,6 +6,7 @@ from acitools.aci_auth import aci_auth
 from acitools.aci_epgs import collect_all_epgs
 from acitools.aci_vrfs import collect_all_vrfs
 from acitools.aci_bds import collect_all_bds
+from acitools.aci_vlanpools import collect_all_vlanpools
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -72,6 +73,11 @@ class ACIValidation:
                     with open(json_file, "w") as file:
                         json.dump(output, file)
 
+                    vlanpools, output = collect_all_bds(session, base_url)
+
+                    json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_vlanpools.json"
+                    with open(json_file, "w") as file:
+                        json.dump(output, file)
 
 
                     # for tenant in tenants:
