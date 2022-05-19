@@ -56,9 +56,13 @@ class ACIValidation:
                     aci_info.aci_query_obj(session, base_url)
 
                     # tenants = aci_info.tenant_list
-                    tenants_json = aci_info.tenants_json
+                    output = aci_info.tenants_json
                     
-                    print(tenants_json)
+                    print(output)
+
+                    json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
+                    with open(json_file, "w") as file:
+                        file.write(output + "\n")
 
 
                     # list all VRF of a tenant
