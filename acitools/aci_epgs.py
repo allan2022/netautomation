@@ -22,13 +22,6 @@ def collect_all_epgs(session, base_url):
             index = index + 1
     except IndexError:
         pass
-    
-    print(tenants_list)
-    print("#############")
-    print(tenants_json)
-    print("##############")
-    print(total_count)
-
 
     return tenants_list, tenants_json
 

@@ -54,7 +54,10 @@ class ACIValidation:
                 if auth_res:
                     tenants, output = collect_all_epgs(session, base_url)
                    
-                    print(output)
+                    print(type(tenants))
+                    print(tenants)
+                    print(type(output))
+                    print(output)                   
 
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
                     with open(json_file, "w") as file:
