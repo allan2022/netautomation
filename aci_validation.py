@@ -1,5 +1,5 @@
 import os
-from socketserver import ThreadingUnixStreamServer
+import json
 from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
@@ -62,7 +62,7 @@ class ACIValidation:
 
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
                     with open(json_file, "w") as file:
-                        file.write(output + "\n")
+                        json.dump(output, file)
 
 
                     # list all VRF of a tenant
