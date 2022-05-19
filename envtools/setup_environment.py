@@ -53,7 +53,7 @@ class SetupEnvironment:
         if not os.path.exists(self.testbed_file):
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
-        check_folder(self.change_folder, test_type)
+        self.snapshot_folder = check_folder(self.change_folder, test_type)
 
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
@@ -97,7 +97,7 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-        check_folder(self.change_folder, test_type)
+        self.snapshot_folder = check_folder(self.change_folder, test_type)
 
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
@@ -141,7 +141,7 @@ class SetupEnvironment:
         hostname, username, password = get_login(env_filename, env)
 
 
-        check_folder(self.change_folder, test_type)
+        self.snapshot_folder = check_folder(self.change_folder, test_type)
 
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
