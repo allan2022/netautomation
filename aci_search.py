@@ -42,9 +42,9 @@ class ACISearch:
                 auth_data = aci_env.auth_data
                 # snapshot_folder = aci_env.snapshot_folder          
 
-                session, res = aci_auth(auth_url, auth_data)
+                session, auth_res = aci_auth(auth_url, auth_data)
 
-                if res:                
+                if auth_res:                
                     aci_info = acitools.aci_collect_info.collect()
 
                     while True:
