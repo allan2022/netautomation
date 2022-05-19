@@ -1,0 +1,78 @@
+main_tasks:
+  core_validation_pyats
+  core_validation_netmiko  
+  aci_validation
+  juniper_validation
+  f5_validation
+  fortinet_validation
+  paloalto_validation
+
+sub_tasks:
+  prechange_snapshot
+  postchange_snapshot_and_diff_prechange_snapshot
+  postchange_snapshot_and_diff_last_postchange_snapshot
+
+output_directory:
+  output
+
+testbed_directory:
+  testbed
+
+parsertemplate_direcotry:
+  parsertemplate
+
+result_folder_suffix:
+  ChangeNumber
+
+aci_list:
+  lab1
+  prod1
+
+core_networks:
+  lab1:
+    username: cisco
+    password: cisco
+
+  prod1:
+    username: input username
+    password: input password
+
+aci_networks:
+  lab1:
+    hostname: 10.10.20.14
+    username: admin
+    password: C1sco12345
+
+  prod1:
+    hostname: input hostname
+    username: input username
+    password: input password
+    
+diff_organize_keywords:
+  config interface routing bgp ospf routes
+
+threads_number:
+  6
+
+pyats_learn_features:
+  interface ospf
+
+nxos_learn_commands:
+  - show interface status
+  - show interface brief
+
+iosxe_learn_commands:
+  - show ip interface brief
+  - show inventory
+
+f5_tmsh_learn_commands:
+  - show net interface
+  - show net route
+
+fortinet_learn_commands:
+  - get system session list
+  - show firewall policy
+
+fortinet_vdom_commands:
+  - config vdom
+  - edit root

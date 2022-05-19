@@ -1,0 +1,189 @@
+aci_fabrics:
+  Walbrook_lab_b_aci:
+    apic_ip_or_hostname: 10.30.0.51
+    username: admin
+    password: NetworksTitanic12
+
+  Walbrook_lab_c_aci:
+    apic_ip_or_hostname: 10.30.0.53
+    username: admin
+    password: NetworksTitanic12
+
+  # WP_lab_aci:
+  #   apic_ip_or_hostname: 10.240.24.58
+  #   username: labapi
+  #   password: Networks@pi12!
+
+  ukdc1:
+    apic_ip_or_hostname: ukdc1-p-api02
+    username: input when login or change here
+    password: input when login or change here
+
+  ukdc2:
+    apic_ip_or_hostname: ukdc2-p-api02
+    username: input when login or change here
+    password: input when login or change here
+
+aci_query_classes:
+  validation_query:
+    query_class_no_children: 
+      topSystem ethpmPhysIf l1PhysIf lldpAdjEp fvRsPathAtt ospfAdjEp
+      fvTenant l3extLNodeP l3extVirtualLIfP l3extRsDynPathAtt l3extRsPathL3OutAtt l3extMember l3extIp l3extLoopBackIfP fvAp fvSubnet 
+      l3extSubnet l3extRsEctx vzEntry vzRsFiltAtt vzRsSubjFiltAtt fvATg l2extInstP fvRsSecInherited fvIp
+      fabricNode
+      #ospfIf fabricPod fabricNode l1PhysIf 
+      # fvRsPathAtt
+      #fvRsCEpToPathEp  fvEPg fabricPathGrp
+    query_class_with_children: 
+      # fvCtx vpcDom bgpPeerEntry fvnsVlanInstP
+      fvCEp l3extOut fvCtx fvBD fvAEPg l3extInstP vzSubj l3extRsNodeL3OutAtt l3extLIfP bgpPeerP vzBrCP vzSubj vzFilter vpcDom actrlFlt bgpPeerEntry fvnsVlanInstP ipRouteP
+    # query_loop_per_pod_node:
+    #   actrlRule
+    query_loop_per_tenant_vrf_dn:
+      any
+    query_loop_per_tenant_vrf_name:
+      uribv4Route
+    query_special_urls:
+      # l3extOut: /api/mo/uni.json?query-target=subtree&target-subtree-class=l3extOut
+      configSnapshot: /api/node/class/configSnapshot.json?query-target-filter=and(not(wcard(configSnapshot.dn,"__ui_")),wcard(configSnapshot.rootDn,"^(?!uni/tn-).*"))
+
+  query_and_exit_keyword:
+    None #l3extRsPathL3OutAtt fvIp #uribv4Route common:GREEN_VRF #fvATg
+
+  endpoint_tracker_query:
+    query_class_with_children:
+      fvCEp
+
+build_dict_sequence:
+  build_tenant_networking_epg_dict_sequence:
+    fvTenant fvCtx fvBD vzSubj l3extOut l3extRsEctx l3extLNodeP l3extLIfP l3extVirtualLIfP l3extRsDynPathAtt l3extRsNodeL3OutAtt l3extLoopBackIfP l3extRsPathL3OutAtt 
+    bgpPeerP l3extMember l3extIp fvAp fvATg fvSubnet l3extSubnet fvRsSecInherited l2extInstP
+  build_add_endpoint_dict_sequence:
+    fvIp
+  build_epg_base_dict_sequence:
+    fvATg
+  build_epg_contract_dict_sequence:
+    vzBrCP
+
+  build_epg_contract_consumer_provider_mapping_dict_sequence:
+    vzBrCP
+
+  build_contract_filter_dict_sequence:
+    fvTenant vzFilter vzEntry vzBrCP vzSubj vzRsFiltAtt any
+  # build_fabric_dict_sequence:
+  #   fabricPod fabricNode ethpmPhysIf l1PhysIf lldpAdjEp vpcDom
+  # build_epg_bd_vrf_endpoint_dict_sequence:
+  #   fvIp #fvRsCEpToPathEp #fvCEp
+  # build_node_access_rule_dict_sequence:
+  #   fabricPod fabricNode actrlRule actrlFlt
+  build_bgp_peer_dict_sequence:
+    bgpPeerEntry
+  build_ospf_neighbor_dict_sequence:
+    ospfAdjEp #ospfIf
+  build_vrf_route_dict_sequence:
+    uribv4Route
+  build_epg_vpc_dict_sequence:
+    fvRsPathAtt
+  build_vlan_pool_dict_sequence:
+    fvnsVlanInstP
+  build_fabric_interface_dict_sequence:
+    ethpmPhysIf l1PhysIf
+  build_fabric_node_ip_dict_sequence:
+    fabricNode
+  build_lldp_neighbor_dict_sequence:
+    lldpAdjEp
+  build_vpc_interface_dict_sequence:
+    vpcDom
+  build_external_subnet_epg_dict_sequence:
+    l3extRsEctx l3extSubnet
+  build_internal_endpoint_epg_dict_sequence:
+    fvIp
+  build_endpoint_tracker_sequence:
+    fvCEp
+  build_static_routes_dict_sequence:
+    ipRouteP
+  build_top_system_dict_sequence:
+    topSystem
+  build_config_snapshot_dict_sequence:
+    configSnapshot
+  build_subject_filter_entry_dict_sequence:
+    vzFilter
+  build_bd_dict_sequence:
+    vzSubj
+
+tasks:
+  baseline_check
+  post_check_and_auto_diff_latest_baseline
+  post_check_and_auto_diff_latest_baseline_and_latest_post_check
+  WP_change_plan_creation
+  update_endpoint_tracker
+  endpoint_epg_contract_tracer
+  query_api_by_url_class_dn
+
+result_folder_suffix:
+  ChangeNumber
+
+output_directory:
+  /data/netdevops/verification
+
+appcentric_vrf_validation:
+  yes
+
+appcentric_vrf_validation_env_list:
+  ukdc1 ukdc2 Walbrook_lab_b_aci Walbrook_lab_c_aci
+
+green_red_vrf_list: 
+  tn-common/ctx-GREEN_VRF tn-common/ctx-RED_VRF
+
+appcentric_vrf_list: 
+  tn-common/ctx-GREEN_VRF tn-common/ctx-RED_VRF tn-common/ctx-BLUE_VRF
+
+appcentric_vrf_dn_list:
+  uni/tn-common/ctx-GREEN_VRF uni/tn-common/ctx-RED_VRF uni/tn-common/ctx-BLUE_VRF
+
+change_plans:
+  ws_change_plan_directory:
+    /data/netdevops/verification/ws_change_plan
+
+  wp_change_plan_directory:
+    /data/netdevops/verification/wp_change_plan
+
+  plan_items:
+    # redgreen_overlapping_subnets_check
+    redgreen_bridge_domain_subnet_as_red_external_epg_change_plan
+    redgreen_bridge_domain_change_plan
+    redgreen_external_epg_to_internal_epg_change_plan
+    redgreen_external_epg_to_external_epg_change_plan
+    redgreen_green_vzany_to_migrate_change_plan
+    redgreen_green_static_routes_change_plan
+    srx_external_epg_policy
+
+query_api_by_url_class_dn:
+  tasks:
+    - query_by_url
+    - query_by_class
+    - query_by_dn
+  output_directory:
+    /data/netdevops/verification/aci_query_output
+
+tracer_default:
+  # internal blue to internal blue
+  # source_ip: 10.130.46.18
+  # destination_ip: 10.130.40.11
+
+  #blue to green across dc
+  source_ip: 10.131.150.10
+  destination_ip: 10.128.40.135
+  vrf: None
+
+  #internal green to internal red
+  # source_ip: 10.128.36.18
+  # destination_ip: 10.132.40.11
+
+  # internal green to red vip via palo snat
+  # source_ip: 10.128.64.5
+  # destination_ip: 195.35.90.30
+  # snat_ip: 
+  
+  # protocol: tcp
+  # destination_port: 1521

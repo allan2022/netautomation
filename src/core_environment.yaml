@@ -2,6 +2,7 @@ main_tasks:
   core_validation_pyats
   core_validation_netmiko  
   aci_validation
+  aci_search
   juniper_validation
   f5_validation
   fortinet_validation
@@ -76,3 +77,33 @@ fortinet_learn_commands:
 fortinet_vdom_commands:
   - config vdom
   - edit root
+
+aci_query_classes:
+  validation_query:
+    query_class_no_children: 
+      topSystem ethpmPhysIf l1PhysIf lldpAdjEp fvRsPathAtt ospfAdjEp
+      fvTenant l3extLNodeP l3extVirtualLIfP l3extRsDynPathAtt l3extRsPathL3OutAtt l3extMember l3extIp l3extLoopBackIfP fvAp fvSubnet 
+      l3extSubnet l3extRsEctx vzEntry vzRsFiltAtt vzRsSubjFiltAtt fvATg l2extInstP fvRsSecInherited fvIp
+      fabricNode
+      #ospfIf fabricPod fabricNode l1PhysIf 
+      # fvRsPathAtt
+      #fvRsCEpToPathEp  fvEPg fabricPathGrp
+    query_class_with_children: 
+      # fvCtx vpcDom bgpPeerEntry fvnsVlanInstP
+      fvCEp l3extOut fvCtx fvBD fvAEPg l3extInstP vzSubj l3extRsNodeL3OutAtt l3extLIfP bgpPeerP vzBrCP vzSubj vzFilter vpcDom actrlFlt bgpPeerEntry fvnsVlanInstP ipRouteP
+    # query_loop_per_pod_node:
+    #   actrlRule
+    query_loop_per_tenant_vrf_dn:
+      any
+    query_loop_per_tenant_vrf_name:
+      uribv4Route
+    query_special_urls:
+      # l3extOut: /api/mo/uni.json?query-target=subtree&target-subtree-class=l3extOut
+      configSnapshot: /api/node/class/configSnapshot.json?query-target-filter=and(not(wcard(configSnapshot.dn,"__ui_")),wcard(configSnapshot.rootDn,"^(?!uni/tn-).*"))
+
+  query_and_exit_keyword:
+    None #l3extRsPathL3OutAtt fvIp #uribv4Route common:GREEN_VRF #fvATg
+
+  endpoint_tracker_query:
+    query_class_with_children:
+      fvCEp

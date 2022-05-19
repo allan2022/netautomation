@@ -3,7 +3,7 @@ from utils.get_task import get_task
 from core_validation import CoreValidation
 from f5_validation import F5Validation
 from fortinet_validation import FortinetValidation
-from aci_validation import ACIValidation
+from aci_search import ACISearch
 
 CORE_ENVIRONMENT = getcwd() + "/src/core_environment.yaml"
 
@@ -37,8 +37,11 @@ def main():
         task = CoreValidation()
         task.core_validation_netmiko()
     elif task_select == "aci_validation":
-        task = ACIValidation()
-        task.aci_validation()
+        task = ACISearch()
+        task.aci_search()
+    elif task_select == "aci_search":
+        task = ACISearch()
+        task.aci_search()
     elif task_select == "juniper_validation":
         print("juniper_validation")
     elif task_select == "f5_validation":

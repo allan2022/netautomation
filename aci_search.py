@@ -6,7 +6,7 @@ import acitools.aci_collect_info
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
-class ACIValidation:
+class ACISearch:
     def __init__(self):
         self.task_list = []
         self.aci_list = []
@@ -29,7 +29,7 @@ class ACIValidation:
         if self.aci_select == None:
             print("\nACI not found")   
 
-    def aci_validation(self):
+    def aci_search(self):
         
         if self.task_select != None and self.aci_select != None:
             aci_env = SetupEnvironment(CORE_ENVIRONMENT)
@@ -176,8 +176,8 @@ class ACIValidation:
                 #     pass    
 
 def main():
-    av = ACIValidation()
-    av.aci_validation()
+    av = ACISearch()
+    av.aci_search()
 
 if __name__ == "__main__":
     try:

@@ -25,21 +25,11 @@ class ValidationQuery(ValidationSession):
         self.response_json = ''
 
 
-    def query_data(self, config, query_url=None):
-        if config.task == 'endpoint_tracer':
-            self.connect(config)
-            self.query_apic(query_url=query_url, config=None)
-            return
-        elif config.task == 'endpoint_tracker':
-            self.connect(config)
-            self.categorize_query_class(config.cfg['aci_query_classes']['endpoint_tracker_query'])
-            self.query_apic(config=config)
-            return
-        else:
-            new_output_directory = self.connect(config)
-            self.categorize_query_class(config.cfg['aci_query_classes']['validation_query'])
-            self.query_apic(config=config, folder=new_output_directory)
-            return new_output_directory
+    def query_data(self, config):
+        new_output_directory = self.connect(config)
+        self.categorize_query_class(config.cfg['aci_query_classes']['validation_query'])
+        self.query_apic(config=config, folder=new_output_directory)
+        return new_output_directory
         
 
 
