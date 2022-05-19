@@ -14,6 +14,7 @@ class collect():
         self.epg = ""
         self.subnet = ""
         self.tenant_list = []
+        self.tenat_json = {}
         self.ap_list = []
         self.bd_list = []
         self.vrf_list = []
@@ -43,18 +44,18 @@ class collect():
             tenant_url = base_url + tenant_class
 
             tenants = session.get(tenant_url, verify=False)
-            tenants_json = tenants.json()
-            self.total_count = int(tenants_json["totalCount"])
+            self.tenants_json = tenants.json()
+            self.total_count = int(self.tenants_json["totalCount"])
 
             try:
                 index = 0
                 self.tenant_list.clear()
                 for i in range(0, self.total_count):
-                    self.tenant_list.append(tenants_json["imdata"][index]["fvTenant"]["attributes"]["name"])
+                    self.tenant_list.append(self.tenants_json["imdata"][index]["fvTenant"]["attributes"]["name"])
                     index = index + 1
             except IndexError:
                 pass
-            return self.tenant_list
+            return self.tenant_list, self.tenants_json
 
         # return a list of all application profiles of the specified tenant     
         elif self.ap == "all":

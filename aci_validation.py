@@ -56,13 +56,16 @@ class ACIValidation:
 
                     # list all tenants
 
-                    tenants = aci_info.aci_query_obj(session, base_url)
+                    tenants, tenants_json = aci_info.aci_query_obj(session, base_url)
                     print(tenants)
 
                     for item in tenants:
                         print(item)
                     print("Total {number} Tenants.".format(number=str(len(tenants))))    
                     
+                    print(tenants_json)
+
+
                     # list all VRF of a tenant
                     # elif task == "2":
                     #     tenant = input("Enter tenant name: ")
