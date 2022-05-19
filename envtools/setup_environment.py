@@ -2,6 +2,7 @@ import os
 from utils.load_file import full_load_yaml, full_load_csv, load_command_csv
 from utils.new_folder import create_folder
 from utils.get_login import get_login
+from utils.check_folder import check_folder
 
 class SetupEnvironment:
 
@@ -24,21 +25,21 @@ class SetupEnvironment:
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
-    def check_folder(self, test_type):
-        if test_type.startswith('prechange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        elif test_type.startswith('postchange_snapshot'):
-            for i in range(20):
-                self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-                if not os.path.exists(self.snapshot_folder):
-                    create_folder(self.snapshot_folder)
-                    break
-        else:
-            print("test type not supported")
+    # def check_folder(self, test_type):
+    #     if test_type.startswith('prechange_snapshot'):
+    #         for i in range(20):
+    #             self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
+    #             if not os.path.exists(self.snapshot_folder):
+    #                 create_folder(self.snapshot_folder)
+    #                 break
+    #     elif test_type.startswith('postchange_snapshot'):
+    #         for i in range(20):
+    #             self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
+    #             if not os.path.exists(self.snapshot_folder):
+    #                 create_folder(self.snapshot_folder)
+    #                 break
+    #     else:
+    #         print("test type not supported")
 
     def setup_validation_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
@@ -52,7 +53,7 @@ class SetupEnvironment:
         if not os.path.exists(self.testbed_file):
             os.system(f'pyats create testbed file --path {dev_filename} --output {self.testbed_file}')
 
-        self.check_folder(test_type)
+        check_folder(self.change_folder, test_type)
 
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
@@ -96,7 +97,8 @@ class SetupEnvironment:
                 command_list = ""
                 print(f'\n device type {dev_type} not supported. ')
 
-            self.check_folder(test_type)
+        check_folder(self.change_folder, test_type)
+
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
         #         self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
@@ -139,7 +141,7 @@ class SetupEnvironment:
         hostname, username, password = get_login(env_filename, env)
 
 
-        self.check_folder(test_type)
+        check_folder(self.change_folder, test_type)
 
         # if test_type.startswith('prechange_snapshot'):
         #     for i in range(20):
