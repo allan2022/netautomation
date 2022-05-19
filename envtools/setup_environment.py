@@ -25,22 +25,6 @@ class SetupEnvironment:
             self.change_folder = os.path.join(os.getcwd(), output_folder, self.change_number)
             self.change_folder = create_folder(self.change_folder)
 
-    # def check_folder(self, test_type):
-    #     if test_type.startswith('prechange_snapshot'):
-    #         for i in range(20):
-    #             self.snapshot_folder = os.path.join(self.change_folder, ('prechange_snapshot_' + str(i)))
-    #             if not os.path.exists(self.snapshot_folder):
-    #                 create_folder(self.snapshot_folder)
-    #                 break
-    #     elif test_type.startswith('postchange_snapshot'):
-    #         for i in range(20):
-    #             self.snapshot_folder = os.path.join(self.change_folder, ('postchange_snapshot_' + str(i)))
-    #             if not os.path.exists(self.snapshot_folder):
-    #                 create_folder(self.snapshot_folder)
-    #                 break
-    #     else:
-    #         print("test type not supported")
-
     def setup_validation_pyats(self, dev_filename, env_filename, test_type):
         self.device_list = full_load_csv(dev_filename)
         self.command_list = full_load_yaml(env_filename)['pyats_learn_features']
@@ -107,11 +91,23 @@ class SetupEnvironment:
 
         return self
 
-    def setup_validation_aci(self, env_filename, test_type, env):  
-        hostname, username, password = get_login(env_filename, env)
-
-
+    def setup_validation_aci(self, env_filename, test_type, aci_env):  
+        hostname, username, password = get_login(env_filename, aci_env)
         self.snapshot_folder = check_folder(self.change_folder, test_type)
+
+        self.base_url = 'https://{apic_host}/api/'.format(apic_host=hostname)
+        auth_bit = "aaaLogin.json"
+        self.auth_url = self.base_url + auth_bit
+
+        # JSON auth data for POST
+        self.auth_data = {
+            "aaaUser":{
+                "attributes":{
+                "name":username,
+                "pwd":password
+                }
+            }
+        }
 
         return self
         

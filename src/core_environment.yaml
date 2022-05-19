@@ -24,6 +24,10 @@ parsertemplate_direcotry:
 result_folder_suffix:
   ChangeNumber
 
+aci_list:
+  lab1
+  prod1
+
 core_networks:
   lab1:
     username: cisco
