@@ -11,4 +11,4 @@ def aci_auth(auth_url, auth_data):
       login_res = "Login failed"
       print(login_res)
 
-    return session
+    return session, login_res
