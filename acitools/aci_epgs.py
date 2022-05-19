@@ -1,10 +1,10 @@
 import requests
 import json
   
-def collect_all_epgs(self, session, base_url):        
-    self.tenant_list = []
-    self.tenat_json = {}
-    self.total_count = 0
+def collect_all_epgs(session, base_url):        
+    tenants_list = []
+    tenants_json = {}
+    total_count = 0
 
     tenant_class = 'node/class/fvTenant.json?'
     tenant_url = base_url + tenant_class
@@ -18,11 +18,11 @@ def collect_all_epgs(self, session, base_url):
 
     try:
         index = 0
-        self.tenant_list.clear()
-        for i in range(0, self.total_count):
-            self.tenant_list.append(self.tenants_json["imdata"][index]["fvTenant"]["attributes"]["name"])
+        tenants_list.clear()
+        for i in range(0, total_count):
+            tenants_list.append(tenants_json["imdata"][index]["fvTenant"]["attributes"]["name"])
             index = index + 1
     except IndexError:
         pass
-    return self.tenant_list, self.tenants_json
+    return tenants_list, tenants_json
 
