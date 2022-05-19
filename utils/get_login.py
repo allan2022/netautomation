@@ -23,7 +23,11 @@ def get_login(yaml_filename, env=None):
         username = input("Enter APIC Username: ")
         
     if password == "input password":
-        password = getpass("Enter APIC Password: ")        
+        password = getpass("Enter APIC Password: ")      
+
+    print(hostname)
+    print(username)
+    print(password)  
 
     return hostname, username, password
 
