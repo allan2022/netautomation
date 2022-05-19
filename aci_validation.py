@@ -3,7 +3,7 @@ import json
 from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
-import acitools.aci_collect_info as aciinfo
+from acitools.aci_epgs import collect_all_epgs
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -52,22 +52,15 @@ class ACIValidation:
                 session, auth_res = aci_auth(auth_url, auth_data)
               
                 if auth_res:
-                    aci_info = aciinfo.collect()
-                    aci_info.aci_query_obj(session, base_url)
-
-                    # tenants = aci_info.tenant_list
-                    output = aci_info.tenants_json
-                    
+                    tenants, output = collect_all_epgs(session, base_url)
+                   
                     print(output)
 
                     json_file = snapshot_folder + "/" + aci_env.change_number + "_" + self.aci_select + "_" + "all_epgs.json"
                     with open(json_file, "w") as file:
                         json.dump(output, file)
 
-
-                    # list all VRF of a tenant
-                    # elif task == "2":
-                    #     tenant = input("Enter tenant name: ")
+                    # for tenant in tenants:
                     #     vrfs = aci_info.aci_query_obj(session, base_url, tenant=tenant, vrf="all")
                     #     for item in vrfs:
                     #         print(item)   

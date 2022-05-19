@@ -14,7 +14,6 @@ class collect():
         self.epg = ""
         self.subnet = ""
         self.tenant_list = []
-        self.tenat_json = {}
         self.ap_list = []
         self.bd_list = []
         self.vrf_list = []
