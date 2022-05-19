@@ -55,15 +55,8 @@ class ACIValidation:
                     aci_info = aciinfo.collect()
                     aci_info.aci_query_obj(session, base_url)
 
-                    tenants = aci_info.tenant_list
+                    # tenants = aci_info.tenant_list
                     tenants_json = aci_info.tenants_json
-
-                    # list all tenants
-                    print(tenants)
-
-                    for item in tenants:
-                        print(item)
-                    print("Total {number} Tenants.".format(number=str(len(tenants))))    
                     
                     print(tenants_json)
 
