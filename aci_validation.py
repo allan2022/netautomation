@@ -50,7 +50,7 @@ class ACIValidation:
 
                 session = aci_auth(auth_url, auth_data)
               
-                aci_info = aci_info.collect()
+                aci_info = aciinfo.collect()
 
 
                 # list all tenants
