@@ -80,7 +80,7 @@ class CoreConfiguration:
                 pass    
 
 def main():
-    cv = CoreValidation()
+    cv = CoreConfiguration()
     cv.core_validation_pyats()
     # cv.core_validation_netmiko()
 

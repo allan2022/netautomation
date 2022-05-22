@@ -72,9 +72,10 @@ class NetmikoCommand:
 
         # multi threads - one thread per device    
         for device in devices:        
-            t1 = threading.Thread(target=self.exec_f5_config, args=(device, commands)) 
-            t1.start()
-            t1.join()
+            threads = [threading.Thread(target=self.exec_f5_config, args=(device, commands)) for _ in range(8)] 
+            for t1 in threads:
+                t1.start()
+                t1.join()
 
     def fortinet_vdom(self, device, commands):
         netconnect = netmiko.ConnectHandler(**device)

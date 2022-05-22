@@ -97,4 +97,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n tast aborted")
+        print("\n test aborted")
