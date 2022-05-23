@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#! ~/venv/bin/python3 
 
 from os import getcwd
 from utils.get_task import get_task
