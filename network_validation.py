@@ -1,5 +1,6 @@
 #! /home/wjing/venv/bin/python3 
 
+from time import perf_counter
 from os import getcwd
 from utils.get_task import get_task
 from core_validation import CoreValidation
@@ -59,7 +60,14 @@ def main():
         print("\ntask not available")
 
 if __name__ == '__main__':
+    
+    start_time = perf_counter()
+    
     try:
         main()
     except  (NameError, KeyboardInterrupt):
         print("\n task aborted")
+    
+    end_time = perf_counter()
+
+    print(f'It took {end_time- start_time: 0.2f} second(s) to complete.')
