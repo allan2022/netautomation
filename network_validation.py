@@ -1,3 +1,5 @@
+#!/usr/bin/python3 
+
 from os import getcwd
 from utils.get_task import get_task
 from core_validation import CoreValidation
