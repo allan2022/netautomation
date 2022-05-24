@@ -50,8 +50,11 @@ class NetmikoCommand:
             for t1 in threads:
                 t1.start()
 
-            for t1 in threads:
-                t1.join()                
+            main_thread = threading.current_thread()
+            for some_thread in threading.enumerate():
+                if some_thread != main_thread:
+                    some_thread.join()
+
 
     def exec_f5_config(self, device, commands):
         netconnect = netmiko.ConnectHandler(**device)
