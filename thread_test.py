@@ -9,7 +9,7 @@ USER = 'admin'
 PASSWORD = 'Admin_1234!'
 
 # Define router IPs, you could also make a dictionary imported from a CSV file, or create a list from a text file of hostnames
-routers = ['131.226.217', '131.226.217', '131.226.217']
+routers = ['131.226.217.151', '131.226.217.151', '131.226.217.151']
 
 def ssh_session(router, output_q):
     # Place what you want each thread to do here, for example connect to SSH, run a command, get output
