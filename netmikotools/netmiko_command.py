@@ -62,6 +62,7 @@ class NetmikoCommand:
     
         devices = env.device_list
         num_threads = min (self.NUM_THREADS, len(devices))
+        print(f'max number of threads is {num_threads}.............')
 
         device_queue = Queue(maxsize=0)
 
