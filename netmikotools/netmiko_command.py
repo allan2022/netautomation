@@ -63,7 +63,7 @@ class NetmikoCommand:
 
         print("\n" + "_"*20 + " all devices to be validated " + "_"*20)
         for dev in devices:
-            print('hostname: {}, platform: {} '.format(dev['host']), dev['device_type'])
+            print('hostname: {}, platform: {} '.format(dev['host'], dev['device_type']))
             
             for cmd in commands[dev['device_type']]:
                 print(f' - {cmd}')
