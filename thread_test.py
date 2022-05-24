@@ -40,7 +40,9 @@ if __name__ == "__main__":
     # Retrieve everything off the queue - k is the router IP, v is output
     # You could also write this to a file, or create a file for each router
     
-    for item in output_q:
-        for k, val in item:
-            print(k)
-            print(val)
+    # for item in output_q:
+    #     for k, val in item:
+    #         print(k)
+    #         print(val)
+
+    print(output_q)
