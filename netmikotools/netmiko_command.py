@@ -51,9 +51,7 @@ class NetmikoCommand:
                 t1.start()
 
             main_thread = threading.current_thread()
-            for some_thread in threading.enumerate():
-                if some_thread != main_thread:
-                    some_thread.join()
+            main_thread.join()
 
 
     def exec_f5_config(self, device, commands):
