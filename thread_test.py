@@ -14,7 +14,7 @@ routers = [ {"ip":"131.226.217.151", "user": "admin", "password": "Admin_1234!",
 def ssh_session(router, output_q):
     # Place what you want each thread to do here, for example connect to SSH, run a command, get output
     output_dict = {}
-    hostname = router
+    hostname = router["ip"]
     router = {'device_type': router["dev"], 'ip': router["ip"], 'username': router["user"], 'password': router["password"], 'verbose': False, }
     ssh_session = ConnectHandler(**router)
     output = ssh_session.send_command("show version")
