@@ -3,7 +3,7 @@ from xml.etree.ElementTree import QName
 from parsertools.parser_cli import parse_output
 
 def save_output (command, output, c_num, s_folder, p_folder, host, d_type):
-    c_name = command.repalce(" ", "_")
+    c_name = command.replace(" ", "_")
     prefix = s_folder + "/" + c_num + "_" + host + "_" + c_name
 
     con_file = prefix + "_console.text"
