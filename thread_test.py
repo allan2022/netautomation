@@ -19,12 +19,12 @@ def ssh_session(router, output_q):
     ssh_session = ConnectHandler(**router)
     output = ssh_session.send_command("show version")
     output_dict[hostname] = output
-    output_q.put(output_dict)
+    output_q.append(output_dict)
 
 
 if __name__ == "__main__":
 
-    output_q = Queue()
+    output_q = []
     
     # Start thread for each router in routers list
     for router in routers:
@@ -40,8 +40,7 @@ if __name__ == "__main__":
     # Retrieve everything off the queue - k is the router IP, v is output
     # You could also write this to a file, or create a file for each router
     
-    while not output_q.empty():
-        my_dict = output_q.get()
-        for k, val in my_dict.items():
+    for item in output_q:
+        for k, val in item:
             print(k)
             print(val)
