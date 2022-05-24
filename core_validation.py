@@ -59,53 +59,18 @@ class CoreValidation:
             if netmiko_env.change_number != "":
                 netmiko_env.setup_validation_netmiko(NETMIKO_DEVICE_LIST, CORE_ENVIRONMENT, self.task_select)
                 
-                # devices = netmiko_env.device_list
-                # commands = netmiko_env.command_list
                 change_folder = netmiko_env.change_folder
                 snapshot_folder = netmiko_env.snapshot_folder
                 
-                # changenumber = netmiko_env.change_number
-                # parser = netmiko_env.parser_folder
-
-                # print("\n" + "-"*20 + " all devices to be validated " + "-"*20)
-                # for dev in devices:
-                #     print('{} : {} '.format(dev['device_type'], dev['host'] ))
-                # print("-" * (40 + len(" all devices to be validated ")) +"\n")
-
-                print("*********** starting setup environment  *************")
                 netmiko_dev = NetmikoCommand()
-                print("*********** setup environment is completed  *************")
-
-
-                print("*********** starting snapshot_all  *************")
                 netmiko_dev.snapshot_all(netmiko_env)                
-                print("*********** snapshot_all is completed *************")
 
-                # netmiko_dev.snapshot(devices, commands, changenumber, snapshot_folder, parser)
-
-                print("*************** starting diff_folder *************")
                 diff_folder(change_folder, snapshot_folder, self.task_select)
-                print("*************** start diff_folder is completed *************")
-
-
-                # if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
-                #     print("#####################  compare postchange with prechange #########################")
-                #     before_folder = os.path.join(change_folder, 'prechange_snapshot_0')
-                #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
-                
-                # elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
-                #     print("#####################  compare postchange with last postchange #########################")
-                #     i = int(snapshot_folder.rsplit('_', 1)[-1]) - 1
-                #     before_folder = os.path.join(change_folder, ('postchange_snapshot_' + str(i)))
-                #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
-                
-                # else:
-                #     pass    
 
 def main():
     cv = CoreValidation()
     # cv.core_validation_pyats()
-    # cv.core_validation_netmiko()
+    cv.core_validation_netmiko()
 
 if __name__ == "__main__":
     try:
