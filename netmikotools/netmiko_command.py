@@ -17,7 +17,7 @@ class NetmikoCommand:
             if device_type == "fortinet":
                 netconnect.send_config_set(['config vdom', 'edit root'])
 
-            output = netconnect.send_command(command, cmd_verify=False)
+            output = netconnect.send_command(command)
             command_name = command.replace(" ", "_")
 
             console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
