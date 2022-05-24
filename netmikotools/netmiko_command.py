@@ -28,7 +28,7 @@ class NetmikoCommand:
 
             device = d_queue.get()
             hostname = device['host']
-            cmds = commands['device_type']
+            cmds = commands[device['device_type']]
 
             self.mt_print(f'{t_name}: connecting to {hostname}...')
             netconnect = ConnectHandler(**device)
