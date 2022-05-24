@@ -17,7 +17,7 @@ def ssh_session(router, output_q):
     hostname = router["ip"]
     router = {'device_type': router["dev"], 'ip': router["ip"], 'username': router["user"], 'password': router["password"], 'verbose': False, }
     ssh_session = ConnectHandler(**router)
-    output = ssh_session.send_command("show ip int brief")
+    output = ssh_session.send_command("show inventory")
     output_dict[hostname] = output
     output_q.append(output_dict)
 
