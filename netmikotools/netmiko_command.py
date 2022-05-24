@@ -9,7 +9,7 @@ class NetmikoCommand:
 
     # log configuration for one device
     def exec_snapshot(self, device, commands, changenumber, snapshot_folder, parser_folder):
-        netconnect = netmiko.ConnectHandler(**device, cmd_verify=False)
+        netconnect = netmiko.ConnectHandler(**device)
 
         for command in commands:
             device_type = device["device_type"]          
@@ -17,7 +17,7 @@ class NetmikoCommand:
             if device_type == "fortinet":
                 netconnect.send_config_set(['config vdom', 'edit root'])
 
-            output = netconnect.send_command(command)
+            output = netconnect.send_command(command, cmd_verify=False)
             command_name = command.replace(" ", "_")
 
             console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
