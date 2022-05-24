@@ -31,32 +31,24 @@ class NetmikoCommand:
             hostname = device['host']
             cmds = commands[device['device_type']]
 
-            self.mt_print(f'{t_name}: connecting --- {hostname}...')
+            self.mt_print(f'{t_name}: connecting: {hostname}...')
             netconnect = ConnectHandler(**device)
-            self.mt_print(f'{t_name}: connecting --- {hostname} is completed...')
-
+            self.mt_print(f'{t_name}: {hostname} is connected!')
+            
             for command in cmds:
                 d_type = device["device_type"]          
 
                 if d_type == "fortinet":
                     netconnect.send_config_set(['config vdom', 'edit root'])
 
-                self.mt_print(f'{t_name}: executing command on --- {hostname} --- {command}')
+                self.mt_print(f'{t_name}: executing command on: {hostname} \n {command}')
                 output = netconnect.send_command(command)
-                self.mt_print(f'{t_name}: executing command on --- {hostname} --- {command} is completed...')
 
-                self.mt_print(f'{t_name}: generating output for --- {hostname}')
+                self.mt_print(f'{t_name}: generating output for: {hostname}')
                 save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
-                self.mt_print(f'{t_name}: generating output for --- {hostname} is completed... ')
 
-            self.mt_print(f'{t_name}: disconnecting --- {hostname}...')
             netconnect.disconnect()
-            self.mt_print(f'{t_name}: disconnecting --- {hostname} is completed...')
-
-            self.mt_print(f'{t_name}: closing task --- {hostname}...')
-            d_queue.task_done()
-            self.mt_print(f'{t_name}: closing task --- {hostname} is completed...')
-             
+            d_queue.task_done()           
 
     # log configuration for all devices by calling exec_snapshot
     def snapshot_all (self, env):    
