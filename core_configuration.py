@@ -1,5 +1,6 @@
 import os
 from utils.get_task import get_task
+from utils.diff_folder import diff_folder
 from envtools.setup_environment import SetupEnvironment
 from netmikotools.netmiko_command import NetmikoCommand
 
@@ -30,19 +31,21 @@ class CoreConfiguration:
 
             os.system(f'pyats learn {commands} --testbed-file {testbed} --output {snapshot_folder}')
 
-            if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
-                print("#####################  compare postchange with prechange #########################")
-                before_folder = os.path.join(change_folder, 'prechange_snapshot_0')
-                os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
+            diff_folder(change_folder, snapshot_folder, self.task_select)
+
+            # if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
+            #     print("#####################  compare postchange with prechange #########################")
+            #     before_folder = os.path.join(change_folder, 'prechange_snapshot_0')
+            #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
             
-            elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
-                print("#####################  compare postchange with last postchange #########################")
-                i = int(snapshot_folder.rsplit('_', 1)[-1]) - 1
-                before_folder = os.path.join(change_folder, ('postchange_snapshot_' + str(i)))
-                os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
+            # elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
+            #     print("#####################  compare postchange with last postchange #########################")
+            #     i = int(snapshot_folder.rsplit('_', 1)[-1]) - 1
+            #     before_folder = os.path.join(change_folder, ('postchange_snapshot_' + str(i)))
+            #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
             
-            else:
-                pass    
+            # else:
+            #     pass    
 
     def core_validation_netmiko(self):
         netmiko_env = SetupEnvironment(CORE_ENVIRONMENT)
@@ -65,19 +68,21 @@ class CoreConfiguration:
             netmiko_dev = NetmikoCommand()
             netmiko_dev.snapshot(devices, commands, changenumber, snapshot_folder, parser)
 
-            if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
-                print("#####################  compare postchange with prechange #########################")
-                before_folder = os.path.join(change_folder, 'prechange_snapshot_0')
-                os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
+            diff_folder(change_folder, snapshot_folder, self.task_select)
+
+            # if self.task_select == "postchange_snapshot_and_diff_prechange_snapshot":
+            #     print("#####################  compare postchange with prechange #########################")
+            #     before_folder = os.path.join(change_folder, 'prechange_snapshot_0')
+            #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
             
-            elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
-                print("#####################  compare postchange with last postchange #########################")
-                i = int(snapshot_folder.rsplit('_', 1)[-1]) - 1
-                before_folder = os.path.join(change_folder, ('postchange_snapshot_' + str(i)))
-                os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
+            # elif self.task_select == "postchange_snapshot_and_diff_last_postchange_snapshot":
+            #     print("#####################  compare postchange with last postchange #########################")
+            #     i = int(snapshot_folder.rsplit('_', 1)[-1]) - 1
+            #     before_folder = os.path.join(change_folder, ('postchange_snapshot_' + str(i)))
+            #     os.system(f'pyats diff {before_folder} {snapshot_folder} --output {change_folder}/diff_dir')
             
-            else:
-                pass    
+            # else:
+            #     pass    
 
 def main():
     cv = CoreConfiguration()
