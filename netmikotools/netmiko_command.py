@@ -44,7 +44,6 @@ class NetmikoCommand:
                 self.mt_print(f'{t_name}: executing command on: {hostname} \n {command}')
                 output = netconnect.send_command(command)
 
-                self.mt_print(f'{t_name}: generating output for: {hostname}')
                 save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
 
             netconnect.disconnect()
@@ -54,8 +53,9 @@ class NetmikoCommand:
     def snapshot_all (self, env):    
     
         devices = env.device_list
+        commands = env.command_list
         num_threads = min (self.NUM_THREADS, len(devices))
-        print(f'max number of threads is {num_threads}.............')
+        print(f'max number of threads is {num_threads}...')
 
         device_queue = Queue(maxsize=0)
 
@@ -64,6 +64,7 @@ class NetmikoCommand:
         print("\n" + "_"*20 + " all devices to be validated " + "_"*20)
         for dev in devices:
             print('{} : {} '.format(dev['device_type'], dev['host']))
+            print(commands[dev['device_type']])
             device_queue.put(dev)
         print("_" * (40 + len(" all devices to be validated ")) + "\n")
 
