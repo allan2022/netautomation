@@ -31,9 +31,9 @@ class NetmikoCommand:
             hostname = device['host']
             cmds = commands[device['device_type']]
 
-            self.mt_print(f'{t_name}: connecting: {hostname}...')
+            # self.mt_print(f'{t_name}: connecting: {hostname}...')
             netconnect = ConnectHandler(**device)
-            self.mt_print(f'{t_name}: {hostname} is connected!')
+            # self.mt_print(f'{t_name}: {hostname} is connected!')
             
             for command in cmds:
                 d_type = device["device_type"]          
@@ -41,7 +41,6 @@ class NetmikoCommand:
                 if d_type == "fortinet":
                     netconnect.send_config_set(['config vdom', 'edit root'])
 
-                self.mt_print(f'{t_name}: executing command on: {hostname} \n {command}')
                 output = netconnect.send_command(command)
 
                 save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
@@ -63,10 +62,11 @@ class NetmikoCommand:
 
         print("\n" + "_"*20 + " all devices to be validated " + "_"*20)
         for dev in devices:
-            print('hostname: {}, platform: {} '.format(dev['host'], dev['device_type']))
+            print('{} : {} '.format(dev['host'], dev['device_type']))
             
             for cmd in commands[dev['device_type']]:
                 print(f' - {cmd}')
+            
             device_queue.put(dev)
         print("_" * (40 + len(" all devices to be validated ")) + "\n")
 
