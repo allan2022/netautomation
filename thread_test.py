@@ -1,6 +1,6 @@
 import csv
 import threading
-from Queue import Queue
+from queue import queue
 from getpass import getpass
 from netmiko import ConnectHandler
 
@@ -24,7 +24,7 @@ def ssh_session(router, output_q):
 
 if __name__ == "__main__":
 
-    output_q = Queue()
+    output_q = queue()
     
     # Start thread for each router in routers list
     for router in routers:
