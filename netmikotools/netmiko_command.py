@@ -16,7 +16,7 @@ class NetmikoCommand:
     def snapshot_one (self, d_queue, env):
 
         commands = env.command_list
-        s_folder = env.snapshsot_folder
+        s_folder = env.snapshot_folder
         cnum = env.changenumber
         p_folder = env.parser_folder
 
