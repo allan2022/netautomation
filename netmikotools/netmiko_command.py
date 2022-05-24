@@ -62,7 +62,7 @@ class NetmikoCommand:
 
         print("\n" + "_"*20 + " all devices to be validated " + "_"*20)
         for dev in devices:
-            print('{} : {} '.format(dev['device_tyep'], dev['host']))
+            print('{} : {} '.format(dev['device_type'], dev['host']))
             device_queue.put(dev)
         print("_" * (40 + len(" all devices to be validated ")) + "\n")
 
