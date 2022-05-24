@@ -17,7 +17,7 @@ class NetmikoCommand:
 
         commands = env.command_list
         s_folder = env.snapshot_folder
-        cnum = env.changenumber
+        cnum = env.change_number
         p_folder = env.parser_folder
 
         while True:
