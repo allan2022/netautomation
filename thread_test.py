@@ -45,4 +45,6 @@ if __name__ == "__main__":
     #         print(k)
     #         print(val)
 
-    print(output_q)
+    for item in output_q:
+        print(item)
+        print("##########################")
