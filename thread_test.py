@@ -42,6 +42,6 @@ if __name__ == "__main__":
     
     while not output_q.empty():
         my_dict = output_q.get()
-        for k, val in my_dict.iteritems():
+        for k, val in my_dict.items():
             print(k)
             print(val)
