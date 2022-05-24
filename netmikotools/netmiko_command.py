@@ -49,10 +49,9 @@ class NetmikoCommand:
             threads = [threading.Thread(target=self.exec_snapshot, args=(device, commands, changenumber, snapshot_folder, parser_folder)) for _ in range(8)] 
             for t1 in threads:
                 t1.start()
-                t1.join()
 
-            # for t1 in threads:
-            #     t1.join()                
+            for t1 in threads:
+                t1.join()                
 
     def exec_f5_config(self, device, commands):
         netconnect = netmiko.ConnectHandler(**device)
