@@ -9,7 +9,7 @@ class NetmikoCommand:
 
     # log configuration for one device
     def exec_snapshot(self, device, commands, changenumber, snapshot_folder, parser_folder):
-        netconnect = netmiko.ConnectHandler(**device)
+        netconnect = netmiko.ConnectHandler(**device, banner_timeout = 15)
 
         for command in commands:
             device_type = device["device_type"]          
