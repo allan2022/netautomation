@@ -1,2 +1,0 @@
-create net vlan Internal interfaces add {1.1}
-create net vlan Internal interfaces add {1.1}
