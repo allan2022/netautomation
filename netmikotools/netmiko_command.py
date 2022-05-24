@@ -32,7 +32,7 @@ class NetmikoCommand:
 
             self.mt_print(f'{t_name}: connecting to {hostname}...')
             netconnect = ConnectHandler(**device)
-            self.mt_print(f'{t_name}: connected!')
+            self.mt_print(f'{t_name}: connected to {hostname}...')
 
             for command in cmds:
                 d_type = device["device_type"]          
@@ -42,10 +42,11 @@ class NetmikoCommand:
 
                 self.mt_print(f'{t_name}: executing command on --- {hostname} --- {command}')
                 output = netconnect.send_command(command)
+                self.mt_print(f'{t_name} executing command on --- {hostname} --- {command} is done...')
 
-                self.mt_print(f'{t_name}: generate output file: {command}')
+                self.mt_print(f'{t_name}: generating output file on --- {hostname}')
                 save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
-                self.mt_print(f'{t_name}: output is done. ')
+                self.mt_print(f'{t_name}: output on --_ {hostname} is done... ')
 
             netconnect.disconnect()
             d_queue.task_done() 
