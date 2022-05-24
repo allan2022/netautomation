@@ -1,6 +1,6 @@
 import csv
 import threading
-# from queue import queue
+from queue import Queue
 from getpass import getpass
 from netmiko import ConnectHandler
 
@@ -9,7 +9,7 @@ USER = 'admin'
 PASSWORD = 'Admin_1234!'
 
 # Define router IPs, you could also make a dictionary imported from a CSV file, or create a list from a text file of hostnames
-routers = ['131.226.217.151', '131.226.217.151', '131.226.217.151']
+routers = ['131.226.217', '131.226.217', '131.226.217']
 
 def ssh_session(router, output_q):
     # Place what you want each thread to do here, for example connect to SSH, run a command, get output
@@ -19,15 +19,12 @@ def ssh_session(router, output_q):
     ssh_session = ConnectHandler(**router)
     output = ssh_session.send_command("show version")
     output_dict[hostname] = output
-    
-    output_q.append(output_dict)
-    # output_q.put(output_dict)
+    output_q.put(output_dict)
 
 
 if __name__ == "__main__":
 
-    # output_q = queue()
-    output_q = []
+    output_q = Queue()
     
     # Start thread for each router in routers list
     for router in routers:
@@ -43,14 +40,8 @@ if __name__ == "__main__":
     # Retrieve everything off the queue - k is the router IP, v is output
     # You could also write this to a file, or create a file for each router
     
-    # while not output_q.empty():
-    #     my_dict = output_q.get()
-    #     for k, val in my_dict.iteritems():
-    #         print(k)
-    #         print(val)
-
-    for item in output_q:
-        # my_dict = item
-        for k, val in item:
+    while not output_q.empty():
+        my_dict = output_q.get()
+        for k, val in my_dict.iteritems():
             print(k)
             print(val)
