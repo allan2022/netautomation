@@ -65,7 +65,7 @@ class NetmikoCommand:
         for dev in devices:
             print('{} : {} '.format(dev['device_type'], dev['host']))
             
-            for cmd in commands[dev['device_type']]
+            for cmd in commands[dev['device_type']]:
                 print(f' - {cmd}')
             device_queue.put(dev)
         print("_" * (40 + len(" all devices to be validated ")) + "\n")
