@@ -45,7 +45,7 @@ class NetmikoCommand:
 
                 self.mt_print(f'{t_name}: generate output file\n{command}')
                 save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
-                self.met_print(f'{t_name}: output is done. ')
+                self.mt_print(f'{t_name}: output is done. ')
 
             netconnect.disconnect()
             d_queue.task_done() 
