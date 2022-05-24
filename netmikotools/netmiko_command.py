@@ -40,7 +40,7 @@ class NetmikoCommand:
                 if d_type == "fortinet":
                     netconnect.send_config_set(['config vdom', 'edit root'])
 
-                self.mt_print(f'{t_name}: executing command: {command}')
+                self.mt_print(f'{t_name}: executing command on --- {hostname} --- {command}')
                 output = netconnect.send_command(command)
 
                 self.mt_print(f'{t_name}: generate output file: {command}')
