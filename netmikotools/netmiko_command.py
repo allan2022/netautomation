@@ -1,60 +1,82 @@
-import json
-import netmiko
-import threading
-from parsertools.parser_cli import parse_output
+from queue import Queue
+from netmiko import ConnectHandler
+from threading import Thread, currentThread, Lock
+from utils.save_output import save_output
 
 class NetmikoCommand:
     def __init__(self):
-        pass
+        self.NUM_THREADS = 3
+        self.PRINT_LOCK = Lock()
+
+    def mt_print(self, msg):
+        with self.PRINT_LOCK:
+            print(msg)
 
     # log configuration for one device
-    def exec_snapshot(self, device, commands, changenumber, snapshot_folder, parser_folder):
-        netconnect = netmiko.ConnectHandler(**device)
+    def snapshot_one (self, d_queue, env):
 
-        for command in commands:
-            device_type = device["device_type"]          
+        commands = env.command_list
+        s_folder = env.snapshsot_folder
+        cnum = env.changenumber
+        p_folder = env.parser_folder
 
-            if device_type == "fortinet":
-                netconnect.send_config_set(['config vdom', 'edit root'])
+        while True:
+            t_name = currentThread().getName()
 
-            output = netconnect.send_command(command)
-            command_name = command.replace(" ", "_")
+            if d_queue.empty():
+                self.mt_print(f'No task left, {t_name} is closed. ')
 
-            console_file = snapshot_folder + "/" + changenumber + "_" + device["host"] + "_" + command_name + "_" + "console.txt"
-            with open(console_file, "w") as file:
-                file.write(output + "\n")
+            device = d_queue.get()
+            hostname = device['host']
+            cmds = commands['device_type']
 
-            parser_template = parser_folder + "/" + device_type + "_" + command_name + ".textfsm"
+            self.mt_print(f'{t_name}: connecting to {hostname}...')
+            netconnect = ConnectHandler(**device)
+            self.mt_print(f'{t_name}: connected!')
 
-            ops_input = parse_output(console_file, parser_template) 
-            ops_file = snapshot_folder + "/" + str(changenumber) + "_" + device["host"] + "_" + command_name + "_" + "ops.txt"            
-            with open(ops_file, "w") as file:
-                file.write(json.dumps(ops_input))
+            for command in cmds:
+                d_type = device["device_type"]          
 
-        netconnect.disconnect()    
+                if d_type == "fortinet":
+                    netconnect.send_config_set(['config vdom', 'edit root'])
+
+                self.mt_print(f'{t_name}: executing command:\n{command}')
+                output = netconnect.send_command(command)
+
+                self.mt_print(f'{t_name}: generate output file\n{command}')
+                save_output(command, output, cnum, s_folder, p_folder, hostname, d_type)
+                self.met_print(f'{t_name}: output is done. ')
+
+            netconnect.disconnect()
+            d_queue.task_done() 
 
     # log configuration for all devices by calling exec_snapshot
-    def snapshot (self, devices, all_commands, changenumber, snapshot_folder, parser_folder):    
+    def snapshot_all (self, env):    
     
+        devices = env.device_list
+        num_threads = min (self.NUM_THREADS, len(devices))
+
+        device_queue = Queue(maxsize=0)
+
         # multi threads - one thread per device    
-        for device in devices:
-            dev_type = device['device_type']
-            commands = all_commands[dev_type]
-            
-            print("-"*20 + " commands for " + dev_type + " " + "-"*20)
-            for command in commands:
-                print(command)
-            print("\n")
 
-            threads = [threading.Thread(target=self.exec_snapshot, args=(device, commands, changenumber, snapshot_folder, parser_folder)) for _ in range(8)] 
-            for t1 in threads:
-                t1.start()
-                t1.join()
+        print("\n" + "_"*20 + " all devices to be validated " + "_"*20)
+        for dev in devices:
+            print('{} : {} '.format(dev['device_tyep'], dev['host']))
+            device_queue.put(dev)
+        print("_" * (40 + len(" all devices to be validated ")) + "\n")
 
+        for i in range(num_threads):
+            t_name = f'Thread - {i}'
+
+            t1 = Thread(name=t_name, target=self.snapshot_one, args=(device_queue, env))
+            t1.start()
+
+        device_queue.join()
 
 
     def exec_f5_config(self, device, commands):
-        netconnect = netmiko.ConnectHandler(**device)
+        netconnect = ConnectHandler(**device)
         devname = device['host']
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
@@ -74,13 +96,13 @@ class NetmikoCommand:
 
         # multi threads - one thread per device    
         for device in devices:        
-            threads = [threading.Thread(target=self.exec_f5_config, args=(device, commands)) for _ in range(8)] 
+            threads = [Thread(target=self.exec_f5_config, args=(device, commands)) for _ in range(8)] 
             for t1 in threads:
                 t1.start()
                 t1.join()
 
     def fortinet_vdom(self, device, commands):
-        netconnect = netmiko.ConnectHandler(**device)
+        netconnect = ConnectHandler(**device)
         devname = device['host']
 
         print("-"*20 + f' commands for {devname} ' + "-"*20)
