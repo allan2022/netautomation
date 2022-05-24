@@ -25,6 +25,7 @@ class NetmikoCommand:
 
             if d_queue.empty():
                 self.mt_print(f'No task left, {t_name} is closed. ')
+                return
 
             device = d_queue.get()
             hostname = device['host']
