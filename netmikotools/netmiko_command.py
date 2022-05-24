@@ -49,7 +49,7 @@ class NetmikoCommand:
                 self.mt_print(f'{t_name}: output on --_ {hostname} is done... ')
 
             netconnect.disconnect()
-            d_queue.task_done() 
+            # d_queue.task_done() 
 
     # log configuration for all devices by calling exec_snapshot
     def snapshot_all (self, env):    
