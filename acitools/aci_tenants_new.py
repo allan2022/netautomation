@@ -32,7 +32,7 @@ class ACITenants:
         return self.tenants_list, self.tenants_json
 
     def add_tenant (self, session, base_url, tenant):
-        self.collect_all_tenants(session, base_url=)
+        self.collect_all_tenants(session, base_url)
 
         add_res = None
         url = base_url + "/mo/uni.json"
