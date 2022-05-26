@@ -115,9 +115,10 @@ class ACISearch:
                         # find tenant   
                         elif task == "6":
                             tenant = input("Enter tenant name: ")
-                            aci_info.aci_query_obj(session, base_url)
-                            tenants = aci_info.tenant_list
-                            if tenant in tenants:
+                            # aci_info.aci_query_obj(session, base_url)
+                            # tenants = aci_info.tenant_list
+                            tenant = aci.search_tenant(session, base_url, tenant)
+                            if tenant != None:
                                 print("\nTenant \"{tenant}\" is found".format(tenant=tenant))
                             else:
                                 print("\nTenant \"{tenant}\" is not found".format(tenant=tenant))
