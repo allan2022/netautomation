@@ -117,8 +117,8 @@ class ACISearch:
                             tenant = input("Enter tenant name: ")
                             # aci_info.aci_query_obj(session, base_url)
                             # tenants = aci_info.tenant_list
-                            tenant = aci.search_tenant(session, base_url, tenant)
-                            if tenant != None:
+                            res = aci.search_tenant(session, base_url, tenant)
+                            if res != None:
                                 print("\nTenant \"{tenant}\" is found".format(tenant=tenant))
                             else:
                                 print("\nTenant \"{tenant}\" is not found".format(tenant=tenant))
