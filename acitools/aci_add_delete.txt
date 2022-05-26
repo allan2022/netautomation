@@ -1,0 +1,66 @@
+ethod: POST
+url: https://10.10.20.14/api/node/mo/uni/tn-BLUE.json
+payload{"fvTenant":{"attributes":{"dn":"uni/tn-BLUE","status":"deleted"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+
+{
+  "fvTenant": {
+    "attributes": {
+      "dn": "uni/tn-BLUE",
+      "status": "deleted"
+    },
+    "children": []
+  }
+}
+
+
+
+method: POST
+url: https://10.10.20.14/api/node/mo/uni/tn-BLUE.json
+payload{"fvTenant":{"attributes":{"dn":"uni/tn-BLUE","name":"BLUE","rn":"tn-BLUE","status":"created"},"children":[]}}
+response: {"totalCount":"0","imdata":[]}
+timestamp: 10:30:50 DEBUG 
+
+{
+  "fvTenant": {
+    "attributes": {
+      "dn": "uni/tn-BLUE",
+      "name": "BLUE",
+      "rn": "tn-BLUE",
+      "status": "created"
+    },
+    "children": []
+  }
+}
+
+method: GET
+url: https://10.10.20.14/api/node/class/fvTenant.json?query-target-filter=and(not(wcard(fvTenant.dn,"__ui_")),eq(fvTenant.dn,"uni/tn-BLUE"))&rsp-subtree=children&rsp-subtree-class=tagAliasInst
+response: {"totalCount":"1","imdata":[{"fvTenant":{"attributes":{"annotation":"","childAction":"","descr":"","dn":"uni/tn-BLUE","extMngdBy":"","lcOwn":"local","modTs":"2022-05-26T14:50:55.078+00:00","monPolDn":"uni/tn-common/monepg-default","name":"BLUE","nameAlias":"","ownerKey":"","ownerTag":"","status":"","uid":"15374","userdom":":all:"}}}]}
+timestamp: 10:56:40 DEBUG 
+
+{
+  "totalCount": "1",
+  "imdata": [
+    {
+      "fvTenant": {
+        "attributes": {
+          "annotation": "",
+          "childAction": "",
+          "descr": "",
+          "dn": "uni/tn-BLUE",
+          "extMngdBy": "",
+          "lcOwn": "local",
+          "modTs": "2022-05-26T14:50:55.078+00:00",
+          "monPolDn": "uni/tn-common/monepg-default",
+          "name": "BLUE",
+          "nameAlias": "",
+          "ownerKey": "",
+          "ownerTag": "",
+          "status": "",
+          "uid": "15374",
+          "userdom": ":all:"
+        }
+      }
+    }
+  ]
+}
