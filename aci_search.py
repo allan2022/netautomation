@@ -3,7 +3,7 @@ from utils.get_task import get_task
 from envtools.setup_environment import SetupEnvironment
 from acitools.aci_auth import aci_auth
 import acitools.aci_collect_info as aciinfo
-import acitools.aci_tenants_new as acitenants
+from acitools.aci_tenants_new import ACITenants
 
 CORE_ENVIRONMENT = os.getcwd() + '/src/core_environment.yaml'
 
@@ -47,7 +47,7 @@ class ACISearch:
 
                 if auth_res:                
                     aci_info = aciinfo.collect()
-                    aci = acitenants()
+                    aci = ACITenants()
 
                     while True:
                         print("""
@@ -69,7 +69,7 @@ class ACISearch:
                         if task == "1":
                             # aci_info.aci_query_obj(session, base_url)
                             # tenants = aci_info.tenant_list
-                            tenants, tenans_json = acitenants.collect_all_tenants(session, base_url)
+                            tenants, tenans_json = aci.collect_all_tenants(session, base_url)
                             
                             for item in tenants:
                                 print(item)
