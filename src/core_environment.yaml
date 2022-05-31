@@ -19,7 +19,7 @@ output_directory:
 testbed_directory:
   testbed
 
-parsertemplate_direcotry:
+parsertemplate_directory:
   parsertemplate
 
 result_folder_suffix:

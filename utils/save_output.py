@@ -1,5 +1,4 @@
 import json
-from xml.etree.ElementTree import QName
 from parsertools.parser_cli import parse_output
 
 def save_output (command, output, c_num, s_folder, p_folder, host, d_type):
